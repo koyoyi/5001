@@ -1,0 +1,13 @@
+# Preserve the original bytes of course materials and data files.
+* -text
+
+# Prevent line-ending conversion or text merges in document/image formats.
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary

@@ -1,0 +1,164 @@
+{
+  "audit_timestamp": "2026-11-07T00:52:25.136431+08:00",
+  "method": "HTTP byte-range reads of 8-byte Parquet tails and footer metadata only; pyarrow.parquet.read_metadata on synthetic header+footer. No full Parquet or CSV download.",
+  "download_status": {
+    "full_data_downloaded": false,
+    "readme_downloaded": true,
+    "metadata_only": true
+  },
+  "catalog_url": "https://data.nlr.gov/submissions/300",
+  "oedi_url": "https://data.openei.org/submissions/8616",
+  "doi": "10.7799/3015212",
+  "catalog_last_updated": "2026-01-29",
+  "readme_url": "https://data.nlr.gov/system/files/300/1769711385-README.md",
+  "license_url": "https://data.nlr.gov/node/300/license",
+  "license_note": "Catalog license grants free use/copy with full notice retained and DOE/NREL/ALLIANCE credit. OEDI links a CC badge; do not assume exact CC license without resolving discrepancy.",
+  "official_engineering_context_urls": [
+    "https://www.nlr.gov/computational-science/measuring-efficiency-pue",
+    "https://www.nlr.gov/computational-science/data-center-cooling-system",
+    "https://www.nlr.gov/computational-science/warm-water-liquid-cooling"
+  ],
+  "power": {
+    "file_name": "1757103411-esif.influx.buildingData.PUE.combined.parquet",
+    "url": "https://data.nlr.gov/system/files/300/1757103411-esif.influx.buildingData.PUE.combined.parquet",
+    "file_size_bytes": 109685321,
+    "catalog_size": "104.6 MB",
+    "footer_size_bytes": 5770,
+    "row_count": 4569543,
+    "row_group_count": 1,
+    "columns": [
+      "tags",
+      "ts",
+      "cooling_kw",
+      "energy_reuse",
+      "ere",
+      "hvac_kw",
+      "it_power_kw",
+      "plug_and_light_kw",
+      "pue",
+      "pump_kw",
+      "day"
+    ],
+    "timestamp_logical_type": "Timestamp(isAdjustedToUTC=false, timeUnit=microseconds)",
+    "timestamp_min": "2015-11-10T03:00:01",
+    "timestamp_max": "2025-08-29T04:35:08.461000",
+    "timestamp_null_count": 0,
+    "column_footer_statistics": {
+      "cooling_kw": {
+        "min": -3.33,
+        "max": 2516.37,
+        "null_count": 136502
+      },
+      "energy_reuse": {
+        "min": -163.08890408308244,
+        "max": 976.6887644057782,
+        "null_count": 3562726
+      },
+      "ere": {
+        "min": -42.608,
+        "max": 547.392,
+        "null_count": 12
+      },
+      "hvac_kw": {
+        "min": -6.94,
+        "max": 5071.570167271273,
+        "null_count": 136510
+      },
+      "it_power_kw": {
+        "min": 0.10000000149011612,
+        "max": 3921.3293040320277,
+        "null_count": 136488
+      },
+      "plug_and_light_kw": {
+        "min": -0.0,
+        "max": 13.83,
+        "null_count": 136486
+      },
+      "pue": {
+        "min": -42.608,
+        "max": 528.3000785497774,
+        "null_count": 799
+      },
+      "pump_kw": {
+        "min": -4.0,
+        "max": 93.26399617269635,
+        "null_count": 136487
+      },
+      "day": {
+        "min": 1,
+        "max": 31,
+        "null_count": 0
+      }
+    }
+  },
+  "weather": {
+    "file_name": "1757105566-esif.influx.buildingData.outside.combined_2.parquet",
+    "url": "https://data.nlr.gov/system/files/300/1757105566-esif.influx.buildingData.outside.combined_2.parquet",
+    "file_size_bytes": 58865468,
+    "catalog_size": "56.1 MB",
+    "footer_size_bytes": 3432,
+    "row_count": 4034917,
+    "row_group_count": 1,
+    "columns": [
+      "tags",
+      "ts",
+      "outdoor_air_humidity",
+      "outdoor_air_temp",
+      "unit",
+      "day"
+    ],
+    "timestamp_logical_type": "Timestamp(isAdjustedToUTC=false, timeUnit=microseconds)",
+    "timestamp_min": "1970-01-01T00:00:00",
+    "timestamp_max": "2025-08-29T18:51:19.790000",
+    "timestamp_null_count": 0,
+    "column_footer_statistics": {
+      "outdoor_air_humidity": {
+        "min": -0.0,
+        "max": 100.0,
+        "null_count": 981
+      },
+      "outdoor_air_temp": {
+        "min": -39.4000015258789,
+        "max": 104.227996826172,
+        "null_count": 1077
+      },
+      "unit": {
+        "min": "outside",
+        "max": "outside",
+        "null_count": 3306781
+      },
+      "day": {
+        "min": 1,
+        "max": 31,
+        "null_count": 0
+      }
+    }
+  },
+  "verified_field_notes": [
+    "Actual Parquet weather names use outdoor_air_*, while the catalog/README says outside_air_*.",
+    "Official air-temperature unit is degrees Fahrenheit; convert Celsius=(F-32)*5/9.",
+    "cooling_kw includes outdoor cooling fans, pipe trace heaters, and dedicated tower filter pump.",
+    "The tower filter pump constant is 2.67 kW; cooling_kw already includes it, pump_kw excludes it. Do not add it again without a measured reconciliation.",
+    "hvac_kw is separate electrical-room fan walls/fan coils and make-up air unit; cooling_kw is not total cooling-system electrical power.",
+    "No independent total-facility-power column, water supply/return temperature, flow, valve position, or fault labels appears in the schemas."
+  ],
+  "quality_flags_requiring_full_data_audit": [
+    "Weather timestamp minimum is 1970-01-01; it must not be interpreted as valid historical coverage.",
+    "Both timestamps are timezone-naive; UTC cannot be assumed from metadata.",
+    "Negative power values and extreme PUE values are present in footer ranges; investigate provenance and physically plausible screening before modelling.",
+    "Minimum IT power near zero can destabilise PUE; PUE and its components are algebraically coupled.",
+    "Full data timestamp uniqueness, sample interval, gaps, duration weighting, alignment, valid date window and usable sample count remain unverified.",
+    "No claim of regular 5-minute or 1-minute sampling is supported by the checked metadata.",
+    "Dataset spans major operational years; hardware/control changes may exist and require regime assessment."
+  ],
+  "proposal_target_boundary": "Provisional main target cooling_kw only. Pump and HVAC power may be supplemental outcomes; do not sum components before meter-boundary reconciliation.",
+  "site_transferability": "ESIF is a warm-water liquid-cooled HPC facility with heat recovery, thermosyphon and evaporative towers in a semi-arid climate. Do not claim direct generalisation to Hong Kong/Singapore chiller-based commercial IDC operation.",
+  "unverified": {
+    "sample_interval": null,
+    "valid_weather_start": null,
+    "timestamp_timezone": null,
+    "hourly_usable_sample_count": null,
+    "full_meter_balance_reconciliation": false
+  },
+  "readme_size_bytes": 1877
+}

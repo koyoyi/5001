@@ -1,0 +1,46 @@
+# Temporary working files and browser profiles.
+/tmp/
+
+# Coursework assignments stay local and are not published.
+/assignment/
+/output/assignment1/
+/output/hw2/
+
+# Repeated backups; keep the course PDFs and useful assignment outputs.
+/output/note_backups/
+**/notebook_backups/
+/output/assignment1/*.zip
+
+# Python environments and notebook caches.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Office and operating-system temporary files.
+~$*
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# LaTeX build intermediates.
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# RAG corpora, pretrained weights, vector indexes and local caches.
+/project/data/raw/
+/project/data/cache/
+/project/models/
+/project/artifacts/
+/.cache/

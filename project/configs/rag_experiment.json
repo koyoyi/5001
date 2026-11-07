@@ -1,0 +1,55 @@
+{
+  "project": "SDSC5001 RAG hybrid retrieval and learned reranking",
+  "protocol_date": "2026-11-07",
+  "status": "planned_not_executed",
+  "frozen_for_final_test": false,
+  "random_seed": 20261107,
+  "dataset": {
+    "name": "BEIR/fiqa",
+    "unit": "original_passage",
+    "corpus_documents": 57638,
+    "official_query_splits": {"train": 5500, "dev": 500, "test": 648},
+    "qrels_are_positive_only": true,
+    "chunking": false
+  },
+  "retrieval": {
+    "sparse_method": "BM25",
+    "dense_encoder_candidate": "BAAI/bge-small-en-v1.5",
+    "dense_encoder_revision": null,
+    "encoder_weights_frozen": true,
+    "record_query_instruction_and_truncation": true,
+    "vector_search_baseline": "exact",
+    "sparse_top_k": 100,
+    "dense_top_k": 100,
+    "candidate_set": "deduplicated_union",
+    "candidate_limit_before_reranking": null,
+    "maximum_union_size": 200,
+    "inject_missed_gold_documents": false,
+    "rrf_constant_dev_grid": [10, 60, 100]
+  },
+  "training": {
+    "group_by": "query_id",
+    "grouped_cv_folds": 3,
+    "use_only_train_qrels_for_fitting": true,
+    "max_proxy_negatives_per_query": 50,
+    "proxy_negative_source": "unjudged_candidates_in_same_union",
+    "query_weighting": true,
+    "preprocessing_fit_scope": "training_fold_only",
+    "models": ["l2_logistic", "constrained_random_forest"],
+    "logistic_C_grid": [0.1, 1.0, 10.0],
+    "rf_n_estimators": 200,
+    "rf_max_depth_grid": [6, 12],
+    "rf_min_samples_leaf_grid": [10, 30],
+    "outputs_are_calibrated_probabilities": false
+  },
+  "evaluation": {
+    "primary_metrics": ["ndcg@10", "recall@20"],
+    "additional_metrics": ["candidate_recall", "latency_median_ms", "latency_p95_ms"],
+    "aggregation_unit": "query",
+    "paired_bootstrap_unit": "query",
+    "same_candidates_for": ["rrf", "l2_logistic", "constrained_random_forest"],
+    "test_used_for_tuning": false,
+    "generation_has_answer_level_gold_labels": false,
+    "generation_scope": "fixed_model_citation_demo_with_qualitative_checks"
+  }
+}

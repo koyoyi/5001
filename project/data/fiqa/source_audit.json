@@ -1,0 +1,30 @@
+{
+  "audit_date": "2026-11-07",
+  "dataset": "BEIR FiQA",
+  "corpus_and_queries_url": "https://huggingface.co/datasets/BeIR/fiqa",
+  "qrels_url": "https://huggingface.co/datasets/BeIR/fiqa-qrels",
+  "evaluation_code_url": "https://github.com/beir-cellar/beir",
+  "corpus_documents": 57638,
+  "corpus_count_verification": "official_dataset_metadata",
+  "queries_total": 6648,
+  "query_count_verification": "official_query_parquet_read_in_memory",
+  "qrels_verification": "official_small_split_tsv_files_read_in_memory",
+  "splits": {
+    "train": {"unique_queries": 5500, "qrel_rows": 14166},
+    "dev": {"unique_queries": 500, "qrel_rows": 1238},
+    "test": {"unique_queries": 648, "qrel_rows": 1706}
+  },
+  "query_id_intersections": {"train_dev": 0, "train_test": 0, "dev_test": 0},
+  "qrel_score_values": [1],
+  "explicit_negative_judgments": false,
+  "full_corpus_downloaded_for_experiment": false,
+  "model_weights_downloaded": false,
+  "retrieval_or_training_experiments_executed": false,
+  "dataset_card_license": "CC-BY-SA-4.0",
+  "scope": "historical_financial_text_retrieval_benchmark",
+  "limitations": [
+    "Unjudged documents are not confirmed irrelevant.",
+    "Qrels assess retrieval relevance, not generated-answer correctness.",
+    "Corpus content, empty-text handling and duplicate checks still require implementation-stage audit."
+  ]
+}
