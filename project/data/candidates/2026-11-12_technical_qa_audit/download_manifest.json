@@ -1,0 +1,50 @@
+{
+  "audit_date": "2026-11-12",
+  "files": [
+    {
+      "repo": "nvidia/TechQA-RAG-Eval",
+      "revision": "0b5bbc84b7f07d6d09d063130e90b716d8d4a32a",
+      "source_url": "https://huggingface.co/datasets/nvidia/TechQA-RAG-Eval/resolve/0b5bbc84b7f07d6d09d063130e90b716d8d4a32a/README.md?download=true",
+      "local_file": "nvidia__TechQA-RAG-Eval\\README.md",
+      "bytes": 2113,
+      "sha256": "8d85191f81a748f2a66bb32cecb972727e69fcc0541c1f936c4debfa4823190b",
+      "upstream_sha256_verified": false
+    },
+    {
+      "repo": "galileo-ai/ragbench",
+      "revision": "97808f3e5fd16ede40bbff6c2949af8139b2eb7b",
+      "source_url": "https://huggingface.co/datasets/galileo-ai/ragbench/resolve/97808f3e5fd16ede40bbff6c2949af8139b2eb7b/README.md?download=true",
+      "local_file": "galileo-ai__ragbench\\README.md",
+      "bytes": 24681,
+      "sha256": "1afeca59575e9508432990054fd75b18b851a384376e2dd7e83852655f33cbe5",
+      "upstream_sha256_verified": false
+    },
+    {
+      "repo": "nvidia/TechQA-RAG-Eval",
+      "revision": "0b5bbc84b7f07d6d09d063130e90b716d8d4a32a",
+      "source_url": "https://huggingface.co/datasets/nvidia/TechQA-RAG-Eval/resolve/0b5bbc84b7f07d6d09d063130e90b716d8d4a32a/train.json?download=true",
+      "local_file": "nvidia__TechQA-RAG-Eval\\train.json",
+      "bytes": 4019332,
+      "sha256": "69d97231509482ed6bd5ec1c4bc0607acb82a88d11169eb8383592d0ca8b93c7",
+      "upstream_sha256_verified": false
+    },
+    {
+      "repo": "galileo-ai/ragbench",
+      "revision": "97808f3e5fd16ede40bbff6c2949af8139b2eb7b",
+      "source_url": "https://huggingface.co/datasets/galileo-ai/ragbench/resolve/97808f3e5fd16ede40bbff6c2949af8139b2eb7b/techqa/test-00000-of-00001.parquet?download=true",
+      "local_file": "galileo-ai__ragbench\\techqa\\test-00000-of-00001.parquet",
+      "bytes": 5348997,
+      "sha256": "426f360d12b5d3589b66293c3417d3686a9d69eba3e82938e93d3e1545681264",
+      "upstream_sha256_verified": true
+    },
+    {
+      "repo": "nvidia/TechQA-RAG-Eval",
+      "revision": "0b5bbc84b7f07d6d09d063130e90b716d8d4a32a",
+      "source_url": "https://huggingface.co/datasets/nvidia/TechQA-RAG-Eval/resolve/0b5bbc84b7f07d6d09d063130e90b716d8d4a32a/corpus.zip?download=true",
+      "local_file": "nvidia__TechQA-RAG-Eval\\corpus.zip",
+      "bytes": 45814227,
+      "sha256": "c06aa287dcc1abf8db6b49b8495df095db73342d729f6451ac330785245d10be",
+      "upstream_sha256_verified": true
+    }
+  ]
+}

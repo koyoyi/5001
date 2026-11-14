@@ -1,0 +1,81 @@
+{
+  "status": "Recommended plan after candidate data audit; original submitted proposal and active experiment config unchanged.",
+  "date": "2026-11-12",
+  "recommended_dataset": "NVIDIA TechQA-RAG-Eval pinned snapshot",
+  "submitted_title_preserved": "Can Learned Reranking Improve Hybrid Retrieval for RAG?",
+  "application_subtitle": "Software technical-support evidence retrieval",
+  "user": "Software support engineers searching a fixed archive of IBM product documentation.",
+  "task": "Given a technical question or error description, retrieve relevant Technotes and show supporting source text.",
+  "preserved_from_submitted_proposal": [
+    "Three research questions about retrieval complementarity, learned reranking, and quality/latency trade-offs",
+    "BM25, frozen dense retrieval, RRF, L2 logistic regression, constrained random forest",
+    "Identical candidate union for RRF and learned rerankers",
+    "nDCG@10, Recall@20, candidate recall, median/p95 online latency",
+    "Fold-local preprocessing, group-aware validation, frozen final test, fixed-model citation demo"
+  ],
+  "changes_required": [
+    "Data section: replace FiQA corpus/query/qrels with this fixed technical-support archive.",
+    "Document-level qrels: any chunking must map back to original Technote IDs before evaluation.",
+    "Define one fixed long-document segmentation/aggregation policy shared by every method.",
+    "Custom group-disjoint train/dev/test; do not report this as official TechQA held-out benchmark.",
+    "Treat answerability as a separate audit, not a reliable global no-answer gold label.",
+    "Update sources, dataset counts, limitations and implementation dates."
+  ],
+  "split_proposal": {
+    "status": "Not frozen",
+    "group_unit": "Connected component of duplicate/near-duplicate cases and shared gold document IDs",
+    "approximate_group_ratios": {
+      "train": 0.7,
+      "dev": 0.15,
+      "test": 0.15
+    },
+    "seed": 20261112,
+    "cv": "Three-fold grouped CV on training groups only",
+    "uncertainty": "Paired resampling by independent case/document component; report actual group/query counts.",
+    "shared_corpus": "Same archive can be indexed by all splits; no QA answers or test labels in features."
+  },
+  "stages": [
+    "Review sample cases, duplicate document aliases and long-document policy; freeze cohort and group splits.",
+    "Build BM25/dense/RRF baselines and ID-aligned candidate runs.",
+    "Fit logistic/RF rerankers using training evidence links and explicitly described proxy negatives.",
+    "Select on development data, freeze pipeline, run held-out evaluation and error/latency analysis.",
+    "Build a small citation-search demonstration and course presentation/code appendix."
+  ],
+  "risks": [
+    "Around 581 canonical answerable queries before remaining review: suitable for a small exploratory reranking study, not a large-scale generalisation claim.",
+    "Historic IBM support documents do not directly evaluate current vLLM, CUDA, GPU troubleshooting or incident resolution.",
+    "Each retained query currently has one labelled positive document; Recall@20 is known-gold hit@20 here and does not measure exhaustive evidence recall.",
+    "The number of training positives actually retrieved by the shared candidate union is not known until retrieval is implemented.",
+    "No promised improvement over RRF; negative results remain valid."
+  ],
+  "other_candidates": [
+    {
+      "name": "RAGBench techqa",
+      "verification": "Pinned test parquet downloaded and inspected",
+      "test_rows": 314,
+      "test_unique_normalized_questions": 157,
+      "reason_not_primary": "Multiple generated answers per question and model-derived sentence labels; same TechQA source, not independent validation."
+    },
+    {
+      "name": "FreshStack",
+      "verification": "Official cards and API samples checked by collaborating agent",
+      "langchain_test_queries": 203,
+      "all_five_domains_test_queries": 672,
+      "reason_not_primary": "Official query sets are test-only; relevance labels use model-assisted nugget annotation. Custom supervised splitting changes protocol."
+    },
+    {
+      "name": "IBM watsonxDocsQA",
+      "verification": "Official card and train/test API samples checked by collaborating agents",
+      "corpus_documents": 1144,
+      "train_queries": 45,
+      "test_queries": 30,
+      "reason_not_primary": "Small independent-query count; useful as a supplementary technical-document evaluation domain."
+    },
+    {
+      "name": "PrimeQA original TechQA archive",
+      "verification": "HF metadata and partial HTTP range verified; not downloaded",
+      "archive_bytes": 2959973525,
+      "reason_not_primary": "Much heavier corpus; no additional independent query source compared with the small derivative."
+    }
+  ]
+}

@@ -2,17 +2,17 @@
 
 **Project title:** Can Learned Reranking Improve Hybrid Retrieval for RAG?
 
-**Team:** [TEAM NAME]  
-**Submitted:** [DD MONTH 2026]  
+**Team:** [TEAM NAME]
+**Submitted:** [DD MONTH 2026]
 **Draft date:** 7 November 2026
 
-| Member | UID | Proposed responsibility |
-|---|---|---|
-| [MEMBER 1] | [UID 1] | Data audit, indexing and candidate retrieval |
-| [MEMBER 2] | [UID 2] | Baselines and logistic reranker |
-| [MEMBER 3] | [UID 3] | Random forest and grouped validation |
-| [MEMBER 4] | [UID 4] | Evaluation, application and presentation |
-| [OPTIONAL MEMBER 5] | [UID 5] | Reproducibility and robustness |
+| Member      | UID      | Proposed responsibility                      |
+| ----------- | -------- | -------------------------------------------- |
+| HU Yuyi     | 60159701 | Data audit, indexing and candidate retrieval |
+| Wang Xin    | 61023715 | Baselines and logistic reranker              |
+| QUE Shenyun | 60269510 | Random forest and grouped validation         |
+| Tang Yuhe   | 61034951 | Evaluation, application                      |
+| Wang Chensu | 60979223 | Reproducibility and robustness               |
 
 ## 1. Background and Motivation
 
@@ -59,12 +59,12 @@ Deliverables include reproducible lexical/vector indexes, SQL experiment records
 
 ## 7. Timeline
 
-| Dates in November 2026 | Milestone |
-|---|---|
-| 7-13 | Audit splits; build indexes, BM25/dense/RRF and shared candidates |
-| 14-20 | Train logistic/RF models; grouped validation and pipeline freeze |
-| 21-26 | Final evaluation, latency/robustness analysis and citation demo |
-| 27-28 | At most 10 slides, 8-minute recording, code appendix and early submission |
+| Dates in November 2026 | Milestone                                                                 |
+| ---------------------- | ------------------------------------------------------------------------- |
+| 7-13                   | Audit splits; build indexes, BM25/dense/RRF and shared candidates         |
+| 14-20                  | Train logistic/RF models; grouped validation and pipeline freeze          |
+| 21-26                  | Final evaluation, latency/robustness analysis and citation demo           |
+| 27-28                  | At most 10 slides, 8-minute recording, code appendix and early submission |
 
 Template deadline: **29 November 2026, 11:59 PM**; subsequent course notices take precedence. No experimental performance is claimed in this proposal.
 
@@ -73,6 +73,6 @@ Template deadline: **29 November 2026, 11:59 PM**; subsequent course notices tak
 1. BEIR. [FiQA corpus and queries](https://huggingface.co/datasets/BeIR/fiqa).
 2. BEIR. [FiQA train/dev/test relevance judgments](https://huggingface.co/datasets/BeIR/fiqa-qrels).
 3. BEIR. [Official datasets and evaluation tools](https://github.com/beir-cellar/beir).
-4. Sentence Transformers. [Retrieve & Re-Rank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
+4. Sentence Transformers. [Retrieve &amp; Re-Rank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
 
 Sources accessed 7 November 2026.

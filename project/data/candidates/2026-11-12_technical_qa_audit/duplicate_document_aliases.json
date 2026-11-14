@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "filenames": [
+        "ssg1S1010477.txt",
+        "ssg1S1010478.txt",
+        "ssg1S1010476.txt"
+      ],
+      "gold_filenames": []
+    },
+    {
+      "filenames": [
+        "swg21454120.txt",
+        "swg21448977.txt"
+      ],
+      "gold_filenames": []
+    }
+  ],
+  "note": "Review exact-text aliases before freezing retrieval IDs and group assignments."
+}

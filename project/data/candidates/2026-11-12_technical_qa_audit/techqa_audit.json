@@ -1,0 +1,64 @@
+{
+  "audit_date": "2026-11-12",
+  "dataset": "nvidia/TechQA-RAG-Eval",
+  "revision": "0b5bbc84b7f07d6d09d063130e90b716d8d4a32a",
+  "source_card": "https://huggingface.co/datasets/nvidia/TechQA-RAG-Eval",
+  "verification": "Downloaded full JSON and ZIP; LFS SHA-256 checked in download_manifest.json.",
+  "corpus": {
+    "documents": 28481,
+    "uncompressed_bytes": 104882784,
+    "empty_text_documents": 0,
+    "documents_with_utf8_replacement_characters": 3,
+    "exact_text_duplicate_groups": 2,
+    "documents_in_exact_text_duplicate_groups": 5,
+    "character_length": {
+      "min": 183,
+      "median": 3182,
+      "p90": 6696,
+      "p95": 7919,
+      "p99": 9643,
+      "max": 178392
+    }
+  },
+  "records": {
+    "total": 910,
+    "unique_record_ids": 910,
+    "original_id_prefix_counts": {
+      "TRAIN": 600,
+      "DEV": 310
+    },
+    "answerable_records": 610,
+    "unanswerable_records": 300,
+    "normalized_unique_questions": 881,
+    "exact_duplicate_question_groups": 29,
+    "cross_original_split_duplicate_groups": 22,
+    "mixed_answerability_question_groups": 9,
+    "reference_context_content_matches": 610,
+    "missing_reference_documents": [],
+    "reference_content_mismatches": []
+  },
+  "conservative_ranking_cohort_proposal": {
+    "status": "Candidate audit only; not a frozen experimental split.",
+    "rule": "Exclude mixed-answerability normalized-question groups pending review; merge exact duplicate answerable questions and union their gold document IDs.",
+    "canonical_answerable_queries": 581,
+    "positive_query_document_pairs": 581,
+    "unique_gold_documents": 487,
+    "shared_gold_document_components": 487,
+    "max_queries_per_component": 8,
+    "remaining_checks": [
+      "Semantic near-duplicate questions",
+      "Exact corpus duplicate aliases",
+      "Long-document retrieval policy",
+      "Human sample review"
+    ]
+  },
+  "interpretation": [
+    "The source card says 908 QA pairs; the pinned JSON actually contains 910 records.",
+    "The Hugging Face split named train contains original TRAIN and DEV IDs; it is not a ready-made new train/dev/test protocol.",
+    "Original TechQA unanswerability is relative to its candidate setting and cannot be assumed to mean no evidence exists anywhere in this corpus.",
+    "Unjudged corpus documents are not confirmed negatives.",
+    "Questions, answers, contexts links and labels must not be indexed as additional corpus text.",
+    "This is a subset/archive study, not the full original TechQA 800k-document search task.",
+    "No retrieval, model training, latency benchmarking, or performance evaluation was run."
+  ]
+}

@@ -16,7 +16,7 @@ The project studies evidence retrieval for a citation-backed RAG application. It
 | [Experiment configuration](project/configs/rag_experiment.json) | Planned candidates, features, model budgets and metrics |
 | [Source audit](project/data/fiqa/source_audit.json) | Verified source information and split counts |
 
-Team name, member names, UIDs and submission date still need the group's details. The proposal contains no invented team information.
+The five member names and UIDs have been entered in the proposal. Team name and submission date remain to be filled; responsibilities are proposed.
 
 ## Architecture
 
