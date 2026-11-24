@@ -1,0 +1,56 @@
+{
+  "updated_at_utc": "2026-11-14T15:21:35.001967+00:00",
+  "primary_experiments": {
+    "head_lsa": {
+      "status": "verified",
+      "run_id": "20261114T135003226733Z_lsa",
+      "test_evaluated": false
+    },
+    "full_lsa": {
+      "status": "verified",
+      "run_id": "20261114T135456567288Z_lsa",
+      "test_evaluated": false
+    },
+    "head_onnx": {
+      "status": "verified",
+      "run_id": "20261114T144053296846Z_onnx",
+      "test_evaluated": false
+    }
+  },
+  "embedding_caches": [
+    {
+      "cache_key": "5fc68a859b5cc03cb64eb3fe286fff9cdf8cb58d3550283dee7eb5de1c917f85",
+      "precision": "float32",
+      "execution_provider": "DmlExecutionProvider",
+      "max_seq_length": 512,
+      "intra_op_threads": 8,
+      "completed_documents": 28478,
+      "total_documents": 28478,
+      "completion_percent": 100.0,
+      "recorded_encoding_seconds": 549.8960624999017,
+      "scope": "Partial corpus encoding is not a completed retrieval/training experiment"
+    },
+    {
+      "cache_key": "d3c7a2648ad0428f18fd482838a164b847e18479ed41336b6c5f860326281cb6",
+      "precision": "float32",
+      "execution_provider": "CPUExecutionProvider",
+      "max_seq_length": 512,
+      "intra_op_threads": 8,
+      "completed_documents": 19552,
+      "total_documents": 28478,
+      "completion_percent": 68.66,
+      "recorded_encoding_seconds": 2781.6409891000367,
+      "scope": "Partial corpus encoding is not a completed retrieval/training experiment"
+    }
+  ],
+  "training_ablations": {
+    "status": "complete",
+    "completed_variants": 0,
+    "total_variants": 6
+  },
+  "frozen_holdout": {
+    "run_id": "frozen_e2324b7a967c5dbe2766ecc3",
+    "status": "completed",
+    "heldout_scored": true
+  }
+}

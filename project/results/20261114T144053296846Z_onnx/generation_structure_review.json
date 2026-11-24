@@ -1,0 +1,140 @@
+{
+  "scope": "posthoc structural validation only; no generation rerun or prompt/model change; original demo JSON preserved",
+  "reviewer": "Codex assistant AI-assisted structural audit; not independent human review",
+  "created_at_utc": "2026-11-14T15:11:20.315281+00:00",
+  "original_demo_sha256": "6c37ffb07e2dcbefc7e58461461ff42ec556e1f9fc294511a433df4719750dc9",
+  "checks_source_sha256": "8d9449d7db5085c920d7e52364f9c6c09661ba53f6e8511af867406edd4cc309",
+  "semantic_support": "unverified pending separate case review",
+  "cases": [
+    {
+      "query_id": "TRAIN_Q049",
+      "original_status": "two_stage_citation_proposed_semantics_unverified",
+      "posthoc_structure_status": "failed_label_only_content",
+      "raw_output": "D3",
+      "raw_citation_output": "[D3]",
+      "citation_map": {
+        "[D1]": "swg21996059.txt",
+        "[D2]": "swg22014520.txt",
+        "[D3]": "swg22013204.txt"
+      },
+      "input_tokens": 286,
+      "selector_input_tokens": 234,
+      "known_gold_in_candidates_diagnostic_only": false,
+      "checks": {
+        "observed_citations": [],
+        "unknown_citations": [],
+        "citations_absent": true,
+        "explicit_abstention": false,
+        "citation_only_output": true,
+        "bare_label_only_output": true,
+        "citation_format_passed": false,
+        "semantic_support": "not_verified_requires_human_review",
+        "answer_accuracy_evaluated": false
+      }
+    },
+    {
+      "query_id": "DEV_Q010",
+      "original_status": "abstained",
+      "posthoc_structure_status": "abstained",
+      "raw_output": "Insufficient evidence.",
+      "raw_citation_output": null,
+      "citation_map": {
+        "[D1]": "swg21366625.txt",
+        "[D2]": "swg21317981.txt",
+        "[D3]": "swg21383033.txt"
+      },
+      "input_tokens": 512,
+      "selector_input_tokens": null,
+      "known_gold_in_candidates_diagnostic_only": true,
+      "checks": {
+        "observed_citations": [],
+        "unknown_citations": [],
+        "citations_absent": true,
+        "explicit_abstention": true,
+        "citation_only_output": false,
+        "bare_label_only_output": false,
+        "citation_format_passed": false,
+        "semantic_support": "not_verified_requires_human_review",
+        "answer_accuracy_evaluated": false
+      }
+    },
+    {
+      "query_id": "DEV_Q014",
+      "original_status": "two_stage_citation_proposed_semantics_unverified",
+      "posthoc_structure_status": "two_stage_citation_proposed_semantics_unverified",
+      "raw_output": "Installation Manager changed from using updateInstaller starting with WebSphere Application Server version 8.",
+      "raw_citation_output": "[D1]",
+      "citation_map": {
+        "[D1]": "swg21427178.txt",
+        "[D2]": "swg21651637.txt",
+        "[D3]": "swg21676099.txt"
+      },
+      "input_tokens": 512,
+      "selector_input_tokens": 468,
+      "known_gold_in_candidates_diagnostic_only": true,
+      "checks": {
+        "observed_citations": [],
+        "unknown_citations": [],
+        "citations_absent": true,
+        "explicit_abstention": false,
+        "citation_only_output": false,
+        "bare_label_only_output": false,
+        "citation_format_passed": false,
+        "semantic_support": "not_verified_requires_human_review",
+        "answer_accuracy_evaluated": false
+      }
+    },
+    {
+      "query_id": "DEV_Q035",
+      "original_status": "abstained",
+      "posthoc_structure_status": "abstained",
+      "raw_output": "Insufficient evidence.",
+      "raw_citation_output": null,
+      "citation_map": {
+        "[D1]": "swg22013168.txt",
+        "[D2]": "swg22013088.txt",
+        "[D3]": "nas8N1022348.txt"
+      },
+      "input_tokens": 394,
+      "selector_input_tokens": null,
+      "known_gold_in_candidates_diagnostic_only": true,
+      "checks": {
+        "observed_citations": [],
+        "unknown_citations": [],
+        "citations_absent": true,
+        "explicit_abstention": true,
+        "citation_only_output": false,
+        "bare_label_only_output": false,
+        "citation_format_passed": false,
+        "semantic_support": "not_verified_requires_human_review",
+        "answer_accuracy_evaluated": false
+      }
+    },
+    {
+      "query_id": "DEV_Q046",
+      "original_status": "abstained",
+      "posthoc_structure_status": "abstained",
+      "raw_output": "Insufficient evidence.",
+      "raw_citation_output": null,
+      "citation_map": {
+        "[D1]": "swg22002589.txt",
+        "[D2]": "swg21998821.txt",
+        "[D3]": "swg21994872.txt"
+      },
+      "input_tokens": 451,
+      "selector_input_tokens": null,
+      "known_gold_in_candidates_diagnostic_only": true,
+      "checks": {
+        "observed_citations": [],
+        "unknown_citations": [],
+        "citations_absent": true,
+        "explicit_abstention": true,
+        "citation_only_output": false,
+        "bare_label_only_output": false,
+        "citation_format_passed": false,
+        "semantic_support": "not_verified_requires_human_review",
+        "answer_accuracy_evaluated": false
+      }
+    }
+  ]
+}

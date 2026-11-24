@@ -1,0 +1,988 @@
+{
+  "DEV_Q019": {
+    "question": "Help with Security Bulletin : Multiple vulnerabilities in IBM Java Runtime affect IIB and WMB (CVE-2015-0138)\n\nI need to understand details regarding Security Bulletin : Multiple vulnerabilities in IBM Java Runtime affect IBM Integration Bus and WebSphere Message Broker (CVE-2015-0138). This is also commonly referenced as “FREAK: Factoring Attack on RSA-EXPORT keys\" TLS/SSL client and server vulnerability. Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "DEV_Q019",
+    "question_cves": [
+      "CVE-2015-0138"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21700397.txt",
+        "sha256": "149c36ef2736487e6065d537b61bdeac263146e6ce31cdcfb1e59388802fa325",
+        "title": "Title: IBM Security Bulletin : Multiple vulnerabilities in IBM Java Runtime affect IBM Integration Bus and WebSphere Message Broker (CVE-2015-0138) - United States",
+        "cves": [
+          "CVE-2015-0138"
+        ],
+        "summary_excerpt": "The “FREAK: Factoring Attack on RSA-EXPORT keys\" TLS/SSL client and server vulnerability affects IBM® Runtime Environment Java™ Technology Edition 6SR16 (and earlier) used by WebSphere Message Broker and the IBM® Runtime Environment Java™ Technology Edition 7SR8 (and earlier) or 7R1 (and earlier) used by IBM Integration Bus.",
+        "affected_products_excerpt": "IBM Integration Bus V9, V10 \nIBM Integration Bus Toolkit V9,\nWebSphere Message Broker V7 and V8 \nWebSphere Message Broker Toolkit V7 and V8"
+      }
+    ]
+  },
+  "DEV_Q028": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities have been identified in WebSphere Application Server shipped with WSRR (CVE-2015-4911)\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities have been identified in WebSphere Application Server shipped with WebSphere Service Registry and Repository (CVE-2015-4911). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "DEV_Q028",
+    "question_cves": [
+      "CVE-2015-4911"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21975747.txt",
+        "sha256": "eb54c01901f4d86e6d84713a5bd59b2e51c0b3dd5d76ee2763a1fcdb59b60bd4",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities have been identified in WebSphere Application Server shipped with WebSphere Service Registry and Repository (CVE-2015-4872 CVE-2015-4911 CVE-2015-4893 CVE-2015-4803) - United States",
+        "cves": [
+          "CVE-2015-4803",
+          "CVE-2015-4872",
+          "CVE-2015-4893",
+          "CVE-2015-4911"
+        ],
+        "summary_excerpt": "WebSphere Application Server is shipped as a component of WebSphere Service Registry and Repository. Information about security vulnerabilities affecting WebSphere Application Server have been published in a security bulletin.",
+        "affected_products_excerpt": null
+      }
+    ]
+  },
+  "DEV_Q035": {
+    "question": "Help with Security Bulletin: API Connect is affected by a Node.js denial of service vulnerability (CVE-2017-14919)\n\nI need to understand details regarding Security Bulletin: API Connect is affected by a Node.js denial of service vulnerability (CVE-2017-14919). Where can I find this information? ",
+    "old_split": "dev",
+    "old_group": "DEV_Q035",
+    "question_cves": [
+      "CVE-2017-14919"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22013168.txt",
+        "sha256": "782a68884d9a635cefc5b281c32227321477f0507f48c5091c28dc96530c29d6",
+        "title": "Title: IBM Security Bulletin: API Connect is affected by a Node.js denial of service vulnerability (CVE-2017-14919) - United States",
+        "cves": [
+          "CVE-2017-14919"
+        ],
+        "summary_excerpt": "IBM API Connect has addressed the following vulnerability. \n\nNode.js is vulnerable to a denial of service, caused by an uncaught exception flaw in the zlib module. By making 8 an invalid value for the windowBits parameter, a remote attacker could exploit this vulnerability to cause the application to crash.",
+        "affected_products_excerpt": "Affected API Connect Affected Versions IBM API Connect 5.0.0.0-5.0.6.4 IBM API Connect 5.0.7.0-5.0.7.2 IBM API Connect 5.0.8.0-5.0.8.1"
+      }
+    ]
+  },
+  "DEV_Q072": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect WMB and IIB\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect WebSphere Message Broker and IBM Integration Bus. Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "DEV_Q072",
+    "question_cves": [],
+    "gold_documents": [
+      {
+        "document_id": "swg22005345.txt",
+        "sha256": "2bd34db7ae466117034f61d5e5b8ccb04410f6fd1076d73d4a79b08d534cf7e0",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect WebSphere Message Broker and IBM Integration Bus - United States",
+        "cves": [
+          "CVE-2016-9840",
+          "CVE-2016-9841",
+          "CVE-2016-9842",
+          "CVE-2016-9843",
+          "CVE-2017-1289",
+          "CVE-2017-3511"
+        ],
+        "summary_excerpt": "Multiple security vulnerabilities exist in the IBM® Runtime Environment Java™ Technology Edition Version 6 Service Refresh 16 Fix Pack 41 and earlier releases used by WebSphere Message Broker, and the IBM® Runtime Environment Java™ Technology Edition Version 7 Service Refresh 10 Fix Pack 1 and earlier releases used by WebSphere Message Broker and IBM Integration Bus, and the IBM® Runtime Environment Java™ Technology Edition Version 7R1 Service Refresh 4 Fix Pack 1 and earlier releases used by IBM Integration Bus. These issues were disclosed as part of the IBM Java SDK updates in April 2017. WebSphere Message Broker and IBM Integration Bus have addressed the applicable CVEs",
+        "affected_products_excerpt": "IBM Integration Bus V10.0.0.0- 10.0.0.8 \n\nIBM Integration Bus V9.0.0.0- 9.0.0.7 \n\nWebSphere Message Broker V8.0.0.0 - 8.0.0.8"
+      }
+    ]
+  },
+  "DEV_Q074": {
+    "question": "Help with Security Bulletin: Security Vulnerability in IBM WebSphere Application Server affects IBM SOA Policy Gateway Pattern for AIX Server 2.5 (CVE-2015-1920)\n\nI need to understand details regarding Security Bulletin: Security Vulnerability in IBM WebSphere Application Server affects IBM SOA Policy Gateway Pattern for AIX Server 2.5 (CVE-2015-1920). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "DEV_Q074",
+    "question_cves": [
+      "CVE-2015-1920"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21959169.txt",
+        "sha256": "d7071af704a399389ec1c4c5ff29b443495192111ab213bce07565756105985a",
+        "title": "Title: IBM Security Bulletin: Security Vulnerability in IBM WebSphere Application Server affects  IBM SOA Policy Gateway Pattern for AIX Server 2.5 (CVE-2015-1920) - United States",
+        "cves": [
+          "CVE-2015-1920"
+        ],
+        "summary_excerpt": "A vulnerability in WebSphere Application Server could allow a remote attacker to execute arbitrary code by connecting to a management port and executing a specific sequence of instructions.",
+        "affected_products_excerpt": "IBM SOA Policy Gateway Pattern for AIX Server version 2.5"
+      }
+    ]
+  },
+  "DEV_Q089": {
+    "question": "Security Bulletin: Vulnerability identified in OpenSSL shipped with IBM API Connect (CVE-2016-8610)\n\nI need to understand details regarding Security Bulletin: Vulnerability identified in OpenSSL shipped with IBM API Connect (CVE-2016-8610). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "DEV_Q089",
+    "question_cves": [
+      "CVE-2016-8610"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22002063.txt",
+        "sha256": "01f73b1190bf19145c5af5cf0aae3e7fa0f50dec13a558d18efa54cad42510fb",
+        "title": "Title: IBM Security Bulletin: Vulnerability identified in OpenSSL shipped with IBM API Connect (CVE-2016-8610) - United States",
+        "cves": [
+          "CVE-2016-8610"
+        ],
+        "summary_excerpt": "An SSL vulnerability was disclosed by the OpenSSL Project. IBM API Connect has addressed the applicable CVE.",
+        "affected_products_excerpt": "IBM API Connect V5.0.0.0 - V5.0.6.1"
+      }
+    ]
+  },
+  "DEV_Q098": {
+    "question": "Help with Security Bulletin: Multiple Vulnerabilities identified in IBM Java SDK affect WSRR and WSRR Studio\n\n\n\nI need to understand details regarding Security Bulletin: Multiple Vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio.\n\nThis is related to CVEID:\nCVE-2018-2633\n\nWhere can I find this information?",
+    "old_split": "train",
+    "old_group": "DEV_Q098",
+    "question_cves": [
+      "CVE-2018-2633"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22013955.txt",
+        "sha256": "52d236a91c55f7d7c2a27e2c594bbf0c9a524ba5803caea15159388da422a0cc",
+        "title": "Title: IBM Security Bulletin: Multiple Vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio - United States",
+        "cves": [
+          "CVE-2018-2579",
+          "CVE-2018-2602",
+          "CVE-2018-2603",
+          "CVE-2018-2633"
+        ],
+        "summary_excerpt": "Multiple vulnerabilities in IBM® SDK Java™ Technology Edition, Version 6 used by WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio. These issues were disclosed as part of the IBM Java SDK updates in January 2018.\n\nThese issues are also addressed by WebSphere Application Server Network Deployment shipped with WebSphere Service Registry and Repository.",
+        "affected_products_excerpt": "WebSphere Service Registry and Repository V8.5 and V8.0 and WebSphere Service Registry and Repository Studio V8.5 are affected."
+      }
+    ]
+  },
+  "DEV_Q129": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM OS Images for Red Hat Linux Systems and AIX (CVE-2015-0410 and CVE-2014-6593)\n\nI need to understand details regarding \"Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM OS Images for Red Hat Linux Systems and AIX (CVE-2015-0410 and CVE-2014-6593)\" Where can I find this information? ",
+    "old_split": "test",
+    "old_group": "DEV_Q129",
+    "question_cves": [
+      "CVE-2014-6593",
+      "CVE-2015-0410"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21962588.txt",
+        "sha256": "9193dd3d3418ba2bf4231583321dfe1a046942b6cd248fb4310ee894687f9c60",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM OS Images for Red Hat Linux Systems and AIX (CVE-2015-0410 and CVE-2014-6593) - United States",
+        "cves": [
+          "CVE-2014-6593",
+          "CVE-2015-0410"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition Version 6 and 7 that are used by IBM OS Images for Red Hat Linux Systems and AIX. These issues were disclosed as part of the IBM Java SDK updates in January 2015.",
+        "affected_products_excerpt": "IBM OS Image for Red Hat Linux Systems 2.0.0.1 and earlier.\nIBM OS Image for AIX 2.0.0.1 and earlier."
+      }
+    ]
+  },
+  "DEV_Q179": {
+    "question": "Help with Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server (CVE-2017-3735)\n\nI need to understand details regarding Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server (CVE-2017-3735). Where can I find this information?",
+    "old_split": "train",
+    "old_group": "DEV_Q179",
+    "question_cves": [
+      "CVE-2017-3735"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22014367.txt",
+        "sha256": "5433184a10615bba3a7298805dfe6f50ed8b4402588fb3a3ae6b86572b6d793b",
+        "title": "Title: IBM Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server (CVE-2017-3735) - United States",
+        "cves": [
+          "CVE-2017-3735"
+        ],
+        "summary_excerpt": "IBM WebSphere MQ 5.3 and IBM MQ 8 for HPE NonStop have addressed a vulnerability in which OpenSSL could allow a remote attacker to obtain sensitive information, caused by an error while parsing an IPAddressFamily extension in an X.509 certificate",
+        "affected_products_excerpt": "All versions of WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server"
+      }
+    ]
+  },
+  "DEV_Q182": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IIB and WMB\n\n\n\nI need to understand details regarding \"Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IBM Integration Bus and WebSphere Message Broker\" This is related to\nCVE-2017-10115\nCVE-2017-10116\nCVE-2017-10109\nCVE-2017-10108\n\nWhere can I find this information?",
+    "old_split": "train",
+    "old_group": "DEV_Q182",
+    "question_cves": [
+      "CVE-2017-10108",
+      "CVE-2017-10109",
+      "CVE-2017-10115",
+      "CVE-2017-10116"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22010090.txt",
+        "sha256": "53516e8d16c2f9a692c929261461cad4299d9503429d3045775d75819588c9fc",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IBM Integration Bus and WebSphere Message Broker - United States",
+        "cves": [
+          "CVE-2017-10108",
+          "CVE-2017-10109",
+          "CVE-2017-10115",
+          "CVE-2017-10116"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition, Version 7.1.4.10 and IBM® Runtime Environment Java™ Versions 7.0.10.10 and 7.1.4.10 used by IBM Integration Bus and WebSphere Message Broker. These issues were disclosed as part of the IBM Java SDK updates in Jul 2017.",
+        "affected_products_excerpt": "IBM Integration Bus V9.0.0.0 - V9.0.0.8 and V10.0.0.0 - V10.0.0.9 \n\nWebSphere Message Broker V8.0.0.0 - V8.0.0.9\nWebSphere Message Broker V7.0.0.0 - V7.0.0.8"
+      }
+    ]
+  },
+  "DEV_Q187": {
+    "question": "Help with Security Bulletin: Multiple Vulnerabilities identified in IBM Java SDK affect WSRR\n\nI need to understand details regarding Security Bulletin: Multiple Vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository, in particular CVE-2017-10115. Where can I find this information? ",
+    "old_split": "test",
+    "old_group": "DEV_Q187",
+    "question_cves": [
+      "CVE-2017-10115"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22007002.txt",
+        "sha256": "b611c288271d645504f8c40d8e364dc110b5c5013b616704a48821906d52c0a6",
+        "title": "Title: IBM Security Bulletin: Multiple Vulnerabilities in IBM® Java SDK affects WebSphere Application Server July 2017 CPU - United States",
+        "cves": [
+          "CVE-2017-10102",
+          "CVE-2017-10107",
+          "CVE-2017-10115",
+          "CVE-2017-10116"
+        ],
+        "summary_excerpt": "There are multiple vulnerabiltities in the IBM® SDK Java™ Technology Edition that is shipped with IBM WebSphere Application Server. These issues were disclosed as part of the IBM Java SDK updates in July 2017. These may affect some configurations of IBM WebSphere Application Server Traditional, IBM WebSphere Application Server Liberty and IBM WebSphere Application Server Hypervisor Edition.",
+        "affected_products_excerpt": "IBM SDK, Java Technology Editions shipped with WebSphere Application Server Liberty up to 17.0.0.2. IBM SDK, Java Technology Editions shipped with IBM WebSphere Application Server Traditional Version 9.0.0.0 through 9.0.0.4, 8.5.0.0 through 8.5.5.12, Version 8.0.0.0 through 8.0.0.13, Version 7.0.0.0 through 7.0.0.43. \n\n * This does not occur on IBM SDK, Java Technology Editions that are shipped with WebSphere Application Servers Fix Packs 17.0.0.3, 9.0.0.5 8.5.5.13, 8.0.0.14, and 7.0.0.45 or later."
+      }
+    ]
+  },
+  "DEV_Q235": {
+    "question": "Security Bulletin: A vulnerability in IBM Java Runtime affects IBM WebSphere MQ (CVE-2016-3485)\n\nI need to understand details regarding Security Bulletin: A vulnerability in IBM Java Runtime affects IBM WebSphere MQ (CVE-2016-3485). Where can I find this information?\n",
+    "old_split": "train",
+    "old_group": "DEV_Q235",
+    "question_cves": [
+      "CVE-2016-3485"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22001630.txt",
+        "sha256": "86bb894ed7cff442fd6fb8bc6c18b80e1ff651700655d7f354b43b428ab512f8",
+        "title": "Title: IBM Security Bulletin: A vulnerability in IBM Java Runtime affects IBM WebSphere MQ (CVE-2016-3485) - United States",
+        "cves": [
+          "CVE-2016-3485"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilites in IBM® Runtime Environment Java™ Versions 6 and 7 that are used by IBM WebSphere MQ. These issues were disclosed as part of the IBM Java SDK updates in July 2016.",
+        "affected_products_excerpt": "IBM MQ 9.0.0.x Long Term Support (LTS)\nMaintenance level 9.0.0.0 only\n\nIBM MQ 9.0.x Continuous Delivery Release (CDR)\nContinuous delivery update 9.0.1 only\n\nWebSphere MQ 8.0\nMaintenance levels between 8.0.0.0 and 8.0.0.5\n\nIBM MQ Appliance 8.0\nMaintenance levels between 8.0.0.0 and 8.0.0.5\n\nWebSphere MQ 7.5\nMaintenance levels between 7.5.0.0 and 7.5.0.7\n\nWebSphere MQ 7.1\nMaintenance levels between 7.1.0.0 and 7.1.0.7"
+      }
+    ]
+  },
+  "DEV_Q249": {
+    "question": "Help with Security Bulletin: IBM WebSphere MQ Administration command could cause denial of service (CVE-2016-8971)\n\nI need to understand details regarding Security Bulletin: IBM WebSphere MQ Administration command could cause denial of service (CVE-2016-8971). Where can I find this information?\n",
+    "old_split": "train",
+    "old_group": "DEV_Q249",
+    "question_cves": [
+      "CVE-2016-8971"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21998663.txt",
+        "sha256": "3435105ada042f7f6b48b4ae8045f4d07cda793f25b7d7fc886e92e0fa66c4c0",
+        "title": "Title: IBM Security Bulletin: IBM MQ administration command could cause denial of service (CVE-2016-8971) - United States",
+        "cves": [
+          "CVE-2016-8971"
+        ],
+        "summary_excerpt": "An administration command can cause IBM MQ to access an invalid memory address, leading to a segmentation failure and causing the queue manager to become unresponsive.",
+        "affected_products_excerpt": "IBM MQ V9.0 Long Term Support Release \n\nIBM MQ V9.0.0.0 only. \n\nIBM MQ V8.0 \n\nIBM MQ V8.0.0.0 - V8.0.0.5 maintenance levels."
+      }
+    ]
+  },
+  "DEV_Q307": {
+    "question": "Help with Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 for HP NonStop Server (CVE-2017-3735)\n\nI need to understand details regarding Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 for HP NonStop Server (CVE-2017-3735). What  versions of the product are affected?",
+    "old_split": "train",
+    "old_group": "DEV_Q179",
+    "question_cves": [
+      "CVE-2017-3735"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22014367.txt",
+        "sha256": "5433184a10615bba3a7298805dfe6f50ed8b4402588fb3a3ae6b86572b6d793b",
+        "title": "Title: IBM Security Bulletin: Vulnerabilities in OpenSSL affect WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server (CVE-2017-3735) - United States",
+        "cves": [
+          "CVE-2017-3735"
+        ],
+        "summary_excerpt": "IBM WebSphere MQ 5.3 and IBM MQ 8 for HPE NonStop have addressed a vulnerability in which OpenSSL could allow a remote attacker to obtain sensitive information, caused by an error while parsing an IPAddressFamily extension in an X.509 certificate",
+        "affected_products_excerpt": "All versions of WebSphere MQ 5.3 and MQ 8 for HPE NonStop Server"
+      }
+    ]
+  },
+  "TRAIN_Q007": {
+    "question": "Why do I get an exception when calling MQ after migrating my BPM environment (2035 MQRC_NOT_AUTHORIZED) ?\n\n\n\nWe migrated our BPM environment from V8.0 to 8.5.7. When we attempt to call the MQ service we are getting the following exception:\n\n     [10/16/17 13:50:05:273 AST] 0000026d SystemOut     O\n     com.ibm.msg.client.jms.DetailedJMSSecurityException: JMSWMQ2013: The\n     security authentication was not valid that was supplied for QueueManager\n     'QM1' with connection mode 'Client' and host name 'MQ1(1414)'.\n     Please check if the supplied username and password are correct on the\n     QueueManager to which you are connecting.\n     ...\n     Caused by: com.ibm.mq.MQException: JMSCMQ0001: WebSphere MQ call failed\n     with compcode '2' ('MQCC_FAILED') reason '2035' ('MQRC_NOT_AUTHORIZED').\n      at\n     com.ibm.msg.client.wmq.common.internal.Reason.createException(Reason.jav\n     a:204)\n      ... 162 more\n\nThe same MQ service is working fine in the old BPM environment. User name and password configured for the queue is correct. However, when we check the MQ logs, we observing the username is not used, instead the sys admin user seems to be used.",
+    "old_split": "test",
+    "old_group": "TRAIN_Q007",
+    "question_cves": [],
+    "gold_documents": [
+      {
+        "document_id": "swg21636093.txt",
+        "sha256": "ec6c9cfcf6111dfe6a0b4b96a879d6c703d44240fca6aabe0348358d4d02bc10",
+        "title": "Title: IBM 2035 MQRC_NOT_AUTHORIZED Connecting to WebSphere MQ from WebSphere Application Server via CLIENT Bindings - United States",
+        "cves": [],
+        "summary_excerpt": "Title: IBM 2035 MQRC_NOT_AUTHORIZED Connecting to WebSphere MQ from WebSphere Application Server via CLIENT Bindings - United States\n\nText:\n TECHNOTE (TROUBLESHOOTING)\n\nPROBLEM(ABSTRACT)\n This article covers the most common reasons why an application running in WebSphere Application Server receives a 2035 MQRC_NOT_AUTHORIZED error when connecting to MQ as a client over a network. Quick steps to work around the MQRC_NOT_AUTHORIZED errors during development are provided in the 'Resolving the problem' section, as well as considerations for implementing security in production environments. A summary is also provided of behavior for outbound scenarios with container-managed and component-managed security, as well as inbound behavior for listener ports and activiation specifications \n\nSYMPTOM\nJMSCMQ0001: WebSphere MQ call failed with compcode '2' ('MQCC_FAILED') reason '2035' ('MQRC_NOT_AUTHORIZED')\n\n\nCAUSE\nThe two most likely reasons why the connection is refused by MQ are as follows: \n\n 1. The user identifier passed across the client connection from the application server to MQ is not known on the server where the MQ queue manager is running, is not authorised to connect to MQ, or is longer than 12 characters and has been truncated.\n    We discuss how this user identifier is obtained and passed over the connection in more detail below.\n    For queue managers running on Windows, the following error might be seen in the MQ error logs for this scenario:\n    AMQ8075: Authorization failed because the SID for entity 'wasuser' cannot be obtained.\n    For UNIX no entry in the MQ error logs would be seen by default.\n    See technote MQS_REPORT_NOAUTH environment variable can be used to better diagnose return code 2035 [http://www-01.ibm.com/support/docview.wss?rs=171&uid=swg21299319",
+        "affected_products_excerpt": null
+      }
+    ]
+  },
+  "TRAIN_Q041": {
+    "question": "Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-5461)\n\nI need to understand details regarding Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-5461). Where can I find this information?",
+    "old_split": "test",
+    "old_group": "TRAIN_Q041",
+    "question_cves": [
+      "CVE-2017-5461"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22005055.txt",
+        "sha256": "a1d1bc64f832c2bf51bef420ec95ec87cbcf83df0e778e0a1880913f51005967",
+        "title": "Title: IBM Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-5461) - United States",
+        "cves": [
+          "CVE-2017-5461"
+        ],
+        "summary_excerpt": "IBM MQ Appliance has addressed a vulnerability in Network Security Services (NSS).",
+        "affected_products_excerpt": "IBM MQ Appliance 8.0 \n\nMaintenance levels between 8.0.0.0 and 8.0.0.6\nIBM MQ Appliance 9.0.x Continuous Delivery (CD) Release \n\nContinuous delivery updates between 9.0.1 and 9.0.3"
+      }
+    ]
+  },
+  "TRAIN_Q049": {
+    "question": "Help with Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with WSRR (CVE-2017-1731)\n\nI need to understand details regarding Security Bulletin: Vulnerability identified in IBM WebSphere Application Server shipped with IBM WebSphere Service Registry and Repository (CVE-2017-1741). We are running WAS traditional V8.5.  What is the recommended fix?",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q049",
+    "question_cves": [
+      "CVE-2017-1731",
+      "CVE-2017-1741"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22012345.txt",
+        "sha256": "3183f6ec3c693960d684b3e877d80387cc548820e0539b3d0749cd779154f452",
+        "title": "Title: IBM Security Bulletin: Potential Privilege Escalation in WebSphere Application Server Admin Console (CVE-2017-1731) - United States",
+        "cves": [
+          "CVE-2017-1731"
+        ],
+        "summary_excerpt": "There is a potential privilege escalation in WebSphere Application Server Admin Console.",
+        "affected_products_excerpt": "This vulnerability affects the following versions and releases of IBM WebSphere Application Server: \n\n * Version 9.0 \n * Version 8.5 \n * Version 8.0 \n * Version 7.0"
+      }
+    ]
+  },
+  "TRAIN_Q052": {
+    "question": "Help with Security Bulletin: IBM MQ is affected by a potential denial of service to channel processes (CVE-2017-1557)\n\nI need to understand details regarding Security Bulletin: IBM MQ is affected by a potential denial of service to channel processes (CVE-2017-1557). Where can I find this information?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q052",
+    "question_cves": [
+      "CVE-2017-1557"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22004378.txt",
+        "sha256": "785ca655630022de83d236813cb553622883a3e05c7318d220b7a679520022c8",
+        "title": "Title: IBM Security Bulletin: IBM MQ is affected by a potential denial of service to channel processes (CVE-2017-1557) - United States",
+        "cves": [
+          "CVE-2017-1557"
+        ],
+        "summary_excerpt": "An IBM MQ application with authority to connect to a remote queue manager could send a malicious request that could cause undefined behaviour within the channel process servicing that connection, including a loss of service for other connections being serviced by the same channel process.",
+        "affected_products_excerpt": "IBM MQ and IBM MQ Appliance v8.0.0.0 to v8.0.0.7 \n\nIBM MQ v9.0.0.0 LTS to v9.0.0.1 LTS \n\nIBM MQ and IBM MQ Appliance v9.0.1 CD to v9.0.3 CD"
+      }
+    ]
+  },
+  "TRAIN_Q084": {
+    "question": "Help with Security Bulletin: IBM MQ Clients connecting to an MQ Queue Manager can cause a SIGSEGV in the AMQRMPPA channel process terminating it (CVE-2018-1371)\n\nI need to understand details regarding Security Bulletin: IBM MQ Clients connecting to an MQ Queue Manager can cause a SIGSEGV in the AMQRMPPA channel process terminating it (CVE-2018-1371). Where can I find this information?\n",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q084",
+    "question_cves": [
+      "CVE-2018-1371"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22012983.txt",
+        "sha256": "aaffb8b4809920dfec5c965d676c2f0f61c782109e34fc9c53abb66d29d45ad3",
+        "title": "Title: IBM Security Bulletin: IBM MQ clients connecting to an MQ queue manager can cause a SIGSEGV in the amqrmppa channel process terminating it. (CVE-2018-1371) - United States",
+        "cves": [
+          "CVE-2018-1371"
+        ],
+        "summary_excerpt": "An IBM MQ client connecting to an MQ queue manager can cause a SIGSEGV in the queue manager's amqrmppa channel process, terminating it.",
+        "affected_products_excerpt": "IBM MQ V8.0 \n\n * Maintenance level 8.0.0.8\n\n\nIBM MQ V9 LTS  * Maintenance level 9.0.0.2\n\n\nIBM MQ V9 CD  * IBM MQ version 9.0.4"
+      }
+    ]
+  },
+  "TRAIN_Q089": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM® Java SDK affect WebSphere Enterprise Service Bus (CVE-2015-2613)\n\nI would like to know details on how vulnerabilities in IBM Java SDK affect Websphere Application Server and in turn, Websphere Enterprise Service Bus product. ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q089",
+    "question_cves": [
+      "CVE-2015-2613"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21965955.txt",
+        "sha256": "24a5adfa65e860176901f32842a0e8d9a6c613d67ceeb773fde27b8cec94d195",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM® Java SDK affect WebSphere Application Server that ships with WebSphere Enterprise Service Bus (CVE-2015-2613, CVE-2015-2601, CVE-2015-4749, CVE-2015-2625, CVE-2015-1931) - United States",
+        "cves": [
+          "CVE-2015-1931",
+          "CVE-2015-2601",
+          "CVE-2015-2613",
+          "CVE-2015-2625",
+          "CVE-2015-4749"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition that is shipped with IBM WebSphere Application Server that ships with WebSphere Enterprise Service Bus.",
+        "affected_products_excerpt": "WebSphere Enterprise Service Bus 6.2\nWebSphere Enterprise Service Bus 7.0\nWebSphere Enterprise Service Bus 7.5"
+      }
+    ]
+  },
+  "TRAIN_Q093": {
+    "question": "Help with Security Bulletin: WMB & IIB are affected by Open Source Tomcat vulnerability (CVE-2016-3092)\n\nI need to understand details regarding Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by Open Source Tomcat vulnerability (CVE-2016-3092). Where can I find this information? ",
+    "old_split": "test",
+    "old_group": "TRAIN_Q093",
+    "question_cves": [
+      "CVE-2016-3092"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21993043.txt",
+        "sha256": "e7a58b9887741087d39861751ffbb3c2ca419ebe1a455f47eeb183356b0950d7",
+        "title": "Title: IBM Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by Open Source Tomcat vulnerability (CVE-2016-3092) - United States",
+        "cves": [
+          "CVE-2016-3092"
+        ],
+        "summary_excerpt": "WebSphere Message Broker and IBM Integration Bus are affected by Open Source Apache Tomcat vulnerability.",
+        "affected_products_excerpt": "IBM Integration Bus V10.0 & V9.0 \n\nWebSphere Message Broker V8.0"
+      }
+    ]
+  },
+  "TRAIN_Q126": {
+    "question": "Security Bulletin: Incorrect saved channel status enquiry could cause denial of service for IBM MQ (CVE-2017-1236)\n\nI need to understand details regarding Security Bulletin: Incorrect saved channel status enquiry could cause denial of service for IBM MQ (CVE-2017-1236). Where can I find this information?\n",
+    "old_split": "test",
+    "old_group": "TRAIN_Q126",
+    "question_cves": [
+      "CVE-2017-1236"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22003510.txt",
+        "sha256": "f80201e14fa0d8258f6b1d4e4536e324173d8242e0a34474e1d31303f5e63659",
+        "title": "Title: IBM Security Bulletin: Incorrect saved channel status enquiry could cause denial of service for IBM MQ (CVE-2017-1236) - United States",
+        "cves": [
+          "CVE-2017-1236"
+        ],
+        "summary_excerpt": "IBM MQ could allow an authenticated user to potentially cause a denial of service by issuing an incorrect saved channel status inquiry.",
+        "affected_products_excerpt": "IBM MQ 9.0.2 Continuous Delivery \n\nIBM MQ Appliance 9.0.x Continuous Delivery \n\nIBM MQ 9.0 LTS \n\nIBM MQ 8.0 \n\nIBM MQ 8.0 Appliance"
+      }
+    ]
+  },
+  "TRAIN_Q171": {
+    "question": "Help with Security Bulletin: Security vulnerabilities have been identified in IBM DB2 shipped with WebSphere Remote Server (CVE-2014-8730)\n\nI need to understand details regarding Security Bulletin: Security vulnerabilities have been identified in IBM DB2 shipped with WebSphere Remote Server (CVE-2014-8730). Where can I find this information? ",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q171",
+    "question_cves": [
+      "CVE-2014-8730"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21700633.txt",
+        "sha256": "413563014d0d3a133b17b0f7a0790a428c08549b61b30c42634717054ec7df96",
+        "title": "Title: IBM Security Bulletin: Security vulnerabilities have been identified in IBM DB2 shipped with WebSphere Remote Server (CVE-2014-8730) - United States",
+        "cves": [
+          "CVE-2014-8730"
+        ],
+        "summary_excerpt": "IBM DB2 is shipped as a component of WebSphere Remote Server. Information about security vulnerabilities affecting IBM DB2 has been published in a security bulletin.",
+        "affected_products_excerpt": null
+      }
+    ]
+  },
+  "TRAIN_Q198": {
+    "question": "Help with Security Bulletin: IBM API Connect is affected by Node.js tough-cookie module vulnerability to a denial of service (CVE-2016-1000232)\n\nI need to understand details regarding Security Bulletin: IBM API Connect is affected by Node.js tough-cookie module vulnerability to a denial of service (CVE-2016-1000232). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q198",
+    "question_cves": [
+      "CVE-2016-1000232"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22013088.txt",
+        "sha256": "fc2355188714bfa3632119569731ca06bac87978a12e650c4ca4ce9a9d4e3b9d",
+        "title": "Title: IBM Security Bulletin: IBM API Connect is affected by Node.js tough-cookie module vulnerability to a denial of service (CVE-2016-1000232) - United States",
+        "cves": [
+          "CVE-2016-1000232"
+        ],
+        "summary_excerpt": "API Connect has addressed the following vulnerability. \n\nNode.js tough-cookie module is vulnerable to a denial of service, caused by a regular expression error. By using a sufficiently large HTTP request Cookie header, a remote attacker could exploit this vulnerability to cause the application to consume an overly large amount of CPU resources.",
+        "affected_products_excerpt": "Affected API Connect Affected Versions IBM API Connect 5.0.6.0-5.0.6.5 IBM API Connect 5.0.7.0-5.0.7.2 IBM API Connect 5.0.8.0"
+      }
+    ]
+  },
+  "TRAIN_Q212": {
+    "question": "Security Bulletin: Vulnerabilities in OpenSSL affect IBM WebSphere MQ Advanced Message Security (CVE-2016-2178)\n\nI need to understand details regarding Security Bulletin: Vulnerabilities in OpenSSL affect IBM WebSphere MQ Advanced Message Security (CVE-2016-2178). Where can I find this information?\n",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q212",
+    "question_cves": [
+      "CVE-2016-2178"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21999724.txt",
+        "sha256": "f2fbff5d60d7174669d61efaf88f3a4b2dcf1774b2aec3bc30df2a7927b43a87",
+        "title": "Title: IBM Security Bulletin: Vulnerabilities in OpenSSL affect IBM MQ Advanced Message Security (CVE-2016-2177, CVE-2016-2178) - United States",
+        "cves": [
+          "CVE-2016-2177",
+          "CVE-2016-2178"
+        ],
+        "summary_excerpt": "OpenSSL vulnerabilities were disclosed on September 22 and 26, 2016 by the OpenSSL Project. OpenSSL is used by IBM MQ Advanced Message Security on the IBM i platform only. IBM MQ Advanced Message Security has addressed the applicable CVEs.",
+        "affected_products_excerpt": "IBM MQ V8 \n\nMaintenance versions 8.0.0.0 through 8.0.0.5 are affected. \n\nIBM MQ V9 \n\n9.0.0.0 only"
+      }
+    ]
+  },
+  "TRAIN_Q214": {
+    "question": "Help with Security Bulletin: Vulnerabilities in IBM Dojo Toolkit affect IBM Image Construction and Composition Tool (CVE-2014-8917)\n\nI need to understand details regarding \"Security Bulletin: Vulnerabilities in IBM Dojo Toolkit affect IBM Image Construction and Composition Tool (CVE-2014-8917)\". Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q214",
+    "question_cves": [
+      "CVE-2014-8917"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21959709.txt",
+        "sha256": "7da3ced449a127461d25b481532616f6b705bbbc9d4954fd64d635e29cdc716a",
+        "title": "Title: IBM Security Bulletin: Vulnerabilities in IBM Dojo Toolkit affect IBM Image Construction and Composition Tool (CVE-2014-8917) - United States",
+        "cves": [
+          "CVE-2014-8917"
+        ],
+        "summary_excerpt": "IBM Dojo Toolkit is vulnerable to cross-site scripting and affects IBM Image Construction and Composition Tool.",
+        "affected_products_excerpt": "IBM Image Construction and Composition Tool v2.2.1.3 \nIBM Image Construction and Composition Tool v2.3.1.0 \nIBM Image Construction and Composition Tool v2.3.2.0"
+      }
+    ]
+  },
+  "TRAIN_Q216": {
+    "question": "Help with Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-7805)\n\nI need to understand details regarding Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-7805). Where can I find this information?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q216",
+    "question_cves": [
+      "CVE-2017-7805"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22009842.txt",
+        "sha256": "adb1fc23f4eadd5eeaf3c1e9b054c7c507de1df25b87cc1337caec84b80a6d69",
+        "title": "Title: IBM Security Bulletin: IBM MQ Appliance is affected by a Network Security Services (NSS) vulnerability (CVE-2017-7805) - United States",
+        "cves": [
+          "CVE-2017-7805"
+        ],
+        "summary_excerpt": "IBM MQ Appliance has addressed a vulnerability in Network Security Services (NSS).",
+        "affected_products_excerpt": "IBM MQ Appliance 8.0 \n\nMaintenance levels between 8.0.0.0 and 8.0.0.7\nIBM MQ Appliance 9.0.x Continuous Delivery (CD) Release \n\nContinuous delivery updates between 9.0.1 and 9.0.3"
+      }
+    ]
+  },
+  "TRAIN_Q244": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities identified in IBM Java SDK affect WSRR Studio (CVE-2015-4872)\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository Studio (CVE-2015-4872). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q244",
+    "question_cves": [
+      "CVE-2015-4872"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21971058.txt",
+        "sha256": "8918f896602f5a070848153b350b196e3d0110a58fa490b546a7882c0ccb9fe5",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository Studio (CVE-2015-4872, CVE-2015-4911, CVE-2015-4893, CVE-2015-4803) - United States",
+        "cves": [
+          "CVE-2015-4803",
+          "CVE-2015-4872",
+          "CVE-2015-4893",
+          "CVE-2015-4911"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition that is shipped with IBM WebSphere Service Registry and Repository Studio. These issues were disclosed as part of the IBM Java SDK updates in October 2015.",
+        "affected_products_excerpt": "WebSphere Service Registry and Repository Studio V8.5, V8.0, V7.5 and V7.0 are affected."
+      }
+    ]
+  },
+  "TRAIN_Q302": {
+    "question": "Help with Security Bulletin: Multiple Vulnerabilities identified in IBM Java SDK affect WSRR and WSRR Studio\n\n\n\nI need to understand details regarding Security Bulletin: Multiple Vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio.\n\nThis is related to CVEID:\nCVE-2018-2633\nCVE-2018-2603\nCVE-2018-2579\nCVE-2018-2602\n\nWhere can I find this information?",
+    "old_split": "train",
+    "old_group": "DEV_Q098",
+    "question_cves": [
+      "CVE-2018-2579",
+      "CVE-2018-2602",
+      "CVE-2018-2603",
+      "CVE-2018-2633"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22013955.txt",
+        "sha256": "52d236a91c55f7d7c2a27e2c594bbf0c9a524ba5803caea15159388da422a0cc",
+        "title": "Title: IBM Security Bulletin: Multiple Vulnerabilities identified in IBM® Java SDK affect WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio - United States",
+        "cves": [
+          "CVE-2018-2579",
+          "CVE-2018-2602",
+          "CVE-2018-2603",
+          "CVE-2018-2633"
+        ],
+        "summary_excerpt": "Multiple vulnerabilities in IBM® SDK Java™ Technology Edition, Version 6 used by WebSphere Service Registry and Repository and WebSphere Service Registry and Repository Studio. These issues were disclosed as part of the IBM Java SDK updates in January 2018.\n\nThese issues are also addressed by WebSphere Application Server Network Deployment shipped with WebSphere Service Registry and Repository.",
+        "affected_products_excerpt": "WebSphere Service Registry and Repository V8.5 and V8.0 and WebSphere Service Registry and Repository Studio V8.5 are affected."
+      }
+    ]
+  },
+  "TRAIN_Q312": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593)\n\nI need to understand details regarding \"Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593).\" Where can I find this information? ",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q312",
+    "question_cves": [
+      "CVE-2014-6593",
+      "CVE-2015-0410"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21962370.txt",
+        "sha256": "6e4d6c5d1b47b6d9571b5bd5f483ad2aab1570e6aac2ea8b03e1fe5eebe581aa",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593) - United States",
+        "cves": [
+          "CVE-2014-6593",
+          "CVE-2015-0410"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition Version 6 and 7 that are used by IBM Image Construction and Composition Tool. These issues were disclosed as part of the IBM Java SDK updates in January 2015.",
+        "affected_products_excerpt": "IBM Image Construction and Composition Tool v2.2.1.3 \nIBM Image Construction and Composition Tool v2.3.1.0 \nIBM Image Construction and Composition Tool v2.3.2.0"
+      }
+    ]
+  },
+  "TRAIN_Q321": {
+    "question": "Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect API Connect\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect API Connect (CVE-2017-10115, CVE-2017-10116). Where can I find this information?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q321",
+    "question_cves": [
+      "CVE-2017-10115",
+      "CVE-2017-10116"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22008382.txt",
+        "sha256": "526fca09878b05c5ac73a8caec44cc6d9b4e65b48e95db29c187b4beedd1ff14",
+        "title": "Title: IBM Security Bulletin:  Multiple vulnerabilities in IBM Java Runtime affect API Connect - United States",
+        "cves": [
+          "CVE-2017-10115",
+          "CVE-2017-10116"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® Runtime Environment Java™ used by IBM API Connect. \n\nThese issues were disclosed as part of the IBM Java SDK updates in July 2017.",
+        "affected_products_excerpt": "IBM API Connect V5.0.0.0 - V5.0.7.2"
+      }
+    ]
+  },
+  "TRAIN_Q324": {
+    "question": "Help with Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with IBM Business Monitor (CVE-2015-0138)\n\nI need to understand details regarding Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with IBM Business Monitor (CVE-2015-0138). Where can I find this information? ",
+    "old_split": "test",
+    "old_group": "TRAIN_Q324",
+    "question_cves": [
+      "CVE-2015-0138"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21700865.txt",
+        "sha256": "098b484ccd8a0dfd2be73a72f8ecc2a321aab52cb6ad30175f362fcf70a1c93c",
+        "title": "Title: IBM Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with IBM Business Monitor (CVE-2015-0138) - United States",
+        "cves": [
+          "CVE-2015-0138"
+        ],
+        "summary_excerpt": "WebSphere Application Server is shipped as a component of IBM Business Monitor. Information about a security vulnerability affecting WebSphere Application Server has been published in a security bulletin.",
+        "affected_products_excerpt": "The following products are affected: \n\n * WebSphere Business Monitor V7.0.0.x \n * IBM Business Monitor V7.5.x \n * IBM Business Monitor V8.0.1.x \n * IBM Business Monitor V8.5.5.0 \n * IBM Business Monitor V8.5.6.0"
+      }
+    ]
+  },
+  "TRAIN_Q343": {
+    "question": "Help with Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with WebSphere Service Registry and Repository (CVE-2017-1681)\n\nI need to understand details regarding Security Bulletin: A security vulnerability has been identified in WebSphere Application Server shipped with WebSphere Service Registry and Repository (CVE-2017-1681). Is WAS Liberty affected?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q343",
+    "question_cves": [
+      "CVE-2017-1681"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22010419.txt",
+        "sha256": "dd0b125a644345053b4e93c492b170a673c1a52f55238f331874d1a97f153332",
+        "title": "Title: IBM Security Bulletin: Information disclosure in WebSphere Application Server (CVE-2017-1681) - United States",
+        "cves": [
+          "CVE-2017-1681"
+        ],
+        "summary_excerpt": "There is a potential information disclosure vulnerability in WebSphere Application Server.",
+        "affected_products_excerpt": "This vulnerability affects the following versions and releases of IBM WebSphere Application Server: \n\n * Liberty \n * Version 9.0 \n * Version 8.5 \n * Version 8.0 \n * Version 7.0"
+      }
+    ]
+  },
+  "TRAIN_Q369": {
+    "question": "Security Bulletin: Vulnerabilities in OpenSSL affect IBM WebSphere MQ Advanced Message Security (CVE-2016-2177)\n\nI need to understand details regarding Security Bulletin: Vulnerabilities in OpenSSL affect IBM WebSphere MQ Advanced Message Security (CVE-2016-2177). Where can I find this information?\n",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q212",
+    "question_cves": [
+      "CVE-2016-2177"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21999724.txt",
+        "sha256": "f2fbff5d60d7174669d61efaf88f3a4b2dcf1774b2aec3bc30df2a7927b43a87",
+        "title": "Title: IBM Security Bulletin: Vulnerabilities in OpenSSL affect IBM MQ Advanced Message Security (CVE-2016-2177, CVE-2016-2178) - United States",
+        "cves": [
+          "CVE-2016-2177",
+          "CVE-2016-2178"
+        ],
+        "summary_excerpt": "OpenSSL vulnerabilities were disclosed on September 22 and 26, 2016 by the OpenSSL Project. OpenSSL is used by IBM MQ Advanced Message Security on the IBM i platform only. IBM MQ Advanced Message Security has addressed the applicable CVEs.",
+        "affected_products_excerpt": "IBM MQ V8 \n\nMaintenance versions 8.0.0.0 through 8.0.0.5 are affected. \n\nIBM MQ V9 \n\n9.0.0.0 only"
+      }
+    ]
+  },
+  "TRAIN_Q376": {
+    "question": "Help with Security Bulletin: Vulnerability in Apache Commons FileUpload affects WSRR (CVE-2016-1000031)\n\nI need to understand details regarding Security Bulletin: Vulnerability in Apache Commons FileUpload affects IBM WebSphere Service Registry and Repository (CVE-2016-1000031). Where can I find this information?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q376",
+    "question_cves": [
+      "CVE-2016-1000031"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22010680.txt",
+        "sha256": "3e4ea2ba698dd700d6f18ad49fa17013fc08f76a2fb4897949280da52a6de070",
+        "title": "Title: IBM Security Bulletin: Vulnerability in Apache Commons FileUpload affects IBM WebSphere Service Registry and Repository (CVE-2016-1000031) - United States",
+        "cves": [
+          "CVE-2016-1000031"
+        ],
+        "summary_excerpt": "Vulnerability in Apache Commons FileUpload affects IBM WebSphere Service Registry and Repository (CVE-2016-1000031)",
+        "affected_products_excerpt": "WebSphere Service Registry and Repository V8.5\nWebSphere Service Registry and Repository V8.0\n\nFor unsupported versions IBM recommends upgrading to a fixed, supported version of the product"
+      }
+    ]
+  },
+  "TRAIN_Q386": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593)\n\nI need to understand details regarding \"Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593).\" Where can I find  information regarding CVE-2014-6593?",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q312",
+    "question_cves": [
+      "CVE-2014-6593",
+      "CVE-2015-0410"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21962370.txt",
+        "sha256": "6e4d6c5d1b47b6d9571b5bd5f483ad2aab1570e6aac2ea8b03e1fe5eebe581aa",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2015-0410 and CVE-2014-6593) - United States",
+        "cves": [
+          "CVE-2014-6593",
+          "CVE-2015-0410"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition Version 6 and 7 that are used by IBM Image Construction and Composition Tool. These issues were disclosed as part of the IBM Java SDK updates in January 2015.",
+        "affected_products_excerpt": "IBM Image Construction and Composition Tool v2.2.1.3 \nIBM Image Construction and Composition Tool v2.3.1.0 \nIBM Image Construction and Composition Tool v2.3.2.0"
+      }
+    ]
+  },
+  "TRAIN_Q400": {
+    "question": "Security Bulletin: IBM MQ termination of a client application causes denial of service (CVE-2017-1235)\n\nI need to understand details regarding Security Bulletin: IBM MQ termination of a client application causes denial of service (CVE-2017-1235). Where can I find this information?\n",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q400",
+    "question_cves": [
+      "CVE-2017-1235"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22005415.txt",
+        "sha256": "d9330b77739f8e3fa127b300909412ef5876fc87d3d236cc0755ae4b26d7d90b",
+        "title": "Title: IBM Security Bulletin: IBM MQ termination of a client application causes denial of service (CVE-2017-1235) - United States",
+        "cves": [
+          "CVE-2017-1235"
+        ],
+        "summary_excerpt": "Termination during an MQGET call of a client application running on a channel with SHARECNV=1, could cause a SIGSEGV and termination of the channel agent process.",
+        "affected_products_excerpt": "IBM MQ V8.0 \n\nIBM MQ V8.0.0.6 and earlier maintenance levels. \n\nIBM MQ V9.0 Long Term Support Release \n\nIBM MQ V9.0.0.1 and earlier maintenance levels. \n\nIBM MQ V9.0 Continuous Delivery Release \n\nIBM MQ Continuous delivery update 9.0.3 and earlier maintenance levels."
+      }
+    ]
+  },
+  "TRAIN_Q406": {
+    "question": "Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect API Connect\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect API Connect ( CVE-2016-5548). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q406",
+    "question_cves": [
+      "CVE-2016-5548"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22006126.txt",
+        "sha256": "1c151c5e8449eaf3be8e56e39685c80c2e6c3a7d836356f8edd4b61914812ea1",
+        "title": "Title: IBM Security Bulletin:  Multiple vulnerabilities in IBM Java Runtime affect API Connect - United States",
+        "cves": [
+          "CVE-2016-2183",
+          "CVE-2016-5546",
+          "CVE-2016-5547",
+          "CVE-2016-5548",
+          "CVE-2016-5549",
+          "CVE-2017-3511"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® Runtime Environment Java™ used by IBM API Connect. \n\nThese issues were disclosed as part of the IBM Java SDK updates in January 2017 and April 2017.",
+        "affected_products_excerpt": "IBM API Connect V5.0.0.0 - V5.0.7.2"
+      }
+    ]
+  },
+  "TRAIN_Q426": {
+    "question": "Help with Security Bulletin: IBM MQ Clients can send a specially crafted message that could cause a channel to SIGSEGV. (CVE-2017-1747)\n\nI need to understand details regarding Security Bulletin: IBM MQ Clients can send a specially crafted message that could cause a channel to SIGSEGV. (CVE-2017-1747). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q426",
+    "question_cves": [
+      "CVE-2017-1747"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22012992.txt",
+        "sha256": "615ffac98db072d443fd2be2b298439963aee6a49a7489deb33f94e01b2c92bb",
+        "title": "Title: IBM Security Bulletin: IBM MQ Clients can send a specially crafted message that could cause a channel to SIGSEGV. (CVE-2017-1747) - United States",
+        "cves": [
+          "CVE-2017-1747"
+        ],
+        "summary_excerpt": "A specially crafted message could cause a denial of service in an IBM MQ application consuming messages that the application needs to perform data conversion on.",
+        "affected_products_excerpt": "IBM MQ V9 LTS\nMaintenance levels 9.0.0.0 - 9.0.0.2 \n\nIBM MQ V9 CD\nMaintenance levels 9.0.0 - 9.0.4"
+      }
+    ]
+  },
+  "TRAIN_Q450": {
+    "question": "MQRC_NOT_AUTHORIZED after migrating from Websphere V7.0 to V8.5.5\n\nAfter migration from WAS 7 TO WAS 8.5.5.3 ,WAS is unable to communicate with MQ and we see the following errors in the SystemOut.log:                                                         \n                                                                                                                                                                                                                      \ncom.ibm.msg.client.jms.DetailedJMSSecurityException: JMSWMQ2013: The security authentication was not valid that was supplied for QueueManager 'XXXQM' with connection mode 'Client' and host name 'ipaddress(port)'. \nPlease check if the supplied username and password are correct on the QueueManager to which you are connecting. at com.ibm.msg.client.wmq.common.internal.Reason .reasonToException(Reason.j ava:516)                 \n.....                                                                                                                                                                                                                 \nCaused by: com.ibm.mq.MQException: JMSCMQ0001: WebSphere MQ call failed with compcode '2' ('MQCC_FAILED') reason '2035' ('MQRC_NOT_AUTHORIZED'). at com.ibm.msg.client.wmq.common.internal.Reason.createException (Reason.java:204)\n                                                                         \n                                                                                                                                                                                                                      What is causing this?",
+    "old_split": "train",
+    "old_group": "TRAIN_Q272",
+    "question_cves": [],
+    "gold_documents": [
+      {
+        "document_id": "swg21662193.txt",
+        "sha256": "b09f01ae8e9e6a9b99d5dbcef71e10580b0636442b8e31842b9234b40ff0773e",
+        "title": "Title: IBM Changes in the default user identifier between WebSphere MQ V7.0.1 classes for JMS and WebSphere MQ V7.1 classes for JMS - United States",
+        "cves": [],
+        "summary_excerpt": "Title: IBM Changes in the default user identifier between WebSphere MQ V7.0.1 classes for JMS and WebSphere MQ V7.1 classes for JMS - United States\n\nText:\n TECHNOTE (FAQ)\n\nQUESTION\n You have configured a WebSphere Application Server WebSphere MQ messaging provider connection factory without an Authentication Alias and do not programmatically supply user identifier information when creating a connection to a queue manager. You notice a change in the default behaviour between WebSphere Application Server versions regarding the user identifier flowed on the MQCONN to the target WebSphere MQ Queue Manager:\n\n- When using WebSphere Application Server v7.0 and v8.0, no user identifier value (blank) is passed to the queue manager. \n\n- When using WebSphere Application Server V8.5, a non-blank user identifier value is passed to the queue manager. \n\nIn the latter case, you receive the following exception when creating a connection to a queue manager:\n\nJMSCMQ0001: WebSphere MQ call failed with compcode '2' ('MQCC_FAILED') reason '2035' ('MQRC_NOT_AUTHORIZED') \n\nIs this change in behaviour expected? \n\nANSWER\nWebSphere MQ access control is based on user identifiers. There is a deliberate change in the default behaviour between the WebSphere MQ V7.0.1 classes for JMS and the WebSphere MQ V7.1 (and later) classes for JMS regarding the default user identifier flowed to the queue manager.\nFrom the WebSphere MQ V7.1 classes for JMS onwards, a non-blank user identifier is always flowed to the queue manager when creating a connection to WebSphere MQ. This is true even if no user identifier has been specified, or a blank or null user identifier has been specified; for example by calling:\n\nMQConnectionFactory.createConnection();\n\nor:\n\nMQConnectionFactory.createConnection(“”, “”);\n\nor:\n\nMQConn",
+        "affected_products_excerpt": null
+      }
+    ]
+  },
+  "TRAIN_Q469": {
+    "question": "Help with Multiple vulnerabilities have been identified in WebSphere Application Server shipped with WSRR \n\nI need to understand details regarding Multiple vulnerabilities have been identified in WebSphere Application Server shipped with WebSphere Service Registry and Repository ( CVE-2011-4343). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q469",
+    "question_cves": [
+      "CVE-2011-4343"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22010993.txt",
+        "sha256": "f2cb0b72ab4fc2b369a9c9cd7fac4432908f5de3051d6404f1eebf81299eaacc",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities affect Java Server Faces (JSF) used by WebSphere Application Server shipped with Jazz for Service Management (CVE-2017-1583, CVE-2011-4343) - United States",
+        "cves": [
+          "CVE-2011-4343",
+          "CVE-2017-1583"
+        ],
+        "summary_excerpt": "There are two potential information disclosure vulnerabilities that affects the Java Server Faces (JSF) component used by WebSphere Application Server.",
+        "affected_products_excerpt": "Jazz for Service Management version 1.1.0 - 1.1.3"
+      }
+    ]
+  },
+  "TRAIN_Q493": {
+    "question": "Help with Security Bulletin: A security vulnerability has been identified in IBM WebSphere Application Server, which is shipped with, or a required product for, IBM Tivoli Network Manager IP Edition (CVE-2017-1741).\n\nI need to understand details regarding Security Bulletin: A security vulnerability has been identified in IBM WebSphere Application Server, which is shipped with, or a required product for, IBM Tivoli Network Manager IP Edition (CVE-2017-1741) Where can I find this information? ",
+    "old_split": "test",
+    "old_group": "TRAIN_Q493",
+    "question_cves": [
+      "CVE-2017-1741"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22012342.txt",
+        "sha256": "c509544b8a4d9b7ba5f43435d48f8e88e5d8fdb31263527de71dc227d602a308",
+        "title": "Title: IBM Security Bulletin: Information disclosure in WebSphere Application Server Admin Console (CVE-2017-1741) - United States",
+        "cves": [
+          "CVE-2017-1741"
+        ],
+        "summary_excerpt": "There is a potential information disclosure in the WebSphere Application Server Admin Console.",
+        "affected_products_excerpt": "This vulnerability affects the following versions and releases of IBM WebSphere Application Server: \n\n * Version 9.0 \n * Version 8.5 \n * Version 8.0 \n * Version 7.0"
+      }
+    ]
+  },
+  "TRAIN_Q513": {
+    "question": "Help with Security Bulletin: WMB and IIB are affected by denial of service vulnerability (CVE-2014-8901)\n\nI need to understand details regarding Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by denial of service vulnerability (CVE-2014-8901). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q513",
+    "question_cves": [
+      "CVE-2014-8901"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21697458.txt",
+        "sha256": "c013c747846d2ce2c6f80ecfbd2b2d5aeee5e5485dc3105f098aa554bafeebf7",
+        "title": "Title: IBM Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by denial of service vulnerability (CVE-2014-8901) - United States",
+        "cves": [
+          "CVE-2014-8901"
+        ],
+        "summary_excerpt": "WebSphere Message Broker and IBM Integration Bus are affected by denial of service vulnerability. Pattern matching while validating a specially crafted XML document causes XML4C to consume 100% CPU",
+        "affected_products_excerpt": "WebSphere Message Broker V8 \n\nIBM Integration Bus V9 and V10"
+      }
+    ]
+  },
+  "TRAIN_Q553": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2014-3566 and CVE-2014-6457)\n\nI need to understand details regarding \"Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2014-3566 and CVE-2014-6457) .\" Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q553",
+    "question_cves": [
+      "CVE-2014-3566",
+      "CVE-2014-6457"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21903249.txt",
+        "sha256": "68de42d48ad71c717da880a39d3f593a496e6cbeb1227fd06b5da255c842352f",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java SDK affect IBM Image Construction and Composition Tool (CVE-2014-3566 and CVE-2014-6457) - United States",
+        "cves": [
+          "CVE-2014-3566",
+          "CVE-2014-6457"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® SDK Java™ Technology Edition, Version 6 that is used by IBM PureApplication System. This also includes a fix for the Padding Oracle On Downgraded Legacy Encryption (POODLE) SSLv3 vulnerability (CVE-2014-3566). These were disclosed as part of the IBM Java SDK updates in October 2014.",
+        "affected_products_excerpt": "IBM Image Construction and Composition Tool v2.2.1.3 \nIBM Image Construction and Composition Tool v2.3.1.0 \nIBM Image Construction and Composition Tool v2.3.2.0"
+      }
+    ]
+  },
+  "TRAIN_Q572": {
+    "question": "Help with Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IBM WebSphere MQ (CVE-2016-0475)\n\nI need to understand details regarding Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IBM WebSphere MQ (CVE-2016-0475). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q572",
+    "question_cves": [
+      "CVE-2016-0475"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg21976896.txt",
+        "sha256": "689298b72b3fbec826d2343d2916aec2014ab05655883c13af5e7a84985d3753",
+        "title": "Title: IBM Security Bulletin: Multiple vulnerabilities in IBM Java Runtime affect IBM WebSphere MQ (CVE-2016-0475, CVE-2015-7575, CVE-2016-0448) - United States",
+        "cves": [
+          "CVE-2015-7575",
+          "CVE-2016-0448",
+          "CVE-2016-0475"
+        ],
+        "summary_excerpt": "There are multiple vulnerabilities in IBM® Runtime Environment Java™ Technology Edition that is used by IBM WebSphere MQ. These issues were disclosed as part of the IBM Java SDK updates in January 2016 and include the vulnerability commonly referred to as “SLOTH”.",
+        "affected_products_excerpt": "IBM JRE 7, Java Technology Edition, Version 7 provided by IBM WebSphere MQ 8.0.0.4 and earlier on all platforms (except IBM i and z/OS) \n\nIBM JRE 6, Java Technology Edition, Version 6 provided by IBM WebSphere MQ 7.5.0.5, IBM WebSphere MQ 7.1.0.7 and earlier on all platforms (except IBM i and z/OS)"
+      }
+    ]
+  },
+  "TRAIN_Q574": {
+    "question": "Help with Security Bulletin: WMB and IIB are affected by information disclosure vulnerability (CVE-2017-1126)\n\nI need to understand details regarding Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by information disclosure vulnerability (CVE-2017-1126). Where can I find this information? ",
+    "old_split": "train",
+    "old_group": "TRAIN_Q574",
+    "question_cves": [
+      "CVE-2017-1126"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22008470.txt",
+        "sha256": "f101c852a93b9a91ea6c56295ef0859cb567906b90ccdb34b8e847b09c548bed",
+        "title": "Title: IBM Security Bulletin: WebSphere Message Broker and IBM Integration Bus are affected by information disclosure vulnerability (CVE-2017-1126) - United States",
+        "cves": [
+          "CVE-2017-1126"
+        ],
+        "summary_excerpt": "IBM Integration Bus and WebSphere Message Broker have addressed the vulnerability that would allow an unauthorized user to obtain sensitive information about software versions, and which could lead to further attacks.",
+        "affected_products_excerpt": "IBM Integration Bus V9.0.0.0 - V9.0.0.8 and V10.0.0.0 - V10.0.0.9 \n\n WebSphere Message Broker V8.0.0.0 - V8.0.0.8"
+      }
+    ]
+  },
+  "TRAIN_Q584": {
+    "question": "Help with Security Bulletin: Vulnerability identified in IBM WebSphere Application Server shipped with WSRR (CVE-2017-1741)\n\nI need to understand details regarding Security Bulletin: Vulnerability identified in IBM WebSphere Application Server shipped with IBM WebSphere Service Registry and Repository (CVE-2017-1741). We are running WAS traditional V9.0.0.0.  What is the recommended fix?",
+    "old_split": "dev",
+    "old_group": "TRAIN_Q049",
+    "question_cves": [
+      "CVE-2017-1741"
+    ],
+    "gold_documents": [
+      {
+        "document_id": "swg22012345.txt",
+        "sha256": "3183f6ec3c693960d684b3e877d80387cc548820e0539b3d0749cd779154f452",
+        "title": "Title: IBM Security Bulletin: Potential Privilege Escalation in WebSphere Application Server Admin Console (CVE-2017-1731) - United States",
+        "cves": [
+          "CVE-2017-1731"
+        ],
+        "summary_excerpt": "There is a potential privilege escalation in WebSphere Application Server Admin Console.",
+        "affected_products_excerpt": "This vulnerability affects the following versions and releases of IBM WebSphere Application Server: \n\n * Version 9.0 \n * Version 8.5 \n * Version 8.0 \n * Version 7.0"
+      }
+    ]
+  },
+  "reviewer_provenance": "Codex assistant semantic/evidence review; not independent human or domain-expert adjudication",
+  "human_review_status": "not independently verified by actual team members or domain experts"
+}

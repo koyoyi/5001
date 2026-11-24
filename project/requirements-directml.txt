@@ -1,0 +1,3 @@
+# Windows DirectML environment, chosen separately from the CPU ORT environment.
+-r requirements-encoder-base.txt
+onnxruntime-directml==1.17.3

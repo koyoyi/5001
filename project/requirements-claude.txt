@@ -1,0 +1,13 @@
+# Optional Claude API generator for project/scripts/rag_demo.py --generator claude.
+# Install into the ignored project folder so the global Python is unchanged (run from the 5001 root):
+#   python -m pip install --target project/.vendor-claude --no-deps -r project/requirements-claude.txt
+# The script adds that folder to sys.path only for the Claude option. Versions below were tested
+# together with the base environment's anyio 4.13, pydantic 2.13, jiter 0.14 and typing-extensions 4.15.
+anthropic==2.12.0
+httpx2==2.16.2
+httpcore2==2.16.2
+h11==0.16.0
+idna==3.20
+truststore==0.10.5
+docstring-parser==0.18.0
+opentelemetry-api==1.45.2

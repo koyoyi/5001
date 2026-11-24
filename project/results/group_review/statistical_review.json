@@ -1,0 +1,23 @@
+{
+  "status": "initial_static_protocol_review_no_test_metrics_read",
+  "code_state_note": "Findings describe the code read at the start of this independent review. The parent is implementing follow-up changes concurrently; listed gaps and original line numbers are historical review findings, not a claim that they remain unresolved in the final code.",
+  "existing_strengths": [
+    "Gold-document aliases and char-near queries are unioned before splitting; no shared canonical gold document crosses existing splits.",
+    "GroupKFold keeps existing query components intact; scaler and supervised model fit only on the training fold.",
+    "Missed positives are never injected into candidates; no-positive queries leave supervised fitting but remain in the full query evaluation cohort.",
+    "Group bootstrap samples complete components and uses their query counts for the query-macro estimand."
+  ],
+  "gaps_verified_at_review_start": [
+    {"source": "project/src/ragstudy/experiment.py:164", "gap": "summarize currently computes only each learned model versus RRF, and only nDCG@10. No paired interval versus BM25 or for Recall@20."},
+    {"source": "project/src/ragstudy/features.py:34", "gap": "One fixed random negative sample with cap50 is used; sampling-cap, hardness and seed robustness are not evaluated."},
+    {"source": "project/src/ragstudy/features.py:43", "gap": "Equal total weight per query does not balance observed positive versus proxy-negative classes within a query; commonly one positive faces up to50 negatives."},
+    {"source": "project/src/ragstudy/experiment.py:90", "gap": "CV summary pools held-out query scores but does not save per-fold fitted-query/positive/negative/weight counts needed to diagnose training support."}
+  ],
+  "minimum_prespecified_additions": {
+    "paired_intervals": {"baselines": ["bm25", "rrf"], "challengers": ["logistic", "random_forest"], "extra_pair": ["bm25", "rrf"], "metrics": ["ndcg@10", "recall@20"], "resampling": "same paired group draws for all methods; 2000 iterations; query-macro difference", "interpretation": "exploratory post-selection development uncertainty, not a confirmatory significance claim"},
+    "negative_sampling": {"caps": [10, 50], "strategies_at_cap50": ["uniform_unjudged_union", "hard_unjudged_by_frozen_baseline_rank"], "negative_only_seeds": [20261114, 20261115, 20261116], "weighting": ["current_equal_query_total", "equal_query_total_and_half_positive_half_negative"], "control": "Hold reviewed cohort, candidates, CV folds, feature set and hyperparameter grids fixed. Avoid a full Cartesian sweep initially; compare one factor at a time against the same cap50 baseline."},
+    "fold_audit": ["query IDs and component IDs", "train/validation query and component counts", "training queries with/without a recalled positive", "selected positive/negative pair counts", "sum of sample weights by class and query", "per-fold nDCG@10 and candidate recall"],
+    "test_policy": "Freeze old holdout manifest SHA, preserve all old splits and quarantine every cross-old-split merged component. Never optimize sampling/group rules on test retrieval metrics.",
+    "comparison_policy": "Report the new reviewed/quarantined cohort as a new experiment version; run head/full and backends on the same retained query IDs. Earlier development means are historical evidence, not directly comparable before/after scores."
+  }
+}

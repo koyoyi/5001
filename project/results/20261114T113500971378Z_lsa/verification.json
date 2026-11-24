@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "run_id": "20261114T113500971378Z_lsa",
+  "verified_at_utc": "2026-11-14T11:47:43.361173+00:00",
+  "artifact_directory": "D:\\Users\\hyy\\Desktop\\guideline\\course\\5001\\project\\artifacts\\20261114T113500971378Z_lsa",
+  "checks": {
+    "exact_candidate_union": "recomputed_from_saved_local_index",
+    "tracked_csv": "passed",
+    "configuration_and_input_hashes": "passed",
+    "sqlite_integrity": "passed",
+    "component_and_shared_gold_split_isolation": "passed",
+    "complete_evaluation_query_cohort": "passed",
+    "candidate_label_consistency": "passed",
+    "independent_ranking_metrics": "passed",
+    "independent_aggregate_metrics": "passed",
+    "same_complete_candidate_set_membership": "passed",
+    "default_test_ranking_lock": "passed",
+    "bootstrap_scope": "means, group counts and interval bounds verified; interval draws not independently recomputed"
+  },
+  "warnings": [
+    "Candidate provenance was independently recomputed from the saved index; it is not an original-run retrieval log."
+  ],
+  "validation_source_sha256": {
+    "project/scripts/run_experiment.py": "4cddd9980e7ae9ae4767767d98271c240815097ec2287a8e6fe0cd992b7b9f80",
+    "project/scripts/verify_experiment.py": "c829867884ad7aeecb28cd93fa1944b85bda853906269b2278b119c6a183ea75",
+    "project/src/ragstudy/__init__.py": "4d8d2ef7001e8960fa8b74b996cb115d86a8e1345ec8a620fb98b8755cb092cf",
+    "project/src/ragstudy/data.py": "fbdd680add6bdcdb9781cb2456f5013e205e678f278d83863d85f15a9e7b6589",
+    "project/src/ragstudy/experiment.py": "2c1c27d2e1d2067087bdf8af814d9916886f00dbcb9456ad502313ae3ea82537",
+    "project/src/ragstudy/features.py": "251fb708ed8f17829495e8d49a6f1dd0edb43046d0e8fe4a3427eebf04cabd15",
+    "project/src/ragstudy/metrics.py": "e2f9a1444f95440aafdf278192eb9ba5c67fe7a2f247999f58f2d2ef39132f73",
+    "project/src/ragstudy/retrieval.py": "4bbe23d711b89a35924e41a4f45a74c92512ebe7fc98f8ee12d5478851646501",
+    "project/src/ragstudy/search.py": "e32a50fad7e794dfe301814ab05b1ef2971beb35fbf10e97a5aaaea684295f39"
+  },
+  "source_hash_scope": "Current validation source files; not evidence of code loaded by the original run",
+  "recomputed_candidates": true,
+  "counts": {
+    "queries": 581,
+    "evaluated_queries": 496,
+    "groups": 482,
+    "documents": 28478,
+    "candidates": 92491,
+    "saved_top20_rankings": 49600,
+    "test_evaluated": false
+  },
+  "evidence_sha256": {
+    "results.json": "87c190ea139cbbc1ab3598ba95f1949bbab0d74c530b4b89f87a0f1de96980ca",
+    "per_query_metrics.json": "5f0698ff28e2730784fa4af00006f6ccdcfb6bb14cd7b00822dcbc741a864e87",
+    "split_manifest.json": "8094c45eeb5468678350fb283a5face880cccd1a3b8f82478373bcce0d6e8e35",
+    "data_audit.json": "250a2b9ed59662d163dcbbb0abd656428469f8572621d13c8b4cf0868a315129",
+    "configuration.json": "fea948b93bec4348f3c57fcffef7a1c7b1e7b27fe1b98dde8df9f06a15b26d8d",
+    "experiments.sqlite": "8c0f9bc6100b8da77e8e6df5baba5c9d69a8bfffa6b5434b757fca960287a01d"
+  },
+  "tracked_csv_sha256": "18d525031b04aae66127422d7a483305297fbb7cbda50e4baa93e86d8308affa"
+}

@@ -1,0 +1,6 @@
+{
+  "artifact": "project/artifacts/20261114T144053296846Z_onnx",
+  "configuration_sha256": "5d4294aa8fc0dda3ee49def98a81785fcda308f2717e94a6b98bf0c3ad57cf81",
+  "cache_key": "5fc68a859b5cc03cb64eb3fe286fff9cdf8cb58d3550283dee7eb5de1c917f85",
+  "full_embedding_build_evidence": "project/results/20261114T144053296846Z_onnx/embedding_build.json"
+}

@@ -1,0 +1,3 @@
+-r requirements-encoder-base.txt
+onnxruntime==1.17.3
+# ORT 1.17.3 uses the NumPy 1.x ABI; core requirements deliberately pin NumPy <2.

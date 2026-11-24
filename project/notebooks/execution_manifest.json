@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "executed_at_utc": "2026-11-14T15:02:43.509921+00:00",
+  "run_id": "frozen_e2324b7a967c5dbe2766ecc3",
+  "kernel": "python3",
+  "results_sha256": "f49f902348d18286731b45466cfa05deeffb21671ba00e993222a75777c0cbd4",
+  "notebooks": [
+    {
+      "path": "project/notebooks/01_data_audit.ipynb",
+      "sha256": "10ccfb5f0f2612aa69781aca5fc19305970fd8f331a2d180f04af3a1dacba70e",
+      "executed_code_cells": 3
+    },
+    {
+      "path": "project/notebooks/02_retrieval_baselines.ipynb",
+      "sha256": "d18ddf13f7c788ef772663aee59c48d84212ae4840076fa077446360ce768f19",
+      "executed_code_cells": 3
+    },
+    {
+      "path": "project/notebooks/03_features_and_rerankers.ipynb",
+      "sha256": "8c046998d54882c05d6f6d3e0de0c3ca333d02d750ed03c1a61e62ff0b2c6fb3",
+      "executed_code_cells": 3
+    },
+    {
+      "path": "project/notebooks/04_development_evaluation.ipynb",
+      "sha256": "0ad334a24898d2db9068b8d71e0726eb32e89c6e2d48213560268d3ebc4adc89",
+      "executed_code_cells": 4
+    },
+    {
+      "path": "project/notebooks/05_citation_demo.ipynb",
+      "sha256": "f43021bcac6d2d8e36123c71f4f34f35b10dae305b1c5c4fef98c5874053d4eb",
+      "executed_code_cells": 2
+    }
+  ]
+}

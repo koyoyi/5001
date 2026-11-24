@@ -1,0 +1,49 @@
+{
+  "scope": "Reconstructed training sampling and saved development rankings only; no test metrics or model fitting",
+  "main_run": "20261114T144053296846Z_onnx",
+  "hard_negative_run": "20261114T144457293132Z_onnx",
+  "sampling_source_sha256": "b6c59889bbf6d053221603131d81da8ea9edb2bbf66adb5cd5b47110bddcfb4b",
+  "configuration_sha256": "5d4294aa8fc0dda3ee49def98a81785fcda308f2717e94a6b98bf0c3ad57cf81",
+  "source_candidate_sqlite_sha256": "993608a06332179dad93a1574544bdec9616e2366293fd8d5ca13292caf117db",
+  "development_rows_sha256": {
+    "20261114T144053296846Z_onnx": "cc77145ccdf755fd641228a773ab46a22a0164354425f0669aabf25a45d2d134",
+    "20261114T144457293132Z_onnx": "d167447a987f1cb2a7ddef4ae6b8873f6dfb53c4b68ff469299e360282d54d38"
+  },
+  "sampling": {
+    "random": {
+      "0": {
+        "rows": 18400,
+        "missing_bm25_rows": 6923,
+        "missing_bm25_fraction": 0.37625
+      },
+      "1": {
+        "rows": 368,
+        "missing_bm25_rows": 32,
+        "missing_bm25_fraction": 0.08695652173913043
+      }
+    },
+    "hard_bm25": {
+      "0": {
+        "rows": 18400,
+        "missing_bm25_rows": 0,
+        "missing_bm25_fraction": 0.0
+      },
+      "1": {
+        "rows": 368,
+        "missing_bm25_rows": 32,
+        "missing_bm25_fraction": 0.08695652173913043
+      }
+    }
+  },
+  "development_top20_missing_bm25_fraction": {
+    "main": {
+      "logistic": 0.05952380952380952,
+      "random_forest": 0.2220238095238095
+    },
+    "hard_bm25": {
+      "logistic": 1.0,
+      "random_forest": 1.0
+    }
+  },
+  "interpretation": "Hard-BM25 sampling excludes the missing-BM25 stratum from proxy negatives while retaining 32 observed positives there; both learned methods place that stratum in every development top20 position. This supports a sampling-support shortcut explanation, not changed retrieval coverage; provided-qrel and held-out limitations remain."
+}

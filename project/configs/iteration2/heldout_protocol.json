@@ -1,0 +1,43 @@
+{
+  "protocol": "TechQA v2 frozen primary evaluation preregistration",
+  "prepared_at_utc": "2026-11-14T14:00:10.134594+00:00",
+  "primary_analysis_name": "head_onnx",
+  "semantic_backend": "onnx",
+  "document_policy": "head",
+  "head_words": 256,
+  "encoder_max_seq_length": 512,
+  "primary_challenger": "logistic",
+  "primary_baseline": "weighted_rrf",
+  "primary_metric": "ndcg@10",
+  "secondary_methods": [
+    "bm25",
+    "semantic",
+    "rrf",
+    "random_forest"
+  ],
+  "secondary_metric": "recall@20",
+  "training_strategy": "random proxy negatives cap50, equal total weight per query, original nine features; hyperparameters by train component CV only",
+  "pipeline_selection": "head_onnx chosen before its development scores; ablations remain development robustness and cannot replace primary based on dev maxima",
+  "rrf_selection": "finite prespecified development grid in primary configuration, freeze chosen constant/weight from completed primary run",
+  "split_lock_manifest": "project/configs/techqa_split_lock.json",
+  "split_lock_sha256": "3560153467c440e69f75b14dff2918ede76c7c567aa75398f709641a8ab275c0",
+  "additional_query_groups": [
+    [
+      "TRAIN_Q007",
+      "TRAIN_Q272",
+      "TRAIN_Q450"
+    ]
+  ],
+  "query_policy": "Keep historical splits, quarantine entire confirmed MQ cross-split component, do not remap old train/dev into test",
+  "limitations": [
+    "Performance is measured against provided sparse/noisy archive qrels, not exhaustive relevance or generated-answer correctness",
+    "89 highest-risk cross-split pairs reviewed by Codex assistants; neither these judgments nor lower-similarity candidates are independently human/domain-expert adjudicated",
+    "SPSS Mac launch symptom group is an uncertainty sensitivity note, not a confirmed same-cause duplicate merge",
+    "Source CVE-2017-1741 versus gold CVE-2017-1731 conflicts remain source-quality warnings; no qrels corrected based on scores",
+    "Development intervals are exploratory; final primary contrast must be fixed before any held-out metric is opened"
+  ],
+  "stopping_rule": "After this one frozen heldout evaluation, report positive or negative result; do not retune using test outcomes",
+  "final_test_opened": false,
+  "reviewer_provenance": "Codex assistant review; actual members/domain experts have not independently validated the semantic judgments",
+  "provenance_clarified_at_utc": "2026-11-14T14:44:32.312244+00:00"
+}

@@ -1,0 +1,129 @@
+{
+  "scope": "Targeted manual semantic judgments after lexical and BGE screening; not automatic threshold merges; no retrieval scores inspected",
+  "candidate_source": "candidate_pairs.json",
+  "decisions": [
+    {
+      "ids": [
+        "TRAIN_Q450",
+        "TRAIN_Q007"
+      ],
+      "decision": "same_specific_issue_for_split_isolation",
+      "reason": "Post-upgrade MQ client identity propagation / 2035 authorization failure with identical JMS error chain and explicit changed user identity; preserve existing TRAIN_Q272 closure."
+    },
+    {
+      "ids": [
+        "TRAIN_Q216",
+        "TRAIN_Q041"
+      ],
+      "decision": "related_template_distinct_issue_do_not_merge",
+      "reason": "NSS/MQ Appliance bulletin wording is nearly identical but explicit CVE-2017-7805 versus CVE-2017-5461 changes the requested advisory. BGE=.995074 is a false-positive duplicate screen."
+    },
+    {
+      "ids": [
+        "TRAIN_Q553",
+        "TRAIN_Q312",
+        "TRAIN_Q386"
+      ],
+      "decision": "related_product_distinct_cves_do_not_merge",
+      "reason": "Same Image Construction/Composition Tool but disjoint 2014 versus 2015 Java SDK CVEs. TRAIN_Q312 and TRAIN_Q386 already share their component; do not link the separate TRAIN_Q553 issue."
+    },
+    {
+      "ids": [
+        "TRAIN_Q312",
+        "DEV_Q129"
+      ],
+      "decision": "same_cves_different_affected_product_do_not_merge",
+      "reason": "Image Construction/Composition Tool versus OS Images for Red Hat/AIX have different advisory/remediation targets even with the same CVE pair."
+    },
+    {
+      "ids": [
+        "TRAIN_Q306",
+        "DEV_Q077",
+        "TRAIN_Q024"
+      ],
+      "decision": "same_broad_license_transfer_goal_but_different_failure_do_not_merge",
+      "reason": "TRAIN_Q306 cannot enter a license into the Mac LAW after migration; its gold swg21966637 addresses administrator privileges/ownership. DEV_Q077/TRAIN_Q024 explicitly hit the new-activation quota on a GradPack license, with gold swg21592093. The shared transfer/new-machine theme does not establish the same support issue."
+    },
+    {
+      "ids": [
+        "TRAIN_Q555",
+        "TRAIN_Q515"
+      ],
+      "decision": "near_symptom_uncertain_same_cause_optional_conservative_quarantine",
+      "reason": "Both hang at the SPSS Mac splash/name screen, but the referenced OS-compatibility versus plist/APAR remedies differ. Not enough evidence to claim exact equivalence; complete inherited closure is provided as a predefined sensitivity option."
+    },
+    {
+      "ids": [
+        "TRAIN_Q582",
+        "TRAIN_Q579"
+      ],
+      "decision": "related_download_task_distinct_failure_do_not_merge",
+      "reason": "Vendor-purchased GradPack download fails across browsers versus a free-trial registration confirm step saying cannot save profile; distinct acquisition stages and symptoms."
+    },
+    {
+      "ids": [
+        "TRAIN_Q118",
+        "TRAIN_Q225",
+        "TRAIN_Q116"
+      ],
+      "decision": "related_portal_upgrade_distinct_context_do_not_merge",
+      "reason": "Explicit Portal7 profile/binary version mismatch; unspecified Portal7 CF29 failure; Portal8 CF14 application deployment error chain. The broad upgrade theme or BGE cosine cannot establish a single failure."
+    },
+    {
+      "ids": [
+        "TRAIN_Q522",
+        "TRAIN_Q443"
+      ],
+      "decision": "different_question_intent_do_not_merge",
+      "reason": "Cross-platform installation support question versus collecting diagnostics from a failing Unix installer. Similar product and platform but different requested operation."
+    },
+    {
+      "ids": [
+        "DEV_Q099",
+        "TRAIN_Q538"
+      ],
+      "decision": "distinct_component_release_do_not_merge",
+      "reason": "ITCAM Agent 7.2.0.0.7 availability versus Data Collector 7.2.0.0.14 availability; preserve component/release distinctions."
+    },
+    {
+      "ids": [
+        "TRAIN_Q316",
+        "DEV_Q052"
+      ],
+      "decision": "same_certificate_theme_distinct_endpoint_do_not_merge",
+      "reason": "Recover unavailable DataPower WebGUI versus validating a remote SSL peer after replacing its certificate. Different endpoint/direction and diagnostic action."
+    },
+    {
+      "ids": [
+        "TRAIN_Q109",
+        "TRAIN_Q080",
+        "TRAIN_Q015",
+        "DEV_Q066",
+        "TRAIN_Q291"
+      ],
+      "decision": "ambiguous_security_family_do_not_add_automatic_edges",
+      "reason": "Generic Red Hat security titles overlap, but two queries explicitly identify disjoint CVE sets; the three generic questions already form one inherited component. Broad topic grouping could be an independently predefined robustness split, not a claimed same-CVE duplicate merge."
+    }
+  ],
+  "bounded_followup_review": {
+    "pair_ledger": "high_risk_pair_review.json",
+    "gold_source_evidence": "gold_evidence_high_risk.json",
+    "reproduce_from_existing_screen": "python -B project/scripts/review_query_groups.py --adjudicate-high-risk",
+    "scope": "All89 old-cross-split, different-component pairs with BGE>=.90, including36 with char cosine<.50;47 unique queries",
+    "outcome": "81 different explicitly requested CVEs;5 different affected-product/advisory cases;1 MQ issue already handled in v2;2 reviewed but unresolved source-label conflicts. No additional confirmed merge is recommended.",
+    "unresolved_pairs": [
+      [
+        "TRAIN_Q493",
+        "TRAIN_Q584"
+      ],
+      [
+        "TRAIN_Q493",
+        "TRAIN_Q049"
+      ]
+    ],
+    "split_change": "None. Do not change current v2 or unlock test. Any later accepted same-issue edge requires separately recorded protocol revision and complete comparison."
+  },
+  "unreviewed_candidates": "The full989-pair ledger labels all89 in-scope pairs reviewed_this_round=true and900 outside this bounded round false. Of408 old-cross-split candidate pairs,319 are outside this follow-up threshold. Prior targeted judgments above remain available. Neither screening nor the bounded review proves absence of all semantic leakage.",
+  "reviewer_provenance": "Codex assistant semantic/evidence review; not independent human or domain-expert adjudication",
+  "human_review_status": "not independently verified by actual team members or domain experts"
+}

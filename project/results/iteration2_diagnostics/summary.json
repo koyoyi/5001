@@ -1,0 +1,195 @@
+{
+  "created_at_utc": "2026-11-14T13:44:02.206168+00:00",
+  "scope": "train/dev error analysis only",
+  "test_metrics_read": false,
+  "test_queries_scored": 0,
+  "answers_used_for_training_or_retrieval": false,
+  "historical_head_top20_match": true,
+  "corpus": {
+    "documents": 28478,
+    "head_words": 256,
+    "longer_than_head": 22050,
+    "document_words_median": 385.0,
+    "document_words_p95": 965.0,
+    "head_index_seconds": 4.165581199980807,
+    "full_index_seconds": 7.970950899994932,
+    "head_bm25_metadata": {
+      "method": "bm25",
+      "k1": 1.2,
+      "b": 0.75,
+      "idf": "log(1 + (N - df + 0.5) / (df + 0.5))",
+      "query_term_frequency": "linear",
+      "documents": 28478,
+      "vocabulary_size": 231710,
+      "average_document_tokens": 242.49497985839844,
+      "tokenizer": "[a-z0-9_]+(?:[.+#:/\\\\-][a-z0-9_]+)*[+#]*"
+    },
+    "full_bm25_metadata": {
+      "method": "bm25",
+      "k1": 1.2,
+      "b": 0.75,
+      "idf": "log(1 + (N - df + 0.5) / (df + 0.5))",
+      "query_term_frequency": "linear",
+      "documents": 28478,
+      "vocabulary_size": 363566,
+      "average_document_tokens": 451.0808410644531,
+      "tokenizer": "[a-z0-9_]+(?:[.+#:/\\\\-][a-z0-9_]+)*[+#]*"
+    }
+  },
+  "summary": {
+    "train": {
+      "queries": 412,
+      "groups": 337,
+      "original_candidate_misses": 66,
+      "head_bm25_better_than_rrf_ndcg10": 128,
+      "rrf_better_than_head_bm25_ndcg10": 23,
+      "full_bm25_improves_ndcg10": 51,
+      "full_bm25_worsens_ndcg10": 43,
+      "full_bm25_rescues_original_candidate_misses": 17,
+      "answer_location_counts": {
+        "head": 323,
+        "tail": 63,
+        "crosses_boundary": 25,
+        "not_exactly_located": 1
+      },
+      "retrieval": {
+        "head_bm25": {
+          "ndcg@10": 0.5427868541879691,
+          "recall@20": 0.7038834951456311,
+          "recall@100": 0.8179611650485437
+        },
+        "full_bm25": {
+          "ndcg@10": 0.5682842521271904,
+          "recall@20": 0.7330097087378641,
+          "recall@100": 0.8543689320388349
+        }
+      },
+      "ranking_failures_despite_available_candidate": {
+        "rrf": 97,
+        "logistic": 75,
+        "random_forest": 9
+      },
+      "answer_region_subgroups": {
+        "crosses_boundary": {
+          "queries": 25,
+          "original_candidate_misses": 5,
+          "head_bm25_recall100": 0.76,
+          "full_bm25_recall100": 0.8
+        },
+        "head": {
+          "queries": 323,
+          "original_candidate_misses": 39,
+          "head_bm25_recall100": 0.8637770897832817,
+          "full_bm25_recall100": 0.8668730650154799
+        },
+        "not_exactly_located": {
+          "queries": 1,
+          "original_candidate_misses": 0,
+          "head_bm25_recall100": 1.0,
+          "full_bm25_recall100": 1.0
+        },
+        "tail": {
+          "queries": 63,
+          "original_candidate_misses": 22,
+          "head_bm25_recall100": 0.6031746031746031,
+          "full_bm25_recall100": 0.8095238095238095
+        }
+      },
+      "full_vs_head_paired_ndcg10": {
+        "baseline": "head",
+        "challenger": "full",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.5427868541879691,
+        "challenger_mean": 0.5682842521271904,
+        "difference": 0.025497397939221234,
+        "ci_lower": 0.0037837829904444095,
+        "ci_upper": 0.04933400297871987,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 412,
+        "n_groups": 337,
+        "iterations": 2000,
+        "seed": 20261114
+      }
+    },
+    "dev": {
+      "queries": 84,
+      "groups": 72,
+      "original_candidate_misses": 14,
+      "head_bm25_better_than_rrf_ndcg10": 29,
+      "rrf_better_than_head_bm25_ndcg10": 8,
+      "full_bm25_improves_ndcg10": 3,
+      "full_bm25_worsens_ndcg10": 6,
+      "full_bm25_rescues_original_candidate_misses": 2,
+      "answer_location_counts": {
+        "tail": 9,
+        "head": 66,
+        "crosses_boundary": 9
+      },
+      "retrieval": {
+        "head_bm25": {
+          "ndcg@10": 0.5996691556084773,
+          "recall@20": 0.6904761904761905,
+          "recall@100": 0.7976190476190477
+        },
+        "full_bm25": {
+          "ndcg@10": 0.5960344704832407,
+          "recall@20": 0.6904761904761905,
+          "recall@100": 0.7857142857142857
+        }
+      },
+      "ranking_failures_despite_available_candidate": {
+        "rrf": 12,
+        "logistic": 13,
+        "random_forest": 12
+      },
+      "answer_region_subgroups": {
+        "crosses_boundary": {
+          "queries": 9,
+          "original_candidate_misses": 4,
+          "head_bm25_recall100": 0.5555555555555556,
+          "full_bm25_recall100": 0.5555555555555556
+        },
+        "head": {
+          "queries": 66,
+          "original_candidate_misses": 7,
+          "head_bm25_recall100": 0.8484848484848485,
+          "full_bm25_recall100": 0.8181818181818182
+        },
+        "tail": {
+          "queries": 9,
+          "original_candidate_misses": 3,
+          "head_bm25_recall100": 0.6666666666666666,
+          "full_bm25_recall100": 0.7777777777777778
+        }
+      },
+      "full_vs_head_paired_ndcg10": {
+        "baseline": "head",
+        "challenger": "full",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.5996691556084773,
+        "challenger_mean": 0.5960344704832407,
+        "difference": -0.0036346851252366807,
+        "ci_lower": -0.019498127454445624,
+        "ci_upper": 0.011748262740984283,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 84,
+        "n_groups": 72,
+        "iterations": 2000,
+        "seed": 20261114
+      }
+    }
+  },
+  "source_hashes": {
+    "train.json": "69d97231509482ed6bd5ec1c4bc0607acb82a88d11169eb8383592d0ca8b93c7",
+    "corpus.zip": "c06aa287dcc1abf8db6b49b8495df095db73342d729f6451ac330785245d10be"
+  },
+  "historical_database_sha256": "8c0f9bc6100b8da77e8e6df5baba5c9d69a8bfffa6b5434b757fca960287a01d",
+  "historical_configuration_sha256": "fea948b93bec4348f3c57fcffef7a1c7b1e7b27fe1b98dde8df9f06a15b26d8d",
+  "script_sha256": "07ff1f6f9e13374d0d4d8836650e1815ede2bd1d49bc5422a6c1615d7e6c2734",
+  "answer_location_rule": "first exact match after whitespace/case normalization; zero-based whitespace word positions; unmatched is unknown",
+  "full_text_comparison": "same unlabelled canonical corpus, BM25 k1/b unchanged; no model fitting, gold insertion or test scoring"
+}

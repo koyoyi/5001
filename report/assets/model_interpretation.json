@@ -1,0 +1,172 @@
+{
+  "source_run": "20261114T144053296846Z_onnx",
+  "note": "Deployed models read from search_bundle.joblib; no refit; test metrics not read.",
+  "feature_names": [
+    "bm25_score",
+    "semantic_score",
+    "bm25_recip_rank",
+    "semantic_recip_rank",
+    "missing_bm25",
+    "missing_semantic",
+    "term_coverage",
+    "log_query_len",
+    "log_doc_len"
+  ],
+  "logistic": {
+    "C": 0.1,
+    "intercept": -5.294778071155047,
+    "standardized_coefficients": {
+      "bm25_score": 0.1042654584103049,
+      "semantic_score": 0.017009961334865438,
+      "bm25_recip_rank": 0.43000328249099645,
+      "semantic_recip_rank": 0.472018287732673,
+      "missing_bm25": -0.398526476032263,
+      "missing_semantic": -0.8543639968003761,
+      "term_coverage": -0.03847751643043251,
+      "log_query_len": -0.013212233112869547,
+      "log_doc_len": 0.008501355450433751
+    },
+    "cv_ndcg@10": 0.6013760639067994,
+    "training_pairs": 18768
+  },
+  "random_forest": {
+    "params": {
+      "max_depth": 12,
+      "min_samples_leaf": 10
+    },
+    "impurity_importance": {
+      "bm25_score": 0.04791465510775071,
+      "semantic_score": 0.07968018508359949,
+      "bm25_recip_rank": 0.305544535511262,
+      "semantic_recip_rank": 0.4238393727495334,
+      "missing_bm25": 0.0009541255633693881,
+      "missing_semantic": 0.0027797482646385488,
+      "term_coverage": 0.08716330832003356,
+      "log_query_len": 0.026195335471197814,
+      "log_doc_len": 0.025928733928615038
+    },
+    "cv_ndcg@10": 0.5910895534163483
+  },
+  "weighted_rrf": {
+    "constant": 10,
+    "semantic_weight": 2.0,
+    "dev_ndcg@10": 0.6672837291045687
+  },
+  "rrf_constant": 10,
+  "dev_methods_ndcg10": {
+    "bm25": 0.5996691556084773,
+    "semantic": 0.6865282676196659,
+    "rrf": 0.6566918935469181,
+    "weighted_rrf": 0.6672837291045687,
+    "logistic": 0.669472506415858,
+    "random_forest": 0.6805884638686837
+  },
+  "retrieval_diagnostics": {
+    "recall@100": {
+      "train": {
+        "bm25": 0.8195121951219512,
+        "semantic": 0.8731707317073171,
+        "union": 0.8975609756097561
+      },
+      "dev": {
+        "bm25": 0.7976190476190477,
+        "semantic": 0.9047619047619048,
+        "union": 0.9285714285714286
+      }
+    },
+    "gold_in_candidates_not_top10": {
+      "train": {
+        "queries_with_gold_in_candidates": 368,
+        "bm25": 97,
+        "semantic": 89,
+        "rrf": 68,
+        "weighted_rrf": 72,
+        "logistic": 64,
+        "random_forest": 10
+      },
+      "dev": {
+        "queries_with_gold_in_candidates": 78,
+        "bm25": 21,
+        "semantic": 11,
+        "rrf": 14,
+        "weighted_rrf": 12,
+        "logistic": 14,
+        "random_forest": 13
+      }
+    }
+  },
+  "dev_answer_location_subgroups": {
+    "answer_in_head": {
+      "logistic": {
+        "baseline": "weighted_rrf",
+        "challenger": "logistic",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.6881955074426107,
+        "challenger_mean": 0.6909812240206155,
+        "difference": 0.002785716578004749,
+        "ci_lower": -0.017730077355424197,
+        "ci_upper": 0.024233072519023013,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 66,
+        "n_groups": 58,
+        "iterations": 2000,
+        "seed": 20261114
+      },
+      "random_forest": {
+        "baseline": "weighted_rrf",
+        "challenger": "random_forest",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.6881955074426107,
+        "challenger_mean": 0.7051288062333027,
+        "difference": 0.016933298790691942,
+        "ci_lower": -0.008800031335733548,
+        "ci_upper": 0.04859598729218499,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 66,
+        "n_groups": 58,
+        "iterations": 2000,
+        "seed": 20261114
+      }
+    },
+    "answer_after_or_across_word_256": {
+      "logistic": {
+        "baseline": "weighted_rrf",
+        "challenger": "logistic",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.5906072085317476,
+        "challenger_mean": 0.5906072085317476,
+        "difference": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 18,
+        "n_groups": 15,
+        "iterations": 2000,
+        "seed": 20261114
+      },
+      "random_forest": {
+        "baseline": "weighted_rrf",
+        "challenger": "random_forest",
+        "metric": "ndcg@10",
+        "baseline_mean": 0.5906072085317476,
+        "challenger_mean": 0.5906072085317476,
+        "difference": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "confidence_level": 0.95,
+        "resampling_unit": "group",
+        "aggregation_unit": "query",
+        "n_queries": 18,
+        "n_groups": 15,
+        "iterations": 2000,
+        "seed": 20261114
+      }
+    }
+  }
+}

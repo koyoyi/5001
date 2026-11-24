@@ -4,19 +4,23 @@
 
 The project studies evidence retrieval for a citation-backed RAG application. It compares BM25, dense retrieval, reciprocal rank fusion (RRF), and lightweight supervised rerankers on BEIR FiQA. The statistical-learning work is the training and evaluation of logistic regression and random forest ranking models.
 
-**Status: proposal and experimental protocol prepared; experiments have not been run.** No retrieval scores, latency gains or answer-accuracy improvements are claimed.
+**Status (14 November 2026): the original FiQA proposal is retained; TechQA now has three completed retrieval pipelines, six training sensitivity runs, independently checked SQL/ranking evidence and one frozen held-out evaluation.** The full pinned BGE FP32 corpus was encoded on the RTX 3060 through DirectML. LSA remains a separately identified baseline.
+
+The held-out primary comparison does **not** establish a reliable learned-reranking gain over weighted RRF: Logistic nDCG@10 is 0.5788 versus 0.5847, with a paired component-bootstrap difference interval spanning zero. See [the current experiment report](project/results/iteration2_summary.md) and [the fixed protocol](project/protocol/TechQA_v2.md).
+
+Start with [the implementation and commands](project/README.md) and [the exploratory configuration](project/configs/techqa_exploratory.json). The pinned neural backend is a separate option; results identify the backend actually used.
 
 ## Project documents
 
 | Document | Purpose |
 |---|---|
 | [English proposal](project/proposal/5001_Proposal_RAG.md) | Seven sections matching the course template |
-| [Proposal PDF](output/pdf/5001_Proposal_RAG.pdf) | Formatted review/submission draft |
-| [中文项目任务书](project/5001_RAG_项目任务书.md) | Methods, validation, implementation plan and deliverables |
+| [Proposal PDF](output/pdf/5001_Proposal_100032.pdf) | Existing formatted review/submission draft |
+| [中文项目任务书](5001_RAG_项目任务书.md) | Original methods, validation and deliverables |
 | [Experiment configuration](project/configs/rag_experiment.json) | Planned candidates, features, model budgets and metrics |
 | [Source audit](project/data/fiqa/source_audit.json) | Verified source information and split counts |
 
-The five member names and UIDs have been entered in the proposal. Team name and submission date remain to be filled; responsibilities are proposed.
+The five member names and UIDs have been entered in the proposal. Team name and submission date remain to be filled; responsibilities are proposed. The proposal describes FiQA; the later [TechQA audit and recommendation](project/data/candidates/2026-11-12_technical_qa_audit/recommended_experiment_plan.json) motivated a separately named exploratory implementation rather than silently replacing that proposal.
 
 ## Architecture
 
@@ -34,7 +38,7 @@ flowchart LR
     C --> G[Fixed-model answer with citations: demo]
 ~~~
 
-## Dataset and comparisons
+## Original proposal dataset and comparisons
 
 The primary benchmark is [BEIR FiQA](https://huggingface.co/datasets/BeIR/fiqa):
 
@@ -50,13 +54,13 @@ The generation layer is a citation-backed demonstration. Retrieval judgments do 
 
 | Stage | Deliverable | Current state |
 |---|---|---|
-| 1 | Source and split audit, proposal, protocol | Prepared |
-| 2 | BM25/dense indexes and shared candidate runs | Planned |
-| 3 | Logistic/RF rerankers and grouped validation | Planned |
-| 4 | Frozen test evaluation, latency and failure analysis | Planned |
-| 5 | Evidence-search API/interface, citation demo and presentation | Planned |
+| 1 | Source and split audit, proposal, protocol | FiQA proposal plus pinned TechQA audit |
+| 2 | Retrieval indexes and shared candidate runs | Head/full LSA and full-corpus BGE FP32 runs completed |
+| 3 | Logistic/RF rerankers and grouped validation | Three-fold component CV and six one-factor sensitivities completed |
+| 4 | Frozen test evaluation, latency and failure analysis | One frozen 84-query evaluation completed; sampling failure diagnosed |
+| 5 | Evidence search, citation demo and presentation | Evidence CLI plus local generation workflow; generated outputs require qualitative review |
 
-The implementation is planned around Python, scikit-learn, Sentence Transformers, a lexical index, an exact vector-search baseline, and SQL experiment records. Notebook workflows will accompany the implementation. Model weights, corpora, indexes and caches are not part of this documentation commit.
+The implementation uses Python, scikit-learn, exact sparse/vector search and SQL experiment records. Sentence Transformers is optional for the local neural backend. Generated models, indexes and caches stay in ignored local folders; compact results and verification evidence live under `project/results/`.
 
 ## Course materials
 

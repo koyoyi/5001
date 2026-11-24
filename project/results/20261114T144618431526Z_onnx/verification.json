@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "run_id": "20261114T144618431526Z_onnx",
+  "verified_at_utc": "2026-11-14T14:46:43.607626+00:00",
+  "artifact_directory": "D:\\Users\\hyy\\Desktop\\guideline\\course\\5001\\project\\artifacts\\20261114T144618431526Z_onnx",
+  "checks": {
+    "exact_candidate_union": "saved_retrieval_runs",
+    "tracked_csv": "passed",
+    "configuration_and_input_hashes": "passed",
+    "sqlite_integrity": "passed",
+    "component_and_shared_gold_split_isolation": "passed",
+    "complete_evaluation_query_cohort": "passed",
+    "candidate_label_consistency": "passed",
+    "independent_ranking_metrics": "passed",
+    "independent_aggregate_metrics": "passed",
+    "same_complete_candidate_set_membership": "passed",
+    "default_test_ranking_lock": "passed",
+    "bootstrap_scope": "means, group counts and interval bounds verified; interval draws not independently recomputed"
+  },
+  "warnings": [],
+  "validation_source_sha256": {
+    "project/scripts/run_experiment.py": "c30c1c7119a5392a35e35d4dae9597d1f148e10c8ff34b340c746d7d7cb86d88",
+    "project/scripts/verify_experiment.py": "72d622d45680b3517655d9e7a5bbaff603dd5c8bab6089a6277bf554e58899e9",
+    "project/src/ragstudy/__init__.py": "4d8d2ef7001e8960fa8b74b996cb115d86a8e1345ec8a620fb98b8755cb092cf",
+    "project/src/ragstudy/data.py": "bd7b790d0a6db69046759db56028694eddbe61e36af43f3073143993ed26f645",
+    "project/src/ragstudy/experiment.py": "41c0691082459891d0dc77bbdd70ae226cf0d3678ec4104ba67d22ac9890dc4a",
+    "project/src/ragstudy/features.py": "b6c59889bbf6d053221603131d81da8ea9edb2bbf66adb5cd5b47110bddcfb4b",
+    "project/src/ragstudy/generation.py": "00868d85c43e6e475ce8b2c4fd20b1d3a7f659f96723de2c85ac4f3b447c1a9f",
+    "project/src/ragstudy/metrics.py": "e2f9a1444f95440aafdf278192eb9ba5c67fe7a2f247999f58f2d2ef39132f73",
+    "project/src/ragstudy/neural.py": "1195bda7f72e82ea6dfe3184e504f4de31632bcf0ef8eb80c17b2d0dd5f903b1",
+    "project/src/ragstudy/replay.py": "f0a3cea0e48babda8f4e2a76e335cdacad3a52f7d89e46c69d1bde961436a891",
+    "project/src/ragstudy/retrieval.py": "41d9cb4a05cdb28a6df6ca1bb2a4dde097ad16007660f8fab2f1e305db5efcb6",
+    "project/src/ragstudy/search.py": "389c1325590be7425fa9d17dc656049849cc265e2ce7441936e4e97e77a15c1d"
+  },
+  "source_hash_scope": "Current validation source files; not evidence of code loaded by the original run",
+  "recomputed_candidates": false,
+  "counts": {
+    "queries": 578,
+    "evaluated_queries": 494,
+    "groups": 480,
+    "documents": 28478,
+    "candidates": 94473,
+    "saved_top20_rankings": 59280,
+    "test_evaluated": false
+  },
+  "evidence_sha256": {
+    "results.json": "56815af537461f182dbe5596f630a125661556fb6d413aa74022c1ba3d0b9e28",
+    "per_query_metrics.json": "483d638ec6e107fef90edb5d4003c5ea79668b59e305784f97731cad17edc0f4",
+    "split_manifest.json": "089b4a77346af498752a049291c5bc45ab67f98bef000397c78089daf97f5f92",
+    "data_audit.json": "02c0ad9c4b33aad202152203cd080bfd3b267af59c15b21a71a23e1690ca7a74",
+    "configuration.json": "2899e839dee502ec44a688c8307b08fbb35a95583ab69002b3e4812080cb3015",
+    "experiments.sqlite": "7d1b0c9a4e51c5264111d406bdd6d32b820dcd845a78a0a487f3085ad4a3f37d",
+    "candidate_runs.json": "21095e4012733df5a008b1a2fb18ca18c457cbd02e8edd826f3554ce54d53a4e"
+  },
+  "tracked_csv_sha256": "7cdb5c1f908b29cd6b2639041d39b6c148f6bdf97cea7eb7a284d6dc635e83cd"
+}

@@ -1,0 +1,61 @@
+{
+  "protocol": "TechQA iteration2: historical split lock + reviewed cross-split quarantine",
+  "seed": 20261114,
+  "source": "project/data/candidates/2026-11-12_technical_qa_audit/nvidia__TechQA-RAG-Eval",
+  "head_words": 256,
+  "near_duplicate_threshold": 0.9,
+  "semantic_backend": "lsa",
+  "lsa_dimensions": 128,
+  "encoder_path": "project/models/bge-small-en-v1.5",
+  "top_k": 100,
+  "max_proxy_negatives": 50,
+  "cv_folds": 3,
+  "logistic_C": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "rf_depth": [
+    6,
+    12
+  ],
+  "rf_min_leaf": [
+    10,
+    30
+  ],
+  "rf_trees": 200,
+  "rrf_constants": [
+    10,
+    60,
+    100
+  ],
+  "bootstrap_iterations": 2000,
+  "final_test_enabled": false,
+  "split_lock_manifest": "project/configs/techqa_split_lock.json",
+  "additional_query_groups": [
+    [
+      "TRAIN_Q007",
+      "TRAIN_Q272",
+      "TRAIN_Q450"
+    ]
+  ],
+  "rrf_semantic_weights": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "comparison_baselines": [
+    "bm25",
+    "rrf",
+    "weighted_rrf"
+  ],
+  "training_seed": 20261114,
+  "rf_prediction_jobs": 1,
+  "document_policy": "head",
+  "encoder_threads": 8,
+  "encoder_batch_size": 32,
+  "encoder_max_seq_length": 512,
+  "analysis_name": "head_lsa"
+}

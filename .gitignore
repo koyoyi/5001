@@ -15,6 +15,7 @@
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+.pytest_cache/
 .venv/
 venv/
 
@@ -44,3 +45,4 @@ Desktop.ini
 /project/models/
 /project/artifacts/
 /.cache/
+/project/.vendor*/

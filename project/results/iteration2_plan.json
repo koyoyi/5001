@@ -1,0 +1,31 @@
+{
+  "scope": "bounded development iteration, no final test tuning",
+  "primary_configurations": [
+    "project\\configs\\iteration2\\head_lsa.json",
+    "project\\configs\\iteration2\\full_lsa.json",
+    "project\\configs\\iteration2\\head_onnx.json"
+  ],
+  "group_policy": "only confirmed MQ specific-issue union; retain original holdout; quarantine whole cross-split component",
+  "robustness_one_factor_at_a_time": [
+    "negative_cap10",
+    "hard_bm25_cap50",
+    "balanced_query_classes",
+    "training_seed20261115",
+    "training_seed20261116",
+    "rank_features_only"
+  ],
+  "fixed_parameters_for_ablations": "reuse main training-group CV choices; do not retune on development",
+  "test_policy": "final_test_enabled remains false during iteration; test identities retained and no test metrics used",
+  "optional_spss_symptom_component": "not adopted as identical-root-cause; independent predefined quarantine sensitivity only",
+  "negative_cap_confound_control": "Fix total sample weight per query to 51 for the neural primary and its ablations, matching baseline cap50. Without this, normalizing weights to mean1 changes logistic effective regularization when cap changes to10.",
+  "encoder_runtime_optimization": {
+    "model_weights_and_token_limit_unchanged": true,
+    "provider": "DmlExecutionProvider",
+    "device_id": 1,
+    "hardware": "NVIDIA GeForce RTX3060 Laptop GPU6GiB",
+    "batch_size": 64,
+    "selection_basis": "Numerical CPU/GPU equivalence and corpus-only engineering throughput, before any head_onnx development metrics",
+    "numeric_probe": "project/results/neural_gpu_probe.json",
+    "batch_probe": "project/results/neural_gpu_batch64_probe.json"
+  }
+}

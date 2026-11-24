@@ -1,0 +1,81 @@
+{
+  "review_protocol": "outcome-blind-query-review-20261114-v1",
+  "status": "independent_recommendation_for_root_decision_not_applied",
+  "old_split_manifest": "project/artifacts/20261114T113637094562Z_neural/split_manifest.json",
+  "old_split_manifest_sha256": "8094c45eeb5468678350fb283a5face880cccd1a3b8f82478373bcce0d6e8e35",
+  "old_lsa_split_manifest_has_identical_sha256": true,
+  "test_retrieval_metrics_read": false,
+  "split_policy": "Preserve every old split. Union inherited gold/char components plus accepted manual edges. Quarantine every entire new component that spans old splits; never move old train/dev into test and never remove cases based on retrieval outcomes.",
+  "manual_rule": "Require the same affected product/context, concrete failure or operation, and materially matching diagnostic issue. Shared product/theme, security-bulletin template, matching generic error alone, or embedding score alone are insufficient. Different explicit CVEs, different affected products or distinct failure goals remain separate unless specific full-text evidence establishes the same underlying issue.",
+  "groups": [
+    {
+      "group_id": "review_mq_upgrade_default_userid_2035",
+      "query_ids": [
+        "TRAIN_Q007",
+        "TRAIN_Q272",
+        "TRAIN_Q450"
+      ],
+      "existing_group_ids": [
+        "TRAIN_Q007",
+        "TRAIN_Q272"
+      ],
+      "accepted_edge": [
+        "TRAIN_Q450",
+        "TRAIN_Q007"
+      ],
+      "old_splits": {
+        "TRAIN_Q007": "test",
+        "TRAIN_Q272": "train",
+        "TRAIN_Q450": "train"
+      },
+      "decision": "merge_for_split_isolation_and_quarantine_whole_component",
+      "reason": "Both describe an application-server/BPM upgrade followed by client MQ JMSWMQ2013/JMSCMQ0001 reason 2035; the second explicitly observes the system/admin username replacing the configured username. TRAIN_Q450 and TRAIN_Q272 already share gold swg21662193. That source explains changed default JMS user.name propagation after WAS 8.5; swg21636093 for TRAIN_Q007 covers the same client identity/authorization mechanism. This is a specific migration/identity issue rather than generic MQ authorization similarity.",
+      "char_cosine": 0.7659949910219706,
+      "bge_cosine": 0.9263185858726501
+    }
+  ],
+  "quarantine_ids": [
+    "TRAIN_Q007",
+    "TRAIN_Q272",
+    "TRAIN_Q450"
+  ],
+  "retained_counts_if_only_confirmed_recommendation_is_applied": {
+    "train_queries": 410,
+    "dev_queries": 84,
+    "test_queries": 84,
+    "train_groups": 336,
+    "dev_groups": 72,
+    "test_groups": 72,
+    "total_queries": 578,
+    "total_groups": 480
+  },
+  "optional_conservative_quarantine_not_a_confirmed_same_cause_duplicate": [
+    {
+      "name": "spss_mac_hangs_at_launch_splash",
+      "edge": [
+        "TRAIN_Q555",
+        "TRAIN_Q515"
+      ],
+      "query_ids_after_inherited_component_closure": [
+        "TRAIN_Q154",
+        "TRAIN_Q186",
+        "TRAIN_Q236",
+        "TRAIN_Q389",
+        "TRAIN_Q515",
+        "TRAIN_Q555",
+        "TRAIN_Q579"
+      ],
+      "existing_group_ids": [
+        "TRAIN_Q154",
+        "TRAIN_Q515"
+      ],
+      "char_cosine": 0.25886872545735357,
+      "bge_cosine": 0.8509867191314697,
+      "reason": "Both full questions describe SPSS on Mac stuck at its launch/name screen, a low-lexical-overlap near-problem risk. However TRAIN_Q555's gold is the OS compatibility guide swg21507587 whereas TRAIN_Q515's gold is the SPSS21/22 plist/APAR PM90266 launch-performance issue swg21651225. Same symptom does not establish the same cause. Keep as an explicitly optional sensitivity quarantine, not an asserted semantic equivalence.",
+      "if_accepted": "Quarantine all seven inherited members, not only the test query. Together with the confirmed MQ component, retained counts would be train 404, dev 84, test 83; do not choose this option based on resulting scores."
+    }
+  ],
+  "coverage_limitation": "Candidate file contains 989 review screens, 408 cross-split. Targeted full-question and source-document adjudication is recorded separately; this does not claim exhaustive human adjudication of all semantic paraphrases or permission to unlock final test.",
+  "reviewer_provenance": "Codex assistant semantic/evidence review; not independent human or domain-expert adjudication",
+  "human_review_status": "not independently verified by actual team members or domain experts"
+}

@@ -1,0 +1,815 @@
+{
+  "run_id": "20261114T113500971378Z_lsa",
+  "scope": "exploratory",
+  "final_test_evaluated": false,
+  "test_review_status": "human semantic duplicate review and protocol approval still pending",
+  "configuration_sha256": "fea948b93bec4348f3c57fcffef7a1c7b1e7b27fe1b98dde8df9f06a15b26d8d",
+  "source_hashes": {
+    "train.json": "69d97231509482ed6bd5ec1c4bc0607acb82a88d11169eb8383592d0ca8b93c7",
+    "corpus.zip": "c06aa287dcc1abf8db6b49b8495df095db73342d729f6451ac330785245d10be"
+  },
+  "data_audit": {
+    "dataset": "nvidia/TechQA-RAG-Eval",
+    "revision": "0b5bbc84b7f07d6d09d063130e90b716d8d4a32a",
+    "protocol": "Custom exploratory split; not the official held-out TechQA benchmark",
+    "raw_documents": 28481,
+    "unique_documents": 28478,
+    "source_records": 910,
+    "canonical_answerable_queries": 581,
+    "independent_components": 482,
+    "splits": {
+      "train": {
+        "queries": 412,
+        "groups": 337
+      },
+      "dev": {
+        "queries": 84,
+        "groups": 72
+      },
+      "test": {
+        "queries": 85,
+        "groups": 73
+      }
+    },
+    "seed": 20261114,
+    "head_words": 256,
+    "near_duplicate_char_cosine": 0.9,
+    "near_duplicate_pairs": [
+      {
+        "left": "DEV_Q192",
+        "right": "TRAIN_Q521",
+        "char_cosine": 0.957181453704834
+      },
+      {
+        "left": "DEV_Q192",
+        "right": "TRAIN_Q346",
+        "char_cosine": 0.9457674622535706
+      },
+      {
+        "left": "TRAIN_Q521",
+        "right": "TRAIN_Q346",
+        "char_cosine": 0.9502222537994385
+      },
+      {
+        "left": "TRAIN_Q353",
+        "right": "DEV_Q088",
+        "char_cosine": 0.9828675985336304
+      },
+      {
+        "left": "DEV_Q260",
+        "right": "TRAIN_Q162",
+        "char_cosine": 0.9887371063232422
+      },
+      {
+        "left": "TRAIN_Q556",
+        "right": "TRAIN_Q488",
+        "char_cosine": 0.9328963160514832
+      },
+      {
+        "left": "TRAIN_Q151",
+        "right": "DEV_Q304",
+        "char_cosine": 0.9623099565505981
+      },
+      {
+        "left": "DEV_Q304",
+        "right": "TRAIN_Q578",
+        "char_cosine": 0.9234189391136169
+      },
+      {
+        "left": "TRAIN_Q562",
+        "right": "TRAIN_Q017",
+        "char_cosine": 0.9342545866966248
+      },
+      {
+        "left": "TRAIN_Q322",
+        "right": "TRAIN_Q152",
+        "char_cosine": 0.9549094438552856
+      },
+      {
+        "left": "TRAIN_Q072",
+        "right": "TRAIN_Q150",
+        "char_cosine": 0.9786214828491211
+      },
+      {
+        "left": "TRAIN_Q072",
+        "right": "DEV_Q171",
+        "char_cosine": 0.990006685256958
+      },
+      {
+        "left": "TRAIN_Q150",
+        "right": "DEV_Q171",
+        "char_cosine": 0.9885013699531555
+      },
+      {
+        "left": "DEV_Q030",
+        "right": "TRAIN_Q065",
+        "char_cosine": 0.9190358519554138
+      },
+      {
+        "left": "TRAIN_Q015",
+        "right": "DEV_Q066",
+        "char_cosine": 0.9907140731811523
+      },
+      {
+        "left": "TRAIN_Q015",
+        "right": "TRAIN_Q291",
+        "char_cosine": 0.9242061376571655
+      },
+      {
+        "left": "DEV_Q066",
+        "right": "TRAIN_Q291",
+        "char_cosine": 0.9151545763015747
+      },
+      {
+        "left": "TRAIN_Q049",
+        "right": "TRAIN_Q584",
+        "char_cosine": 0.9311212301254272
+      },
+      {
+        "left": "TRAIN_Q386",
+        "right": "TRAIN_Q312",
+        "char_cosine": 0.9787658452987671
+      },
+      {
+        "left": "DEV_Q179",
+        "right": "DEV_Q307",
+        "char_cosine": 0.9088420867919922
+      },
+      {
+        "left": "TRAIN_Q224",
+        "right": "TRAIN_Q108",
+        "char_cosine": 0.969056248664856
+      },
+      {
+        "left": "TRAIN_Q359",
+        "right": "TRAIN_Q139",
+        "char_cosine": 0.9252196550369263
+      },
+      {
+        "left": "DEV_Q063",
+        "right": "TRAIN_Q258",
+        "char_cosine": 0.9954765439033508
+      },
+      {
+        "left": "DEV_Q008",
+        "right": "DEV_Q302",
+        "char_cosine": 0.9732016921043396
+      },
+      {
+        "left": "TRAIN_Q597",
+        "right": "TRAIN_Q330",
+        "char_cosine": 0.9881943464279175
+      },
+      {
+        "left": "TRAIN_Q597",
+        "right": "TRAIN_Q393",
+        "char_cosine": 0.9847114086151123
+      },
+      {
+        "left": "TRAIN_Q330",
+        "right": "TRAIN_Q393",
+        "char_cosine": 0.9846274852752686
+      },
+      {
+        "left": "TRAIN_Q401",
+        "right": "TRAIN_Q483",
+        "char_cosine": 0.9471156597137451
+      },
+      {
+        "left": "TRAIN_Q024",
+        "right": "TRAIN_Q460",
+        "char_cosine": 0.9372971057891846
+      },
+      {
+        "left": "DEV_Q094",
+        "right": "DEV_Q039",
+        "char_cosine": 0.9895944595336914
+      },
+      {
+        "left": "DEV_Q257",
+        "right": "TRAIN_Q278",
+        "char_cosine": 0.9782957434654236
+      },
+      {
+        "left": "TRAIN_Q280",
+        "right": "TRAIN_Q388",
+        "char_cosine": 0.9332160949707031
+      },
+      {
+        "left": "DEV_Q134",
+        "right": "TRAIN_Q120",
+        "char_cosine": 0.9695579409599304
+      },
+      {
+        "left": "TRAIN_Q101",
+        "right": "TRAIN_Q060",
+        "char_cosine": 0.9935324788093567
+      },
+      {
+        "left": "TRAIN_Q101",
+        "right": "TRAIN_Q517",
+        "char_cosine": 0.9852814674377441
+      },
+      {
+        "left": "TRAIN_Q060",
+        "right": "TRAIN_Q517",
+        "char_cosine": 0.9792687296867371
+      },
+      {
+        "left": "DEV_Q288",
+        "right": "DEV_Q291",
+        "char_cosine": 0.9888019561767578
+      },
+      {
+        "left": "TRAIN_Q194",
+        "right": "DEV_Q188",
+        "char_cosine": 0.969150960445404
+      },
+      {
+        "left": "TRAIN_Q203",
+        "right": "DEV_Q033",
+        "char_cosine": 0.9933161735534668
+      },
+      {
+        "left": "TRAIN_Q055",
+        "right": "TRAIN_Q053",
+        "char_cosine": 0.9923646450042725
+      },
+      {
+        "left": "TRAIN_Q369",
+        "right": "TRAIN_Q212",
+        "char_cosine": 0.9082722663879395
+      },
+      {
+        "left": "DEV_Q055",
+        "right": "DEV_Q262",
+        "char_cosine": 0.9744867086410522
+      },
+      {
+        "left": "TRAIN_Q490",
+        "right": "TRAIN_Q029",
+        "char_cosine": 0.9932398200035095
+      },
+      {
+        "left": "TRAIN_Q424",
+        "right": "TRAIN_Q255",
+        "char_cosine": 0.9613903760910034
+      },
+      {
+        "left": "TRAIN_Q413",
+        "right": "TRAIN_Q338",
+        "char_cosine": 0.9925131797790527
+      },
+      {
+        "left": "TRAIN_Q383",
+        "right": "TRAIN_Q417",
+        "char_cosine": 0.9768581986427307
+      },
+      {
+        "left": "TRAIN_Q573",
+        "right": "TRAIN_Q575",
+        "char_cosine": 0.9735544919967651
+      },
+      {
+        "left": "TRAIN_Q348",
+        "right": "TRAIN_Q394",
+        "char_cosine": 0.9661705493927002
+      },
+      {
+        "left": "DEV_Q112",
+        "right": "DEV_Q206",
+        "char_cosine": 0.9817184209823608
+      },
+      {
+        "left": "TRAIN_Q247",
+        "right": "DEV_Q261",
+        "char_cosine": 0.9902855753898621
+      },
+      {
+        "left": "TRAIN_Q588",
+        "right": "TRAIN_Q387",
+        "char_cosine": 0.9705938696861267
+      },
+      {
+        "left": "DEV_Q040",
+        "right": "TRAIN_Q134",
+        "char_cosine": 0.9892504215240479
+      },
+      {
+        "left": "TRAIN_Q227",
+        "right": "TRAIN_Q564",
+        "char_cosine": 0.9972896575927734
+      },
+      {
+        "left": "DEV_Q176",
+        "right": "DEV_Q175",
+        "char_cosine": 0.9855474233627319
+      }
+    ],
+    "excluded_conflicts": [
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q298",
+          "TRAIN_Q138"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q165",
+          "TRAIN_Q160"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q082",
+          "TRAIN_Q238"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q189",
+          "TRAIN_Q210"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q228",
+          "TRAIN_Q333"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q276",
+          "TRAIN_Q248"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "DEV_Q195",
+          "TRAIN_Q156"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "TRAIN_Q402",
+          "TRAIN_Q551"
+        ]
+      },
+      {
+        "reason": "mixed_answerability",
+        "ids": [
+          "TRAIN_Q022",
+          "TRAIN_Q340"
+        ]
+      }
+    ],
+    "duplicate_aliases": {
+      "ssg1S1010477.txt": "ssg1S1010476.txt",
+      "ssg1S1010478.txt": "ssg1S1010476.txt",
+      "swg21454120.txt": "swg21448977.txt"
+    },
+    "semantic_duplicate_human_review": "pending; automated grouping is not exhaustive",
+    "source_hashes": {
+      "train.json": "69d97231509482ed6bd5ec1c4bc0607acb82a88d11169eb8383592d0ca8b93c7",
+      "corpus.zip": "c06aa287dcc1abf8db6b49b8495df095db73342d729f6451ac330785245d10be"
+    }
+  },
+  "retrieval_metadata": {
+    "bm25": {
+      "method": "bm25",
+      "k1": 1.2,
+      "b": 0.75,
+      "idf": "log(1 + (N - df + 0.5) / (df + 0.5))",
+      "query_term_frequency": "linear",
+      "documents": 28478,
+      "vocabulary_size": 231710,
+      "average_document_tokens": 242.49497985839844,
+      "tokenizer": "[a-z0-9_]+(?:[.+#:/\\\\-][a-z0-9_]+)*[+#]*"
+    },
+    "semantic": {
+      "method": "tfidf_lsa_cosine",
+      "neural_encoder": false,
+      "fit_scope": "shared document corpus only; no query labels",
+      "dimensions_requested": 128,
+      "dimensions": 128,
+      "max_features": 60000,
+      "sublinear_tf": true,
+      "normalization": "l2",
+      "search": "exact dot product",
+      "seed": 20261114,
+      "documents": 28478,
+      "vocabulary_size": 60000
+    }
+  },
+  "rrf_constant": 10,
+  "rrf_development_selection": [
+    {
+      "constant": 10,
+      "dev_ndcg@10": 0.4876696968702241
+    },
+    {
+      "constant": 60,
+      "dev_ndcg@10": 0.42773039987599293
+    },
+    {
+      "constant": 100,
+      "dev_ndcg@10": 0.4136174990208738
+    }
+  ],
+  "selected_models": {
+    "logistic": {
+      "parameters": {
+        "C": 0.1
+      },
+      "training_pairs": 17646,
+      "training_queries_without_positive": [
+        "TRAIN_Q166",
+        "TRAIN_Q421",
+        "TRAIN_Q044",
+        "DEV_Q067",
+        "TRAIN_Q092",
+        "TRAIN_Q125",
+        "TRAIN_Q430",
+        "TRAIN_Q288",
+        "TRAIN_Q395",
+        "TRAIN_Q368",
+        "DEV_Q181",
+        "DEV_Q068",
+        "TRAIN_Q020",
+        "DEV_Q283",
+        "TRAIN_Q469",
+        "TRAIN_Q343",
+        "TRAIN_Q024",
+        "DEV_Q094",
+        "DEV_Q039",
+        "TRAIN_Q207",
+        "TRAIN_Q352",
+        "TRAIN_Q478",
+        "TRAIN_Q187",
+        "TRAIN_Q351",
+        "DEV_Q047",
+        "DEV_Q077",
+        "TRAIN_Q118",
+        "TRAIN_Q598",
+        "TRAIN_Q360",
+        "TRAIN_Q428",
+        "TRAIN_Q550",
+        "TRAIN_Q294",
+        "TRAIN_Q241",
+        "TRAIN_Q444",
+        "TRAIN_Q103",
+        "DEV_Q240",
+        "TRAIN_Q124",
+        "TRAIN_Q058",
+        "DEV_Q034",
+        "TRAIN_Q373",
+        "TRAIN_Q423",
+        "TRAIN_Q526",
+        "TRAIN_Q543",
+        "TRAIN_Q328",
+        "TRAIN_Q033",
+        "DEV_Q055",
+        "DEV_Q262",
+        "DEV_Q116",
+        "TRAIN_Q016",
+        "TRAIN_Q283",
+        "DEV_Q132",
+        "TRAIN_Q100",
+        "DEV_Q201",
+        "TRAIN_Q295",
+        "TRAIN_Q272",
+        "TRAIN_Q494",
+        "TRAIN_Q319",
+        "TRAIN_Q259",
+        "DEV_Q110",
+        "DEV_Q202",
+        "TRAIN_Q596",
+        "TRAIN_Q514",
+        "TRAIN_Q332",
+        "TRAIN_Q387",
+        "DEV_Q149",
+        "TRAIN_Q082"
+      ],
+      "cv_ndcg@10": 0.5431539025520776
+    },
+    "random_forest": {
+      "parameters": {
+        "max_depth": 12,
+        "min_samples_leaf": 10
+      },
+      "training_pairs": 17646,
+      "training_queries_without_positive": [
+        "TRAIN_Q166",
+        "TRAIN_Q421",
+        "TRAIN_Q044",
+        "DEV_Q067",
+        "TRAIN_Q092",
+        "TRAIN_Q125",
+        "TRAIN_Q430",
+        "TRAIN_Q288",
+        "TRAIN_Q395",
+        "TRAIN_Q368",
+        "DEV_Q181",
+        "DEV_Q068",
+        "TRAIN_Q020",
+        "DEV_Q283",
+        "TRAIN_Q469",
+        "TRAIN_Q343",
+        "TRAIN_Q024",
+        "DEV_Q094",
+        "DEV_Q039",
+        "TRAIN_Q207",
+        "TRAIN_Q352",
+        "TRAIN_Q478",
+        "TRAIN_Q187",
+        "TRAIN_Q351",
+        "DEV_Q047",
+        "DEV_Q077",
+        "TRAIN_Q118",
+        "TRAIN_Q598",
+        "TRAIN_Q360",
+        "TRAIN_Q428",
+        "TRAIN_Q550",
+        "TRAIN_Q294",
+        "TRAIN_Q241",
+        "TRAIN_Q444",
+        "TRAIN_Q103",
+        "DEV_Q240",
+        "TRAIN_Q124",
+        "TRAIN_Q058",
+        "DEV_Q034",
+        "TRAIN_Q373",
+        "TRAIN_Q423",
+        "TRAIN_Q526",
+        "TRAIN_Q543",
+        "TRAIN_Q328",
+        "TRAIN_Q033",
+        "DEV_Q055",
+        "DEV_Q262",
+        "DEV_Q116",
+        "TRAIN_Q016",
+        "TRAIN_Q283",
+        "DEV_Q132",
+        "TRAIN_Q100",
+        "DEV_Q201",
+        "TRAIN_Q295",
+        "TRAIN_Q272",
+        "TRAIN_Q494",
+        "TRAIN_Q319",
+        "TRAIN_Q259",
+        "DEV_Q110",
+        "DEV_Q202",
+        "TRAIN_Q596",
+        "TRAIN_Q514",
+        "TRAIN_Q332",
+        "TRAIN_Q387",
+        "DEV_Q149",
+        "TRAIN_Q082"
+      ],
+      "cv_ndcg@10": 0.5395758313200286
+    }
+  },
+  "cross_validation": [
+    {
+      "model": "logistic",
+      "parameters": {
+        "C": 0.1
+      },
+      "cv_ndcg@10": 0.5431539025520776,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "logistic",
+      "parameters": {
+        "C": 1.0
+      },
+      "cv_ndcg@10": 0.5426711741331591,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "logistic",
+      "parameters": {
+        "C": 10.0
+      },
+      "cv_ndcg@10": 0.5427002158063293,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "random_forest",
+      "parameters": {
+        "max_depth": 6,
+        "min_samples_leaf": 10
+      },
+      "cv_ndcg@10": 0.5374272351970568,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "random_forest",
+      "parameters": {
+        "max_depth": 6,
+        "min_samples_leaf": 30
+      },
+      "cv_ndcg@10": 0.5381023714637784,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "random_forest",
+      "parameters": {
+        "max_depth": 12,
+        "min_samples_leaf": 10
+      },
+      "cv_ndcg@10": 0.5395758313200286,
+      "queries": 412,
+      "folds": 3
+    },
+    {
+      "model": "random_forest",
+      "parameters": {
+        "max_depth": 12,
+        "min_samples_leaf": 30
+      },
+      "cv_ndcg@10": 0.5388904384518194,
+      "queries": 412,
+      "folds": 3
+    }
+  ],
+  "summary": {
+    "train": {
+      "queries": 412,
+      "groups": 337,
+      "candidate_recall": 0.8398058252427184,
+      "methods": {
+        "bm25": {
+          "ndcg@10": 0.5427868541879693,
+          "recall@20": 0.7038834951456311
+        },
+        "semantic": {
+          "ndcg@10": 0.27540821767935153,
+          "recall@20": 0.44660194174757284
+        },
+        "rrf": {
+          "ndcg@10": 0.4376775161306417,
+          "recall@20": 0.6990291262135923
+        },
+        "logistic": {
+          "ndcg@10": 0.5428341195035234,
+          "recall@20": 0.7014563106796117
+        },
+        "random_forest": {
+          "ndcg@10": 0.6153286310336502,
+          "recall@20": 0.8398058252427184
+        }
+      },
+      "paired_comparisons": {},
+      "latency_single_observation": {
+        "bm25_ms": {
+          "median_ms": 0.7320000004256144,
+          "p95_ms": 1.9405249971896408
+        },
+        "semantic_ms": {
+          "median_ms": 12.969699993846007,
+          "p95_ms": 17.059784998127725
+        },
+        "feature_ms": {
+          "median_ms": 34.755599990603514,
+          "p95_ms": 46.52516499045304
+        },
+        "logistic_rerank_ms": {
+          "median_ms": 0.4753499961225316,
+          "p95_ms": 0.6691450020298362
+        },
+        "random_forest_rerank_ms": {
+          "median_ms": 55.56929999147542,
+          "p95_ms": 67.31357001699507
+        }
+      }
+    },
+    "dev": {
+      "queries": 84,
+      "groups": 72,
+      "candidate_recall": 0.8333333333333334,
+      "methods": {
+        "bm25": {
+          "ndcg@10": 0.5996691556084773,
+          "recall@20": 0.6904761904761905
+        },
+        "semantic": {
+          "ndcg@10": 0.25304245688721605,
+          "recall@20": 0.4642857142857143
+        },
+        "rrf": {
+          "ndcg@10": 0.4876696968702241,
+          "recall@20": 0.7142857142857143
+        },
+        "logistic": {
+          "ndcg@10": 0.5986869940294424,
+          "recall@20": 0.7619047619047619
+        },
+        "random_forest": {
+          "ndcg@10": 0.6008162623896484,
+          "recall@20": 0.7380952380952381
+        }
+      },
+      "paired_comparisons": {
+        "logistic": {
+          "baseline": "rrf",
+          "challenger": "logistic",
+          "metric": "ndcg@10",
+          "baseline_mean": 0.4876696968702241,
+          "challenger_mean": 0.5986869940294424,
+          "difference": 0.11101729715921826,
+          "ci_lower": 0.04455981157423557,
+          "ci_upper": 0.17694616387105344,
+          "confidence_level": 0.95,
+          "resampling_unit": "group",
+          "aggregation_unit": "query",
+          "n_queries": 84,
+          "n_groups": 72,
+          "iterations": 2000,
+          "seed": 20261114
+        },
+        "random_forest": {
+          "baseline": "rrf",
+          "challenger": "random_forest",
+          "metric": "ndcg@10",
+          "baseline_mean": 0.4876696968702241,
+          "challenger_mean": 0.6008162623896484,
+          "difference": 0.11314656551942426,
+          "ci_lower": 0.04528713494273341,
+          "ci_upper": 0.17970545154019638,
+          "confidence_level": 0.95,
+          "resampling_unit": "group",
+          "aggregation_unit": "query",
+          "n_queries": 84,
+          "n_groups": 72,
+          "iterations": 2000,
+          "seed": 20261114
+        }
+      },
+      "latency_single_observation": {
+        "bm25_ms": {
+          "median_ms": 0.7472500146832317,
+          "p95_ms": 1.9750649895286185
+        },
+        "semantic_ms": {
+          "median_ms": 13.072749992716126,
+          "p95_ms": 16.96763001382351
+        },
+        "feature_ms": {
+          "median_ms": 36.085950006963685,
+          "p95_ms": 50.03285499697085
+        },
+        "logistic_rerank_ms": {
+          "median_ms": 0.47890000860206783,
+          "p95_ms": 0.5910249979933724
+        },
+        "random_forest_rerank_ms": {
+          "median_ms": 55.478850001236424,
+          "p95_ms": 65.0836549946689
+        }
+      }
+    }
+  },
+  "feature_names": [
+    "bm25_score",
+    "semantic_score",
+    "bm25_reciprocal_rank",
+    "semantic_reciprocal_rank",
+    "missing_bm25_rank",
+    "missing_semantic_rank",
+    "query_term_coverage",
+    "log_query_length",
+    "log_document_length"
+  ],
+  "offline_index_seconds": 12.097085899993544,
+  "runtime": {
+    "python": "3.11.5",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "numpy": "1.24.3",
+    "sklearn": "1.3.0",
+    "blas_threads": 2
+  },
+  "latency_scope": "One observation/query during candidate generation and prediction; not repeated steady-state latency",
+  "limitations": [
+    "Custom supervised archive study, not official TechQA benchmark",
+    "Only document heads are indexed; long-document answer evidence may be lost",
+    "Unjudged candidates are proxy negatives, not confirmed irrelevant documents",
+    "Automated near-duplicate grouping does not replace human semantic review",
+    "LSA, if selected, is a corpus-fitted baseline and not a pretrained neural encoder",
+    "Development confidence intervals are exploratory after pipeline selection"
+  ],
+  "wall_seconds": 194.3786298999912
+}

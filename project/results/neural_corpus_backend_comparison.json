@@ -1,0 +1,14 @@
+{
+  "scope": "Corpus-only numerical backend comparison; no queries, judgments or ranking metrics read",
+  "reference_cache": "d3c7a2648ad0428f18fd482838a164b847e18479ed41336b6c5f860326281cb6",
+  "candidate_cache": "5fc68a859b5cc03cb64eb3fe286fff9cdf8cb58d3550283dee7eb5de1c917f85",
+  "reference_provider": "CPUExecutionProvider",
+  "candidate_provider": "DmlExecutionProvider",
+  "common_documents": 19552,
+  "total_documents": 28478,
+  "minimum_cosine": 0.9999999999993006,
+  "mean_cosine": 0.9999999999997287,
+  "max_absolute_difference": 4.172325134277344e-07,
+  "predefined_minimum_cosine": 0.99999,
+  "passed": true
+}

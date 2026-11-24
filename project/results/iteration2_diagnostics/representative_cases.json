@@ -1,0 +1,614 @@
+[
+  {
+    "category": "原候选漏检被全文BM25找回",
+    "query_id": "TRAIN_Q429",
+    "split": "dev",
+    "group_id": "TRAIN_Q429",
+    "gold_document_ids": [
+      "swg27020885.txt"
+    ],
+    "original_candidate_recall": 0.0,
+    "candidate_count": 142,
+    "head_bm25_ndcg10": 0.0,
+    "head_bm25_recall20": 0.0,
+    "head_bm25_recall100": 0.0,
+    "head_bm25_rank100": null,
+    "full_bm25_ndcg10": 0.0,
+    "full_bm25_recall20": 0.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 25,
+    "rrf_ndcg10": 0.0,
+    "rrf_recall20": 0.0,
+    "logistic_ndcg10": 0.0,
+    "logistic_recall20": 0.0,
+    "random_forest_ndcg10": 0.0,
+    "random_forest_recall20": 0.0,
+    "rrf_rank20": null,
+    "answer_location": "tail",
+    "answer_start_word": 2184,
+    "answer_end_word": 2226,
+    "gold_max_words": 16302,
+    "question": "Does Portal 7.0.0.2 CF20 support upgrading the DB2 JDBC Driver from 4.11.77 to 4.18.60?\n\nDoes Portal 7.0.0.2 CF20 support upgrading the DB2 JDBC Driver from 4.11.77 to 4.18.60?",
+    "source_record_ids": [
+      "TRAIN_Q429"
+    ],
+    "source_answer_excerpt": "IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4) Version and future fix packs All Applicable AIX OS Requires APAR PK93123 for DB2 on z/OS V8.1 and V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.",
+    "gold_evidence_excerpt": "(type 2/4) 4.0 IBM Application Connectivity to DB2 for z/OS Feature Version and future fix packs All Applicable AIX OS IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4) Version and future fix packs All Applicable AIX OS Requires APAR PK93123 for DB2 on z/OS V8.1 and V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK. IBM Toolbox for Java/JTOpen JDBC Driver 6.0 and future fix packs All Applicable AIX OS Check for the latest jt400.jar file at:http://sourceforge.net/projects/jt400/files/ [http://sourceforge.net/projects/jt400/files/]",
+    "head_bm25_top3": [
+      "swg1PM93028.txt",
+      "swg21686541.txt",
+      "swg21461670.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21461670.txt",
+      "swg1PM93028.txt",
+      "swg21686541.txt"
+    ],
+    "rrf_top3": [
+      "swg21686541.txt",
+      "swg21626560.txt",
+      "swg21694681.txt"
+    ]
+  },
+  {
+    "category": "原候选漏检被全文BM25找回",
+    "query_id": "TRAIN_Q066",
+    "split": "dev",
+    "group_id": "TRAIN_Q066",
+    "gold_document_ids": [
+      "swg24043263.txt"
+    ],
+    "original_candidate_recall": 0.0,
+    "candidate_count": 150,
+    "head_bm25_ndcg10": 0.0,
+    "head_bm25_recall20": 0.0,
+    "head_bm25_recall100": 0.0,
+    "head_bm25_rank100": null,
+    "full_bm25_ndcg10": 0.0,
+    "full_bm25_recall20": 0.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 71,
+    "rrf_ndcg10": 0.0,
+    "rrf_recall20": 0.0,
+    "logistic_ndcg10": 0.0,
+    "logistic_recall20": 0.0,
+    "random_forest_ndcg10": 0.0,
+    "random_forest_recall20": 0.0,
+    "rrf_rank20": null,
+    "answer_location": "head",
+    "answer_start_word": 19,
+    "answer_end_word": 36,
+    "gold_max_words": 10110,
+    "question": "Is there a 64-bit agent Log File Agent available for Windows OS?\n\nIs there a 64-bit agent Log File Agent available for Windows OS? ",
+    "source_record_ids": [
+      "TRAIN_Q066"
+    ],
+    "source_answer_excerpt": "This fix pack adds support for a Windows x86-64 bit (WIX64) and PowerPC little-endian Log File agent.",
+    "gold_evidence_excerpt": "Title: IBM Tivoli Log File Agent, Version 6.3.0 Fix Pack 02 (6.3.0-TIV-ITM_LFA-FP0002) - United States Text: DOWNLOADABLE FILES ABSTRACT This fix pack adds support for a Windows x86-64 bit (WIX64) and PowerPC little-endian Log File agent. In addition, it resolves the APARs and defects listed below. DOWNLOAD DESCRIPTION (C) Copyright International Business Machines Corporation 2017. All rights reserved. Component: Tivoli® Log File Agent, Version 6.3.0 Component ID: 5724C04LF Fix Pack: 0002, 6.3.0-TIV-ITM_LFA-FP0002 Date: September 19, 2017 Contents: 1.0 General description 2.0 Problems fixed 3.0 Architecture",
+    "head_bm25_top3": [
+      "swg21975634.txt",
+      "swg1IV12881.txt",
+      "swg1IV14950.txt"
+    ],
+    "full_bm25_top3": [
+      "swg1IV67483.txt",
+      "swg21975634.txt",
+      "swg1IZ51505.txt"
+    ],
+    "rrf_top3": [
+      "swg21975634.txt",
+      "swg21551427.txt",
+      "swg21427756.txt"
+    ]
+  },
+  {
+    "category": "原候选漏检被全文BM25找回",
+    "query_id": "DEV_Q202",
+    "split": "train",
+    "group_id": "DEV_Q202",
+    "gold_document_ids": [
+      "swg21631478.txt"
+    ],
+    "original_candidate_recall": 0.0,
+    "candidate_count": 157,
+    "head_bm25_ndcg10": 0.0,
+    "head_bm25_recall20": 0.0,
+    "head_bm25_recall100": 0.0,
+    "head_bm25_rank100": null,
+    "full_bm25_ndcg10": 0.3333333333333333,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 7,
+    "rrf_ndcg10": 0.0,
+    "rrf_recall20": 0.0,
+    "logistic_ndcg10": 0.0,
+    "logistic_recall20": 0.0,
+    "random_forest_ndcg10": 0.0,
+    "random_forest_recall20": 0.0,
+    "rrf_rank20": null,
+    "answer_location": "tail",
+    "answer_start_word": 743,
+    "answer_end_word": 764,
+    "gold_max_words": 927,
+    "question": "Why is installation manager cores when try to install netcool using GUI mode in AIX 7.1?\n\nIBM Installation Manager Cores when running in GUI mode on AIX 7.1 ",
+    "source_record_ids": [
+      "DEV_Q202"
+    ],
+    "source_answer_excerpt": "To use the GUI, the gtk+ RPM and dependencies must be available on AIX. Install this set of RPMs on AIX:",
+    "gold_evidence_excerpt": "all packages. For console mode, check your product documentation to verify that the product supports console mode. RESOLVING THE PROBLEM To use the GUI, the gtk+ RPM and dependencies must be available on AIX. Install this set of RPMs on AIX: atk-1.12.3-2.aix5.2.ppc.rpm cairo-1.8.8-1.aix5.2.ppc.rpm expat-2.0.1-1.aix5.2.ppc.rpm fontconfig-2.4.2-1.aix5.2.ppc.rpm freetype2-2.3.9-1.aix5.2.ppc.rpm gettext-0.10.40-6.aix5.1.ppc.rpm glib2-2.12.4-2.aix5.2.ppc.rpm gtk2-2.10.6-4.aix5.2.ppc.rpm libjpeg-6b-6.aix5.1.ppc.rpm libpng-1.2.32-2.aix5.2.ppc.rpm libtiff-3.8.2-1.aix5.2.ppc.rpm pango-1.14.5-4.aix5.2.ppc.rpm pixman-0.12.0-3.aix5.2.ppc.rpm xcursor-1.1.7-3.aix5.2.ppc.rpm xft-2.1.6-5.aix5.1.ppc.rpm xrender-0.9.1-3.aix5.2.ppc.rpm zlib-1.2.3-3.aix5.1.ppc.rpm The installed RPMs must be of the minimum versions listed above. To install the RPM versions specified above take the following steps: 1. Download the gtk2_bundle_v2.tar package",
+    "head_bm25_top3": [
+      "swg21661861.txt",
+      "swg21499198.txt",
+      "nas8N1012223.txt"
+    ],
+    "full_bm25_top3": [
+      "swg27043142.txt",
+      "swg21661861.txt",
+      "swg27036212.txt"
+    ],
+    "rrf_top3": [
+      "swg21967264.txt",
+      "swg21661861.txt",
+      "swg21499198.txt"
+    ]
+  },
+  {
+    "category": "尾部答案与全文BM25改善",
+    "query_id": "TRAIN_Q546",
+    "split": "dev",
+    "group_id": "TRAIN_Q546",
+    "gold_document_ids": [
+      "swg21424808.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 177,
+    "head_bm25_ndcg10": 0.43067655807339306,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 4,
+    "full_bm25_ndcg10": 0.5,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 3,
+    "rrf_ndcg10": 0.3562071871080222,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 0.38685280723454163,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 0.3562071871080222,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 6,
+    "answer_location": "crosses_boundary",
+    "answer_start_word": 209,
+    "answer_end_word": 285,
+    "gold_max_words": 289,
+    "question": "Does @LocalNodeAlias=\"\" will affect ITNM failover health check events?.\n\nCustomization in nco_p_monitor.rules with @LocalNodeAlias=\"empty\", after that both Primary and Backup started health check fail event, how to resolve that. ",
+    "source_record_ids": [
+      "TRAIN_Q546"
+    ],
+    "source_answer_excerpt": "The value for m_Domain is taken from the value for Node (@Node) in alerts.status for the health check event. If you have altered the inserted value for @Node, either by modifying the nco_p_ncpmonitor.rules file or by some other method such as an Automation or Impact policy, then the resulting update for state.domains will fail. Ensure that the rules governing the modification of @Node allow for the value of @Node to remain unchanged for health check events.",
+    "gold_evidence_excerpt": "It should not be the name of the Virtual domain. ProcessHealthCheck sent:update state.domains set m_HealthStatus=1 where m_Domain='ITNM'; RESOLVING THE PROBLEM The value for m_Domain is taken from the value for Node (@Node) in alerts.status for the health check event. If you have altered the inserted value for @Node, either by modifying the nco_p_ncpmonitor.rules file or by some other method such as an Automation or Impact policy, then the resulting update for state.domains will fail. Ensure that the rules governing the modification of @Node allow for",
+    "head_bm25_top3": [
+      "swg21588006.txt",
+      "swg21668525.txt",
+      "swg21646731.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21588006.txt",
+      "swg21668525.txt",
+      "swg21424808.txt"
+    ],
+    "rrf_top3": [
+      "swg21588006.txt",
+      "swg21646731.txt",
+      "swg21620006.txt"
+    ]
+  },
+  {
+    "category": "尾部答案与全文BM25改善",
+    "query_id": "DEV_Q080",
+    "split": "train",
+    "group_id": "DEV_Q080",
+    "gold_document_ids": [
+      "swg21960062.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 194,
+    "head_bm25_ndcg10": 0.0,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 13,
+    "full_bm25_ndcg10": 1.0,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 1,
+    "rrf_ndcg10": 0.0,
+    "rrf_recall20": 0.0,
+    "logistic_ndcg10": 0.0,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 0.3333333333333333,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": null,
+    "answer_location": "tail",
+    "answer_start_word": 2852,
+    "answer_end_word": 2874,
+    "gold_max_words": 4411,
+    "question": "Why is the OUTPUT_TYPE specified in the properties file for the custom scripting feature ignored?\n\n\n\nWhy is the OUTPUT_TYPE specified in the properties file for the custom scripting feature ignored in ITM V6?\n\nSpecifying \"I\" for INTEGER, or \"F\" for FLOAT for the OUTPUT_TYPE doesn't work, but specifying OUTPUT_TYPE=S results in STRING type for the first token.",
+    "source_record_ids": [
+      "DEV_Q080"
+    ],
+    "source_answer_excerpt": "OUTPUT_TYPE (STRING|INTEGER|FLOAT - Optional - default string). It defines the type of the first token returned by each row of the script;",
+    "gold_evidence_excerpt": "tokens for a maximum of 5 strings, 5 integers and 5 floats following a predefined syntax as described below: - OUTPUT_TYPE (STRING|INTEGER|FLOAT - Optional - default string). It defines the type of the first token returned by each row of the script; OUTPUT_TYPE can be: 1. STRING (default): strings up to 2048 characters. When used, the \"Standard_Output_String\" attribute of KXX_Custom_Scripts_Runtime is filled in by the first token. 2. INTEGER: allows getting numeric values between -9223372036854775806 and 9223372036854775806. When used, the \"Standard_Output_Integer\" attribute of KXX_Custom_Scripts_Runtime is",
+    "head_bm25_top3": [
+      "swg1PK52626.txt",
+      "swg21255699.txt",
+      "swg21445278.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21960062.txt",
+      "swg1IV85660.txt",
+      "swg1IV85663.txt"
+    ],
+    "rrf_top3": [
+      "swg1PK52626.txt",
+      "swg21133718.txt",
+      "swg21255699.txt"
+    ]
+  },
+  {
+    "category": "尾部答案与全文BM25改善",
+    "query_id": "DEV_Q153",
+    "split": "train",
+    "group_id": "DEV_Q153",
+    "gold_document_ids": [
+      "swg21409481.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 176,
+    "head_bm25_ndcg10": 0.0,
+    "head_bm25_recall20": 0.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 40,
+    "full_bm25_ndcg10": 1.0,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 1,
+    "rrf_ndcg10": 0.0,
+    "rrf_recall20": 0.0,
+    "logistic_ndcg10": 0.0,
+    "logistic_recall20": 0.0,
+    "random_forest_ndcg10": 0.3333333333333333,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": null,
+    "answer_location": "tail",
+    "answer_start_word": 378,
+    "answer_end_word": 398,
+    "gold_max_words": 843,
+    "question": "Can we create Match design specification db in xmeta\n\nCould you please let me know if we can create schema for Match design\nspecification database in xmeta db.",
+    "source_record_ids": [
+      "DEV_Q153"
+    ],
+    "source_answer_excerpt": "You should start from an empty Database; using the default XMETA Database is not recommended because it can become corrupt.",
+    "gold_evidence_excerpt": "the most accurate matching thresholds a full volume run should be performed in the DataStage Designer. Creating the Database 1. You should start from an empty Database; using the default XMETA Database is not recommended because it can become corrupt. 2. There are certain requirements on how the Database is to be created. a) If Oracle: CHARACTERSET should be set to AL32UTF b) If SQL: default is fine. c) If DB2: create as codepage UTF-8 and page size 32K d) Permission’s - Each user has",
+    "head_bm25_top3": [
+      "swg21632499.txt",
+      "swg21417855.txt",
+      "swg1JR29102.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21409481.txt",
+      "swg21632499.txt",
+      "swg21417855.txt"
+    ],
+    "rrf_top3": [
+      "swg21973116.txt",
+      "swg22000116.txt",
+      "swg21430010.txt"
+    ]
+  },
+  {
+    "category": "原BM25优于RRF",
+    "query_id": "TRAIN_Q171",
+    "split": "dev",
+    "group_id": "TRAIN_Q171",
+    "gold_document_ids": [
+      "swg21700633.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 156,
+    "head_bm25_ndcg10": 1.0,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 1,
+    "full_bm25_ndcg10": 1.0,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 1,
+    "rrf_ndcg10": 0.31546487678572877,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 1.0,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 1.0,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 8,
+    "answer_location": "head",
+    "answer_start_word": 52,
+    "answer_end_word": 67,
+    "gold_max_words": 271,
+    "question": "Help with Security Bulletin: Security vulnerabilities have been identified in IBM DB2 shipped with WebSphere Remote Server (CVE-2014-8730)\n\nI need to understand details regarding Security Bulletin: Security vulnerabilities have been identified in IBM DB2 shipped with WebSphere Remote Server (CVE-2014-8730). Where can I find this information? ",
+    "source_record_ids": [
+      "TRAIN_Q171"
+    ],
+    "source_answer_excerpt": "For vulnerability details, see the security bulletin TLS padding vulnerability affects IBM DB2 LUW (CVE-2014-8730)",
+    "gold_evidence_excerpt": "of WebSphere Remote Server. Information about security vulnerabilities affecting IBM DB2 has been published in a security bulletin. VULNERABILITY DETAILS For vulnerability details, see the security bulletin TLS padding vulnerability affects IBM DB2 LUW (CVE-2014-8730) [http://www.ibm.com/support/docview.wss?uid=swg21692618]. AFFECTED PRODUCTS AND VERSIONS Principal Product and Version(s) Affected Supporting Product and Version WebSphere Remote Server V6.1, 6.2, 6.2.1, 7.0, 7.1, 7.1.1, 7.1.2, 8.5 IBM DB2 Workgroup Server Edition V9.1, 9.5, 9.7, 10.1, 10.5 GET NOTIFIED ABOUT FUTURE SECURITY BULLETINS Subscribe to My Notifications [ http://www-01.ibm.com/software/support/einfo.html] to be notified",
+    "head_bm25_top3": [
+      "swg21700633.txt",
+      "swg21883331.txt",
+      "swg21700354.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21700633.txt",
+      "swg21883331.txt",
+      "swg21882609.txt"
+    ],
+    "rrf_top3": [
+      "swg22006686.txt",
+      "swg21700354.txt",
+      "swg21882724.txt"
+    ]
+  },
+  {
+    "category": "原BM25优于RRF",
+    "query_id": "TRAIN_Q084",
+    "split": "dev",
+    "group_id": "TRAIN_Q084",
+    "gold_document_ids": [
+      "swg22012983.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 159,
+    "head_bm25_ndcg10": 1.0,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 1,
+    "full_bm25_ndcg10": 1.0,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 1,
+    "rrf_ndcg10": 0.3562071871080222,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 1.0,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 1.0,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 6,
+    "answer_location": "head",
+    "answer_start_word": 57,
+    "answer_end_word": 103,
+    "gold_max_words": 361,
+    "question": "Help with Security Bulletin: IBM MQ Clients connecting to an MQ Queue Manager can cause a SIGSEGV in the AMQRMPPA channel process terminating it (CVE-2018-1371)\n\nI need to understand details regarding Security Bulletin: IBM MQ Clients connecting to an MQ Queue Manager can cause a SIGSEGV in the AMQRMPPA channel process terminating it (CVE-2018-1371). Where can I find this information?\n",
+    "source_record_ids": [
+      "TRAIN_Q084"
+    ],
+    "source_answer_excerpt": "CVEID: CVE-2018-1371 [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1371] DESCRIPTION: An IBM MQ client connecting to an MQ queue manager can cause a SIGSEGV in the amqrmppa channel process terminating it. CVSS Base Score: 6.5 CVSS Temporal Score: See https://exchange.xforce.ibmcloud.com/vulnerabilities/137771 [https://exchange.xforce.ibmcloud.com/vulnerabilities/137771] for the current score CVSS Environmental Score*: Undefined CVSS Vector: (CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "gold_evidence_excerpt": "to an MQ queue manager can cause a SIGSEGV in the queue manager's amqrmppa channel process, terminating it. VULNERABILITY DETAILS CVEID: CVE-2018-1371 [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1371] DESCRIPTION: An IBM MQ client connecting to an MQ queue manager can cause a SIGSEGV in the amqrmppa channel process terminating it. CVSS Base Score: 6.5 CVSS Temporal Score: See https://exchange.xforce.ibmcloud.com/vulnerabilities/137771 [https://exchange.xforce.ibmcloud.com/vulnerabilities/137771] for the current score CVSS Environmental Score*: Undefined CVSS Vector: (CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H) AFFECTED PRODUCTS AND VERSIONS IBM MQ V8.0 * Maintenance level 8.0.0.8 IBM MQ V9 LTS * Maintenance level 9.0.0.2",
+    "head_bm25_top3": [
+      "swg22012983.txt",
+      "swg1IT16342.txt",
+      "swg1IC61566.txt"
+    ],
+    "full_bm25_top3": [
+      "swg22012983.txt",
+      "swg1IT20662.txt",
+      "swg1SE50458.txt"
+    ],
+    "rrf_top3": [
+      "swg21106807.txt",
+      "swg1IT16342.txt",
+      "swg1IY45091.txt"
+    ]
+  },
+  {
+    "category": "原BM25优于RRF",
+    "query_id": "TRAIN_Q144",
+    "split": "dev",
+    "group_id": "TRAIN_Q144",
+    "gold_document_ids": [
+      "swg21995004.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 161,
+    "head_bm25_ndcg10": 1.0,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 1,
+    "full_bm25_ndcg10": 1.0,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 1,
+    "rrf_ndcg10": 0.3562071871080222,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 1.0,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 1.0,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 6,
+    "answer_location": "head",
+    "answer_start_word": 40,
+    "answer_end_word": 83,
+    "gold_max_words": 405,
+    "question": "Help with Security Bulletin: The WebAdmin context for WMB V8 allows directory listings (CVE-2016-6080)\n\n\n\nI need to understand details regarding Security Bulletin: The WebAdmin context for WebSphere Message Broker Version 8 allows directory listings (CVE-2016-6080). Where can I find this information?\n  0",
+    "source_record_ids": [
+      "TRAIN_Q144"
+    ],
+    "source_answer_excerpt": "CVEID: CVE-2016-6080 [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6080] DESCRIPTION: The WebAdmin context for WebSphere Message Broker allows directory listings, which could disclose sensitive information to the attacker. CVSS Base Score: 5.3 CVSS Temporal Score: See https://exchange.xforce.ibmcloud.com/vulnerabilities/117560 [https://exchange.xforce.ibmcloud.com/vulnerabilities/117560] for the current score CVSS Environmental Score*: Undefined CVSS Vector: (CVSS:3.0/AV:N/AC:L/PR:N/UI",
+    "gold_evidence_excerpt": "Text: WMB IIB SECURITY BULLETIN SUMMARY The WebAdmin context for WebSphere Message Broker Version 8 allows directory listings. VULNERABILITY DETAILS CVEID: CVE-2016-6080 [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6080] DESCRIPTION: The WebAdmin context for WebSphere Message Broker allows directory listings, which could disclose sensitive information to the attacker. CVSS Base Score: 5.3 CVSS Temporal Score: See https://exchange.xforce.ibmcloud.com/vulnerabilities/117560 [https://exchange.xforce.ibmcloud.com/vulnerabilities/117560] for the current score CVSS Environmental Score*: Undefined CVSS Vector: (CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N) AFFECTED PRODUCTS AND VERSIONS WebSphere Message Broker V8 REMEDIATION/FIXES Product VRMF APAR Remediation/Fix WebSphere Message Broker V8 IT16698 The APAR is available",
+    "head_bm25_top3": [
+      "swg21995004.txt",
+      "swg21902837.txt",
+      "swg21979292.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21995004.txt",
+      "swg21592038.txt",
+      "swg21988624.txt"
+    ],
+    "rrf_top3": [
+      "swg21985013.txt",
+      "swg21979292.txt",
+      "swg21902837.txt"
+    ]
+  },
+  {
+    "category": "全文BM25退化",
+    "query_id": "DEV_Q046",
+    "split": "dev",
+    "group_id": "DEV_Q046",
+    "gold_document_ids": [
+      "swg22002589.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 158,
+    "head_bm25_ndcg10": 1.0,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 1,
+    "full_bm25_ndcg10": 0.6309297535714575,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 2,
+    "rrf_ndcg10": 1.0,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 1.0,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 1.0,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 1,
+    "answer_location": "head",
+    "answer_start_word": 57,
+    "answer_end_word": 78,
+    "gold_max_words": 152,
+    "question": "Cannot delete folder in Box collab folder\n\n\n\nIn an ICM 5.3.0 environment integrated with Box, after setting up Box Collaboration, case worker can create Box collaboration folder, and can create folders and files under Box collaboration folder, however, they cannot delete the their folders and files.\n\nCase worker's default permission is 'Viewer Uploader' and case worker cannot add permission more than editor (Editor/Co-owner/Owner). So case worker can add new folder/file and edit file, but cannot delete folder/file.\n\nThe question is, why cannot case worker have permission more than editor?",
+    "source_record_ids": [
+      "DEV_Q046"
+    ],
+    "source_answer_excerpt": "There is no support for deleting documents and/or folders from a Box Collaboration folder created via Case Manager at this time.",
+    "gold_evidence_excerpt": "folders created under the Box collaboration folder. There does not appear to be any mechanism to perform this deletion. ANSWER There is no support for deleting documents and/or folders from a Box Collaboration folder created via Case Manager at this time. Case workers who created the Box collaboration folder will have Viewer/Uploader permission on the Box Collaboration folder, and therefore, will not be able to delete content within a Box collaboration folder as this may result in missing data in the associated cases. Users who",
+    "head_bm25_top3": [
+      "swg22002589.txt",
+      "swg21998821.txt",
+      "swg21994872.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21994872.txt",
+      "swg22002589.txt",
+      "swg21998821.txt"
+    ],
+    "rrf_top3": [
+      "swg22002589.txt",
+      "swg21998821.txt",
+      "swg27020669.txt"
+    ]
+  },
+  {
+    "category": "全文BM25退化",
+    "query_id": "TRAIN_Q301",
+    "split": "dev",
+    "group_id": "TRAIN_Q301",
+    "gold_document_ids": [
+      "swg21692240.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 193,
+    "head_bm25_ndcg10": 0.6309297535714575,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 2,
+    "full_bm25_ndcg10": 0.3562071871080222,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 6,
+    "rrf_ndcg10": 1.0,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 0.6309297535714575,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 0.6309297535714575,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 1,
+    "answer_location": "head",
+    "answer_start_word": 65,
+    "answer_end_word": 118,
+    "gold_max_words": 193,
+    "question": "How do you switch on the indexing of sparse file in StoredIQ?\n\nBy default these are skipped - does anyone know where to switch them on on the dataserver? ",
+    "source_record_ids": [
+      "TRAIN_Q301"
+    ],
+    "source_answer_excerpt": "SSH into the Data Server(s) and enter the following command at the prompt; psql -U dfuser dfdata -c \"insert into adminknobs (name,value,description,valuetype,use) VALUES ('read_sparse_files','1','Read sprase data objects','int','1')\" It should return the following; INSERT 0 1 if so, enter the following command and wait for the UI to come back up; service siqinit restart",
+    "gold_evidence_excerpt": "a sparse data object message recorded in the details section. To correct this problem, ensure that no jobs are running. SSH into the Data Server(s) and enter the following command at the prompt; psql -U dfuser dfdata -c \"insert into adminknobs (name,value,description,valuetype,use) VALUES ('read_sparse_files','1','Read sprase data objects','int','1')\" It should return the following; INSERT 0 1 if so, enter the following command and wait for the UI to come back up; service siqinit restart You can now run harvests as normal and sparse data objects will",
+    "head_bm25_top3": [
+      "swg21693837.txt",
+      "swg21692240.txt",
+      "swg22014180.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21637333.txt",
+      "swg21996647.txt",
+      "swg21693837.txt"
+    ],
+    "rrf_top3": [
+      "swg21692240.txt",
+      "swg21412861.txt",
+      "swg21630318.txt"
+    ]
+  },
+  {
+    "category": "全文BM25退化",
+    "query_id": "TRAIN_Q091",
+    "split": "dev",
+    "group_id": "TRAIN_Q091",
+    "gold_document_ids": [
+      "swg21648986.txt"
+    ],
+    "original_candidate_recall": 1.0,
+    "candidate_count": 149,
+    "head_bm25_ndcg10": 0.6309297535714575,
+    "head_bm25_recall20": 1.0,
+    "head_bm25_recall100": 1.0,
+    "head_bm25_rank100": 2,
+    "full_bm25_ndcg10": 0.5,
+    "full_bm25_recall20": 1.0,
+    "full_bm25_recall100": 1.0,
+    "full_bm25_rank100": 3,
+    "rrf_ndcg10": 1.0,
+    "rrf_recall20": 1.0,
+    "logistic_ndcg10": 0.6309297535714575,
+    "logistic_recall20": 1.0,
+    "random_forest_ndcg10": 0.6309297535714575,
+    "random_forest_recall20": 1.0,
+    "rrf_rank20": 1,
+    "answer_location": "head",
+    "answer_start_word": 73,
+    "answer_end_word": 125,
+    "gold_max_words": 125,
+    "question": "Keys couldn't be imported. Unable to encrypt the FIPS key\n\nOn windows10 machine when I attempt to import the encryption key I am getting the error: \"Keys couldn't be imported. Unable to encrypt the FIPS key\". Because I cannot import the keys, I am unable to validate parameters. ",
+    "source_record_ids": [
+      "TRAIN_Q091"
+    ],
+    "source_answer_excerpt": "To allow the keys to be exported properly: 1. Select Local Security Policy under Administrative tools 2. Navigate to Local Policies - Security Options 3. Select System Cryptography: Use FIPS compliant algorithms for encryption, hashing and signing and be sure it is Disabled 4. Run dcskey e again to export the key",
+    "gold_evidence_excerpt": "Enabling the Use FIPS compliant algorithms for encryption, hashing and signing security policy can cause this error RESOLVING THE PROBLEM To allow the keys to be exported properly: 1. Select Local Security Policy under Administrative tools 2. Navigate to Local Policies - Security Options 3. Select System Cryptography: Use FIPS compliant algorithms for encryption, hashing and signing and be sure it is Disabled 4. Run dcskey e again to export the key",
+    "head_bm25_top3": [
+      "swg21633150.txt",
+      "swg21648986.txt",
+      "swg21968549.txt"
+    ],
+    "full_bm25_top3": [
+      "swg21633150.txt",
+      "swg21968549.txt",
+      "swg21648986.txt"
+    ],
+    "rrf_top3": [
+      "swg21648986.txt",
+      "swg21633150.txt",
+      "swg1IZ97199.txt"
+    ]
+  }
+]

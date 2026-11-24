@@ -1,0 +1,183 @@
+{
+  "backend": "dml",
+  "onnxruntime_version": "1.17.3",
+  "onnxruntime_path": "D:\\Users\\hyy\\Desktop\\guideline\\course\\5001\\project\\.vendor-onnx-dml\\onnxruntime\\__init__.py",
+  "model_onnx_sha256": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+  "sample_text_sha256": "241f927d3dc9f0d3c8d0ad13f2aeb0167020d3cf5f9f66626e77d4e0f82b7a39",
+  "document_ids": [
+    "ibm10713449.txt",
+    "ibm10713463.txt",
+    "ibm10713539.txt",
+    "ibm10713695.txt",
+    "ibm10715649.txt",
+    "ibm10715651.txt",
+    "ibm10715781.txt",
+    "ibm10715845.txt",
+    "ibm10716029.txt",
+    "ibm10716213.txt",
+    "ibm10716377.txt",
+    "ibm10716463.txt",
+    "ibm10716573.txt",
+    "ibm10716655.txt",
+    "ibm10716661.txt",
+    "ibm10716669.txt",
+    "ibm10716807.txt",
+    "ibm10716829.txt",
+    "ibm10717023.txt",
+    "ibm10717031.txt",
+    "ibm10717197.txt",
+    "ibm10717315.txt",
+    "ibm10717319.txt",
+    "ibm10717327.txt",
+    "ibm10717329.txt",
+    "ibm10717335.txt",
+    "ibm10717337.txt",
+    "ibm10717345.txt",
+    "ibm10717395.txt",
+    "ibm10717429.txt",
+    "ibm10717485.txt",
+    "ibm10717517.txt"
+  ],
+  "head_words": 256,
+  "max_seq_length": 512,
+  "precision": "FP32 ONNX output; no model quantization",
+  "no_query_or_qrel_files_read": true,
+  "scope": "Small engineering probe, one warm and one timed batch; not a steady-state latency benchmark",
+  "adapters": [
+    {
+      "device_id": 0,
+      "description": "Intel(R) UHD Graphics",
+      "vendor_id": 32902,
+      "pci_device_id": 39520,
+      "dedicated_video_memory_mib": 128.0,
+      "adapter_luid": "0000000000016c5a"
+    },
+    {
+      "device_id": 1,
+      "description": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "vendor_id": 4318,
+      "pci_device_id": 9504,
+      "dedicated_video_memory_mib": 5996.0,
+      "adapter_luid": "000000000001707f"
+    },
+    {
+      "device_id": 2,
+      "description": "Intel(R) UHD Graphics",
+      "vendor_id": 32902,
+      "pci_device_id": 39520,
+      "dedicated_video_memory_mib": 128.0,
+      "adapter_luid": "000000000001ef78"
+    },
+    {
+      "device_id": 3,
+      "description": "Microsoft Basic Render Driver",
+      "vendor_id": 5140,
+      "pci_device_id": 140,
+      "dedicated_video_memory_mib": 0.0,
+      "adapter_luid": "000000000001702e"
+    }
+  ],
+  "selected_device_id": 1,
+  "selected_adapter": {
+    "device_id": 1,
+    "description": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "vendor_id": 4318,
+    "pci_device_id": 9504,
+    "dedicated_video_memory_mib": 5996.0,
+    "adapter_luid": "000000000001707f"
+  },
+  "gpu_memory_before": {
+    "status": "read",
+    "csv": "0, NVIDIA GeForce RTX 3060 Laptop GPU, 44, 6144, 0"
+  },
+  "active_providers": [
+    "DmlExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "measurements": [
+    {
+      "batch_size": 16,
+      "seconds": 0.3108836000028532,
+      "documents_per_second": 51.466207930727634
+    },
+    {
+      "batch_size": 32,
+      "seconds": 0.7103074999758974,
+      "documents_per_second": 45.05091105061659
+    }
+  ],
+  "minimum_document_cosine_vs_cpu": 0.9999998807907104,
+  "minimum_query_cosine_vs_cpu": 1.0,
+  "maximum_absolute_embedding_difference": 2.384185791015625e-07,
+  "equivalence_threshold": 0.99999,
+  "equivalence_probe_passed": true,
+  "cpu_reference": {
+    "backend": "cpu",
+    "onnxruntime_version": "1.17.3",
+    "onnxruntime_path": "D:\\Users\\hyy\\Desktop\\guideline\\course\\5001\\project\\.vendor-onnx-compat\\onnxruntime\\__init__.py",
+    "model_onnx_sha256": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+    "sample_text_sha256": "241f927d3dc9f0d3c8d0ad13f2aeb0167020d3cf5f9f66626e77d4e0f82b7a39",
+    "document_ids": [
+      "ibm10713449.txt",
+      "ibm10713463.txt",
+      "ibm10713539.txt",
+      "ibm10713695.txt",
+      "ibm10715649.txt",
+      "ibm10715651.txt",
+      "ibm10715781.txt",
+      "ibm10715845.txt",
+      "ibm10716029.txt",
+      "ibm10716213.txt",
+      "ibm10716377.txt",
+      "ibm10716463.txt",
+      "ibm10716573.txt",
+      "ibm10716655.txt",
+      "ibm10716661.txt",
+      "ibm10716669.txt",
+      "ibm10716807.txt",
+      "ibm10716829.txt",
+      "ibm10717023.txt",
+      "ibm10717031.txt",
+      "ibm10717197.txt",
+      "ibm10717315.txt",
+      "ibm10717319.txt",
+      "ibm10717327.txt",
+      "ibm10717329.txt",
+      "ibm10717335.txt",
+      "ibm10717337.txt",
+      "ibm10717345.txt",
+      "ibm10717395.txt",
+      "ibm10717429.txt",
+      "ibm10717485.txt",
+      "ibm10717517.txt"
+    ],
+    "head_words": 256,
+    "max_seq_length": 512,
+    "precision": "FP32 ONNX output; no model quantization",
+    "no_query_or_qrel_files_read": true,
+    "scope": "Small engineering probe, one warm and one timed batch; not a steady-state latency benchmark",
+    "active_providers": [
+      "CPUExecutionProvider"
+    ],
+    "measurements": [
+      {
+        "batch_size": 16,
+        "seconds": 6.2727475999854505,
+        "documents_per_second": 2.5507163718873547
+      },
+      {
+        "batch_size": 32,
+        "seconds": 10.67882390000159,
+        "documents_per_second": 2.9965846707140886
+      }
+    ]
+  },
+  "gpu_memory_after": {
+    "status": "read",
+    "csv": "0, NVIDIA GeForce RTX 3060 Laptop GPU, 2348, 6144, 61"
+  },
+  "reference_vectors_sha256": "acc9a66d9e5fb21a93bc4d5b2bb8230fc2bead7f535c21036d8ed0ec93347f6b",
+  "references": [
+    "https://onnxruntime.ai/docs/execution-providers/DirectML-ExecutionProvider.html"
+  ]
+}

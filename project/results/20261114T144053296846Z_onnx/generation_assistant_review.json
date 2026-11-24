@@ -1,0 +1,55 @@
+{
+  "scope": "AI-assisted qualitative inspection of five fixed development examples; not an accuracy benchmark or independent human evaluation",
+  "reviewer": "Codex assistant",
+  "reference_QA_answers_read": false,
+  "generation_demo_sha256": "6c37ffb07e2dcbefc7e58461461ff42ec556e1f9fc294511a433df4719750dc9",
+  "exact_source_windows_verified": 15,
+  "cases": [
+    {
+      "query_id": "TRAIN_Q049",
+      "raw_content": "D3",
+      "raw_citation": "[D3]",
+      "assistant_assessment": "content_failure",
+      "reason": "Only the bare source label D3 was generated. The question itself mixes CVE-2017-1731 and CVE-2017-1741, and seen snippets do not establish a recommended fix. No usable answer.",
+      "question_truncated": false,
+      "human_review": "pending"
+    },
+    {
+      "query_id": "DEV_Q010",
+      "raw_content": "Insufficient evidence.",
+      "raw_citation": null,
+      "assistant_assessment": "abstention_with_context_limits",
+      "reason": "The question was truncated before detailed encoding diagnostics. Seen sources discuss database layout or older Portal remedies; the refusal is not evidence of a correct solution and should not be scored as answer accuracy.",
+      "question_truncated": true,
+      "human_review": "pending"
+    },
+    {
+      "query_id": "DEV_Q014",
+      "raw_content": "Installation Manager changed from using updateInstaller starting with WebSphere Application Server version 8.",
+      "raw_citation": "[D1]",
+      "assistant_assessment": "core_version_boundary_supported",
+      "reason": "Seen D1 explicitly states V8 and higher bundle the JDK and server updates, while V7 and below use UpdateInstaller. The generated V8 boundary is supported; wording about Installation Manager changing is imprecise. Second-stage D1 points to the supporting snippet.",
+      "question_truncated": true,
+      "human_review": "pending"
+    },
+    {
+      "query_id": "DEV_Q035",
+      "raw_content": "Insufficient evidence.",
+      "raw_citation": null,
+      "assistant_assessment": "conservative_refusal",
+      "reason": "Seen excerpts contain the Node.js zlib windowBits denial-of-service description and the requested CVE. The model still refused, indicating possible under-answering. No substantive answer was produced.",
+      "question_truncated": false,
+      "human_review": "pending"
+    },
+    {
+      "query_id": "DEV_Q046",
+      "raw_content": "Insufficient evidence.",
+      "raw_citation": null,
+      "assistant_assessment": "under_answering_and_question_truncation",
+      "reason": "Seen D1 directly explains the deletion restriction and Viewer/Uploader rationale, but the model refused. The long question was also truncated before its final permission-elevation clause. The demo does not show a complete useful answer.",
+      "question_truncated": true,
+      "human_review": "pending"
+    }
+  ],
+  "conclusion": "The local small generator is not reliably useful: preserve one supported release-boundary example, refusal cases and label-only failure. Citation syntax is not semantic verification."
+}

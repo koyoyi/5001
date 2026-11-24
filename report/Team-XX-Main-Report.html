@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Team-XX Main Report — Learned Reranking for RAG</title>
+<style>
+:root{
+  --brand:#2b48ee; --brand-soft:#eef2fe; --ink:#1f2633; --body:#2b3340;
+  --muted:#8a93a3; --line:#d7dce6; --card:#f1f3f7;
+}
+*{box-sizing:border-box;}
+@page{ size:13.333in 7.5in; margin:0; }
+html,body{margin:0;padding:0;background:#51565e;
+  font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--body);}
+.slide{position:relative;width:13.333in;height:7.5in;background:#fff;overflow:hidden;
+  page-break-after:always;padding:0.62in 0.7in 0.6in 0.7in;}
+.slide:last-child{page-break-after:auto;}
+.topbar{position:absolute;top:0;left:0;right:0;height:10px;background:var(--brand);}
+.leftbar{position:absolute;top:0;left:0;bottom:0;width:14px;background:var(--brand);}
+.speaker{position:absolute;top:0.5in;right:0.7in;font-size:11px;color:var(--muted);}
+h1.title{color:var(--brand);font-size:27px;font-weight:700;line-height:1.14;margin:0.1in 0 0.16in 0;
+  max-width:10.6in;}
+.subtitle{color:var(--brand);font-size:16px;font-weight:600;margin:0 0 0.3in 0;}
+.footer{position:absolute;left:0.7in;right:0.7in;bottom:0.32in;}
+.footer .rule{border-top:1px solid var(--line);margin-bottom:6px;}
+.footer .meta{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);}
+.ph{color:var(--brand);}
+.sec{font-size:14px;font-weight:700;color:var(--ink);margin:0 0 7px 0;}
+ul{margin:0 0 0 0;padding-left:18px;}
+li{font-size:13px;line-height:1.4;margin-bottom:7px;}
+.cols{display:flex;gap:0.5in;}
+.col{flex:1;}
+.rqcard{border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin-bottom:12px;}
+.rqcard .k{color:var(--brand);font-weight:700;font-size:14px;margin-bottom:3px;}
+.rqcard .t{font-size:12.5px;line-height:1.35;color:var(--body);}
+.takeaway{border:2px solid var(--brand);background:var(--brand-soft);border-radius:12px;
+  padding:11px 15px;margin-top:10px;}
+.takeaway.plain{border:none;background:var(--card);}
+.takeaway .lab{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--brand);margin-bottom:4px;}
+.takeaway .txt{font-size:12.5px;line-height:1.38;color:var(--ink);}
+table.cmp{border-collapse:collapse;width:100%;font-size:11.5px;margin-top:4px;}
+table.cmp th{background:#f4f6fa;color:var(--ink);font-weight:700;text-align:left;
+  border:1px solid var(--line);padding:6px 8px;}
+table.cmp td{border:1px solid var(--line);padding:5px 8px;color:var(--body);}
+table.cmp td.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.cmp tr.hi td{background:var(--brand-soft);font-weight:600;}
+.ladder{display:flex;align-items:stretch;gap:0;margin:0.14in 0 0.1in 0;}
+.rung{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px 8px;text-align:center;}
+.rung.hi{border:2px solid var(--brand);}
+.rung .n{font-weight:700;font-size:12.5px;color:var(--ink);}
+.rung .s{font-size:10.5px;color:var(--muted);margin-top:2px;}
+.arrow{display:flex;align-items:center;color:var(--line);font-size:20px;padding:0 5px;}
+.scale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-top:2px;}
+.folds{display:flex;gap:4px;margin-top:8px;}
+.fold{flex:1;background:#eef1f8;border:1px solid var(--line);border-radius:6px;
+  text-align:center;font-size:11px;padding:7px 2px;color:var(--body);}
+.fold.cv{background:#dce3fb;} .fold.test{background:#f0efec;}
+.figcard{border:1px solid var(--line);border-radius:10px;padding:8px;background:#fff;text-align:center;}
+.figcard img{width:100%;height:auto;display:block;}
+.cap{font-size:11px;line-height:1.34;color:var(--body);margin-top:7px;}
+.cap b{color:var(--ink);}
+table.mem{border-collapse:collapse;width:100%;font-size:13px;margin:0.2in 0;}
+table.mem th{background:#f4f6fa;border:1px solid var(--line);padding:7px 10px;text-align:left;color:var(--ink);}
+table.mem td{border:1px solid var(--line);padding:7px 10px;}
+.deck-meta{font-size:14px;color:var(--ink);}
+.note{font-size:11px;color:var(--muted);margin-top:8px;}
+</style>
+</head>
+<body>
+<!-- SLIDES -->
+
+<section class="slide">
+  <div class="leftbar"></div>
+  <div style="font-size:14px;color:var(--muted);margin-top:0.1in;">DSC5001 · Statistical Machine Learning · Project Report</div>
+  <h1 class="title" style="font-size:33px;margin-top:0.3in;">Can Learned Reranking Improve Hybrid Retrieval for RAG?</h1>
+  <div class="subtitle">TechQA support retrieval · BM25 + BGE dense candidates · logistic / random-forest rerankers vs fixed fusion</div>
+  <table class="mem">
+    <tr><th>Member</th><th>UID</th><th>Member</th><th>UID</th></tr>
+    <tr><td>HU Yuyi</td><td>60159701</td><td>Tang Yuhe</td><td>61034951</td></tr>
+    <tr><td>Wang Xin</td><td>61023715</td><td>Wang Chensu</td><td>60979223</td></tr>
+    <tr><td>QUE Shenyun</td><td>60269510</td><td></td><td></td></tr>
+  </table>
+  <div class="deck-meta"><b>Team:</b> <span class="ph">[Team Name]</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Date:</b> <span class="ph">[DD Nov 2026]</span></div>
+  <div class="footer"><div class="meta"><span>DSC5001 · Learned reranking for RAG</span><span>1 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:45</div>
+  <h1 class="title">Fixed fusion already finds the evidence — learning has to beat it to matter</h1>
+  <div class="cols">
+    <div class="col">
+      <div class="sec">Motivation</div>
+      <ul>
+        <li>A RAG answer is capped by what is retrieved first: a support assistant must surface the right document before it can cite it.</li>
+        <li>Who uses it, and the decision: a technical-support search tool; whether to deploy a trained reranker or keep a parameter-light fusion rule.</li>
+        <li>Gap: BM25 and dense retrieval rank the same corpus differently. It is unclear whether a supervised reranker beats strong fixed fusion on identical candidates, and whether the extra latency is worth it.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="rqcard"><div class="k">RQ1</div><div class="t">Does the hybrid candidate union recover relevant passages that BM25 or dense retrieval alone miss?</div></div>
+      <div class="rqcard"><div class="k">RQ2</div><div class="t">On unseen queries, can a logistic or random-forest reranker improve nDCG@10 / Recall@20 over weighted RRF, using identical candidates?</div></div>
+      <div class="rqcard"><div class="k">RQ3</div><div class="t">Are any gains consistent across query types and worth the added online latency? (optional)</div></div>
+    </div>
+  </div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>2 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:45</div>
+  <h1 class="title">28,478 support documents, 578 questions, one known answer each</h1>
+  <div class="cols">
+    <div class="col">
+      <ul>
+        <li><b>Source:</b> NVIDIA TechQA retrieval-eval archive, local SHA-256-pinned snapshot (no live download); retrieval over document text only.</li>
+        <li><b>Unit:</b> a training row is a query–candidate pair; evaluation aggregates by question; bootstrap resamples by near-duplicate component.</li>
+        <li><b>Response:</b> observed relevance of a candidate (1 = judged gold; unjudged candidates are proxy negatives, capped at 50 per query).</li>
+        <li><b>Predictors (9):</b> BM25 &amp; dense cosine score, each list's reciprocal rank + missing-rank flag, query-term coverage, log query/document length.</li>
+        <li><b>Known issues:</b> one gold per question (Recall@20 = hit@20); proxy negatives ≠ confirmed irrelevant; only the first 256 words indexed; semantic grouping is AI-assisted, not expert-verified.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <table class="cmp">
+        <tr><th>Cleaning / split step</th><th>Count</th></tr>
+        <tr><td>Raw archive documents</td><td class="num">28,481</td></tr>
+        <tr><td>After exact-body de-duplication</td><td class="num">28,478</td></tr>
+        <tr><td>Canonical questions</td><td class="num">581</td></tr>
+        <tr><td>After quarantining 1 cross-split component (3 questions)</td><td class="num">578</td></tr>
+        <tr class="hi"><td>Train / Dev / Test questions</td><td class="num">410 / 84 / 84</td></tr>
+        <tr><td>Dev independent components</td><td class="num">72</td></tr>
+      </table>
+      <div class="note">Historical split locked; samples are never re-randomised to improve a score. 22,050 of 28,478 documents are longer than the 256-word head (median 385 words, p95 965).</div>
+    </div>
+  </div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>3 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:45</div>
+  <h1 class="title">Dense retrieval carries the signal; head truncation caps what reranking can reach</h1>
+  <div class="cols">
+    <div class="col">
+      <div class="figcard"><img src="assets/fig_dev_methods.png" alt="Development nDCG@10 by method"></div>
+      <div class="cap"><b>What it shows:</b> within the BGE pipeline the dense retriever (0.69) already matches fusion; every reranker sits within ~0.01 of weighted RRF (0.67). <b>→ Decision:</b> compare learned models against the strong weighted-RRF baseline, not a weak one.</div>
+    </div>
+    <div class="col">
+      <div class="figcard"><img src="assets/fig_tail_recall.png" alt="Recall by answer location, head vs full text"></div>
+      <div class="cap"><b>What it shows:</b> for the 63 tail-answer questions, head-only recall@100 falls to 0.60 vs 0.81 for full text. <b>→ Decision:</b> keep head indexing for a controlled comparison, and record head truncation as the ceiling that motivates a future chunking track.</div>
+    </div>
+  </div>
+  <div class="takeaway" style="margin-top:0.14in;"><div class="lab">KEY TAKEAWAY</div><div class="txt">Hybrid candidate recall tops out at 0.93 — reranking can only reorder what retrieval already found, so the realistic ceiling for any reranker is modest.</div></div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>4 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:50</div>
+  <h1 class="title">A short ladder from fusion to a constrained forest, judged on a frozen split</h1>
+  <div class="ladder">
+    <div class="rung"><div class="n">BM25</div><div class="s">lexical baseline</div></div>
+    <div class="arrow">→</div>
+    <div class="rung"><div class="n">Dense (BGE)</div><div class="s">frozen encoder</div></div>
+    <div class="arrow">→</div>
+    <div class="rung"><div class="n">Weighted RRF</div><div class="s">strong fixed fusion</div></div>
+    <div class="arrow">→</div>
+    <div class="rung"><div class="n">Logistic (L2)</div><div class="s">interpretable</div></div>
+    <div class="arrow">→</div>
+    <div class="rung hi"><div class="n">Random forest</div><div class="s">depth/leaf-constrained</div></div>
+  </div>
+  <div class="scale"><span>increasing flexibility →</span><span>← decreasing interpretability</span></div>
+  <div class="sec" style="margin-top:0.2in;">Validation design</div>
+  <ul>
+    <li>Every method ranks the <b>identical</b> deduplicated candidate union (BM25 ∪ dense top-100, ≤200 per query); no model truncates another's candidates.</li>
+    <li>Hyper-parameters chosen by <b>3-fold GroupKFold</b> grouped by near-duplicate component (seed 20261114); fusion constant and semantic weight chosen on dev only.</li>
+    <li>Metric: macro nDCG@10 / Recall@20 by question, with 95% component-paired bootstrap. Test split evaluated <b>once</b>, under a pre-recorded freeze.</li>
+  </ul>
+  <div class="folds">
+    <div class="fold">fold 1</div><div class="fold cv">fold 2 (CV tuning)</div><div class="fold">fold 3</div>
+    <div class="fold">Dev — selection</div><div class="fold test">Test — used once</div>
+  </div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>5 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:40</div>
+  <h1 class="title">The linear model trusts rank position, not raw scores</h1>
+  <div class="cols">
+    <div class="col" style="flex:1.15;">
+      <div class="figcard"><img src="assets/fig_logistic_coef.png" alt="Logistic standardised coefficients"></div>
+    </div>
+    <div class="col">
+      <div class="takeaway"><div class="lab">KEY TAKEAWAY</div><div class="txt">The two reciprocal ranks (+0.47, +0.43) and the semantic missing-rank penalty (−0.85) dominate; BM25/dense raw scores and term coverage add almost nothing. The reranker mostly re-encodes the rank signal RRF already uses.</div></div>
+      <ul style="margin-top:14px;">
+        <li>Standardised L2 logistic, C = 0.1; sign is direction, magnitude is effect per standard deviation.</li>
+        <li>A document absent from the dense list is pushed down hardest — being retrieved at all matters more than the exact score.</li>
+        <li>Output is an ordering score, not a calibrated probability. Training CV nDCG@10 = 0.601.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>6 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:55</div>
+  <h1 class="title">On the frozen test set the learned reranker ties weighted RRF — the interval crosses zero</h1>
+  <table class="cmp">
+    <tr><th>Method</th><th>Key hyper-parameters</th><th>Dev nDCG@10</th><th>Test nDCG@10</th><th>Test Recall@20</th><th>Online median (ms)</th></tr>
+    <tr><td>BM25</td><td>k1 = 1.2, b = 0.75</td><td class="num">0.600</td><td class="num">0.510</td><td class="num">0.655</td><td class="num">5.7</td></tr>
+    <tr><td>Dense (BGE)</td><td>bge-small-en-v1.5, 512 tok</td><td class="num">0.687</td><td class="num">0.578</td><td class="num">0.750</td><td class="num">66.5</td></tr>
+    <tr><td>RRF</td><td>k = 10</td><td class="num">0.657</td><td class="num">0.554</td><td class="num">0.726</td><td class="num">71.4</td></tr>
+    <tr class="hi"><td>Weighted RRF</td><td>k = 10, semantic weight = 2.0</td><td class="num">0.667</td><td class="num">0.585</td><td class="num">0.726</td><td class="num">71.1</td></tr>
+    <tr class="hi"><td>Logistic</td><td>C = 0.1</td><td class="num">0.669</td><td class="num">0.579</td><td class="num">0.738</td><td class="num">69.8</td></tr>
+    <tr><td>Random forest</td><td>depth 12, min-leaf 10, 200 trees</td><td class="num">0.681</td><td class="num">0.590</td><td class="num">0.738</td><td class="num">91.2</td></tr>
+  </table>
+  <div class="note">Dev = development split; Test = single frozen held-out evaluation (84 questions, 72 components). Latency: median of 600 warm serial samples, BGE pipeline on DirectML / RTX 3060.</div>
+  <div class="takeaway" style="margin-top:0.16in;"><div class="lab">KEY TAKEAWAY</div><div class="txt">Pre-registered primary comparison — <b>logistic − weighted RRF nDCG@10 = −0.006</b>, 95% component-paired CI <b>[−0.023, +0.012]</b>. The interval crosses zero, so the methods are comparable. The random forest's +0.006 point gain is within noise and costs ~28% more latency.</div></div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>7 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:55</div>
+  <h1 class="title">Both models key on where each retriever ranked the document</h1>
+  <div class="cols">
+    <div class="col">
+      <div class="figcard"><img src="assets/fig_rf_importance.png" alt="Random forest impurity importance"></div>
+      <div class="cap"><b>What matters:</b> the two reciprocal ranks carry 73% of RF importance (semantic 0.42 + BM25 0.31); raw scores and coverage are minor, missing-rank flags negligible.</div>
+    </div>
+    <div class="col">
+      <div class="figcard"><img src="assets/fig_rf_pdp.png" alt="Random forest partial dependence"></div>
+      <div class="cap"><b>How it acts:</b> partial dependence rises monotonically with each reciprocal rank — higher-ranked candidates score higher, the same monotone signal RRF encodes by construction.</div>
+    </div>
+  </div>
+  <div class="takeaway" style="margin-top:0.12in;"><div class="lab">KEY TAKEAWAY</div><div class="txt">On training queries the forest fixes all but 9 of the "candidate present but mis-ranked" cases (RRF 97, logistic 75, RF 9) — but that extra flexibility is training fit, and it does not transfer to a held-out gain.</div></div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>8 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:40</div>
+  <h1 class="title">The negative result holds across seeds, negative caps, and feature subsets</h1>
+  <table class="cmp">
+    <tr><th>Check</th><th>What changed</th><th>Result (dev nDCG@10 vs main line)</th><th>Conclusion holds?</th></tr>
+    <tr><td>Negative cap</td><td>50 → 10 proxy negatives / query</td><td>Logistic −0.004 [−0.014, +0.001]; RF +0.010 [−0.004, +0.026]</td><td>Yes</td></tr>
+    <tr><td>Class balance</td><td>equal positive/negative weight</td><td>Logistic −0.007; RF −0.004 (CIs cross 0)</td><td>Yes</td></tr>
+    <tr><td>Training seed</td><td>20261114 → …15 / …16</td><td>|Δ| ≤ 0.011, every CI crosses 0</td><td>Yes</td></tr>
+    <tr><td>Feature set</td><td>rank features only (drop raw scores)</td><td>Logistic +0.001; RF −0.014</td><td>Yes</td></tr>
+    <tr><td>Negative sampling</td><td>random → hardest-BM25 negatives</td><td>Logistic −0.608; RF −0.665 — collapses</td><td>No</td></tr>
+  </table>
+  <div class="takeaway plain" style="margin-top:0.18in;"><div class="lab" style="color:var(--ink)">WHAT MOVES THE STORY</div><div class="txt">Only adversarial hard-negative sampling changes the outcome, and it degrades <i>every</i> method — evidence that the random proxy-negative protocol, not a tuning artefact, drives the result. Dropping raw scores barely matters, confirming the rank-position reading from the coefficient and importance plots. No single change reverses the main finding.</div></div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>9 / 10</span></div></div>
+</section>
+
+<section class="slide">
+  <div class="topbar"></div>
+  <div class="speaker">Speaker: <span class="ph">[Name]</span> · ~0:50</div>
+  <h1 class="title">Strong fixed fusion is enough here; a trained reranker does not earn its place</h1>
+  <div class="cols">
+    <div class="col" style="flex:1.1;">
+      <ul>
+        <li><b>RQ1 — Yes.</b> The hybrid union lifts candidate recall to 0.93, above either retriever alone; ~7% of questions stay unreachable (evidence outside the indexed head or the candidate set).</li>
+        <li><b>RQ2 — No.</b> Logistic − weighted RRF nDCG@10 = −0.006 (95% CI [−0.023, +0.012]); random forest +0.006, within noise. No reliable gain on the frozen test.</li>
+        <li><b>RQ3 — No.</b> Logistic latency (median 69.8 ms) matches weighted RRF (71.1 ms); the random forest is ~28% slower for no reliable gain.</li>
+      </ul>
+      <div class="sec" style="margin-top:12px;">Recommendations</div>
+      <ul>
+        <li>For a support-search deployment: ship <b>weighted RRF</b> (k = 10, semantic weight 2.0); skip the trained reranker.</li>
+        <li>If reranking is pursued, invest first in <b>candidate coverage</b> (chunk long documents), not model complexity.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="takeaway plain"><div class="lab" style="color:var(--ink)">LIMITATIONS</div><div class="txt">One domain (TechQA) · sparse single-gold judgments · proxy (not confirmed) negatives · frozen head-only encoder, first 256 words · AI-assisted, not expert-verified, semantic grouping.</div></div>
+      <div class="takeaway" style="margin-top:12px;"><div class="lab">FUTURE WORK</div><div class="txt">Long-document chunking with document-level aggregation, developed on train/dev only — the current held-out split stays frozen.</div></div>
+    </div>
+  </div>
+  <div style="position:absolute;left:0.7in;bottom:0.6in;font-size:12px;color:var(--ink);">Source code and full numbers for every result: <b>Team-<span class="ph">[XX]</span>-Appendix.pdf</b></div>
+  <div class="footer"><div class="rule"></div><div class="meta"><span>DSC5001 · Team <span class="ph">[Team Name]</span> · Learned reranking for RAG</span><span>10 / 10</span></div></div>
+</section>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

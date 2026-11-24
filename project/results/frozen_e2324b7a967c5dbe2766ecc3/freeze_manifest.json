@@ -1,0 +1,203 @@
+{
+  "run_id": "frozen_e2324b7a967c5dbe2766ecc3",
+  "identity_sha256": "e2324b7a967c5dbe2766ecc334965069dfbe2aec3acf6d195f81a48d1b599bef",
+  "identity": {
+    "source_artifact": "project/artifacts/20261114T144053296846Z_onnx",
+    "source_files_sha256": {
+      "results.json": "053b27403224b87b9fb28e51470f587add26c168a0b8965a12e0511f96e096e5",
+      "configuration.json": "5d4294aa8fc0dda3ee49def98a81785fcda308f2717e94a6b98bf0c3ad57cf81",
+      "data_audit.json": "02c0ad9c4b33aad202152203cd080bfd3b267af59c15b21a71a23e1690ca7a74",
+      "split_manifest.json": "089b4a77346af498752a049291c5bc45ab67f98bef000397c78089daf97f5f92",
+      "candidate_runs.json": "21095e4012733df5a008b1a2fb18ca18c457cbd02e8edd826f3554ce54d53a4e",
+      "per_query_metrics.json": "cc77145ccdf755fd641228a773ab46a22a0164354425f0669aabf25a45d2d134",
+      "experiments.sqlite": "993608a06332179dad93a1574544bdec9616e2366293fd8d5ca13292caf117db",
+      "search_bundle.joblib": "5d5e91e9146f25e479cbadaa4feeacd60de002856ebfae84acd0f1dfa35ac3b7"
+    },
+    "protocol_path": "project/configs/iteration2/heldout_protocol.json",
+    "protocol_sha256": "67e7a15c91cf6d40b4e1a33d8d2b2fc087cad2bcfd08def55e50b34b2312957f",
+    "execution_code_sha256": {
+      "project/src/ragstudy/__init__.py": "4d8d2ef7001e8960fa8b74b996cb115d86a8e1345ec8a620fb98b8755cb092cf",
+      "project/src/ragstudy/data.py": "bd7b790d0a6db69046759db56028694eddbe61e36af43f3073143993ed26f645",
+      "project/src/ragstudy/features.py": "b6c59889bbf6d053221603131d81da8ea9edb2bbf66adb5cd5b47110bddcfb4b",
+      "project/src/ragstudy/retrieval.py": "41d9cb4a05cdb28a6df6ca1bb2a4dde097ad16007660f8fab2f1e305db5efcb6",
+      "project/src/ragstudy/neural.py": "1195bda7f72e82ea6dfe3184e504f4de31632bcf0ef8eb80c17b2d0dd5f903b1",
+      "project/src/ragstudy/experiment.py": "41c0691082459891d0dc77bbdd70ae226cf0d3678ec4104ba67d22ac9890dc4a",
+      "project/src/ragstudy/replay.py": "f0a3cea0e48babda8f4e2a76e335cdacad3a52f7d89e46c69d1bde961436a891",
+      "project/src/ragstudy/metrics.py": "e2f9a1444f95440aafdf278192eb9ba5c67fe7a2f247999f58f2d2ef39132f73"
+    }
+  },
+  "frozen_at_utc": "2026-11-14T14:57:51.081850+00:00",
+  "status": "completed",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at_utc": "2026-11-14T14:58:17.641409+00:00",
+      "resume": false,
+      "wrapper_sha256": "ef9b38af6bd8a8edbc4ebbf01e873b8bd12815a91d78e4538857755f4c43e555",
+      "reused_saved_predictions": false,
+      "status": "completed",
+      "finished_at_utc": "2026-11-14T14:58:28.280643+00:00"
+    }
+  ],
+  "frozen_configuration_sha256": "0e9890ac0ae2ac70df0dbf345710cab4bf852d1f7e997fdf9d4a7b1cdb6f747f",
+  "primary_contrast": {
+    "baseline": "weighted_rrf",
+    "challenger": "logistic",
+    "metric": "ndcg@10"
+  },
+  "selected_model_parameters": {
+    "logistic": {
+      "parameters": {
+        "C": 0.1
+      },
+      "feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "training_pairs": 18768,
+      "training_queries_without_positive": [
+        "TRAIN_Q166",
+        "TRAIN_Q421",
+        "TRAIN_Q044",
+        "DEV_Q067",
+        "TRAIN_Q092",
+        "TRAIN_Q430",
+        "TRAIN_Q288",
+        "TRAIN_Q395",
+        "TRAIN_Q020",
+        "DEV_Q283",
+        "TRAIN_Q469",
+        "TRAIN_Q024",
+        "TRAIN_Q207",
+        "TRAIN_Q352",
+        "TRAIN_Q478",
+        "TRAIN_Q118",
+        "TRAIN_Q598",
+        "TRAIN_Q428",
+        "TRAIN_Q294",
+        "TRAIN_Q241",
+        "TRAIN_Q444",
+        "DEV_Q240",
+        "TRAIN_Q124",
+        "TRAIN_Q058",
+        "TRAIN_Q543",
+        "TRAIN_Q328",
+        "TRAIN_Q033",
+        "DEV_Q055",
+        "DEV_Q262",
+        "DEV_Q000",
+        "TRAIN_Q016",
+        "TRAIN_Q100",
+        "DEV_Q201",
+        "TRAIN_Q295",
+        "TRAIN_Q494",
+        "TRAIN_Q319",
+        "TRAIN_Q259",
+        "DEV_Q110",
+        "DEV_Q202",
+        "TRAIN_Q514",
+        "TRAIN_Q387",
+        "TRAIN_Q082"
+      ],
+      "cv_ndcg@10": 0.6013760639067994
+    },
+    "random_forest": {
+      "parameters": {
+        "max_depth": 12,
+        "min_samples_leaf": 10
+      },
+      "feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "training_pairs": 18768,
+      "training_queries_without_positive": [
+        "TRAIN_Q166",
+        "TRAIN_Q421",
+        "TRAIN_Q044",
+        "DEV_Q067",
+        "TRAIN_Q092",
+        "TRAIN_Q430",
+        "TRAIN_Q288",
+        "TRAIN_Q395",
+        "TRAIN_Q020",
+        "DEV_Q283",
+        "TRAIN_Q469",
+        "TRAIN_Q024",
+        "TRAIN_Q207",
+        "TRAIN_Q352",
+        "TRAIN_Q478",
+        "TRAIN_Q118",
+        "TRAIN_Q598",
+        "TRAIN_Q428",
+        "TRAIN_Q294",
+        "TRAIN_Q241",
+        "TRAIN_Q444",
+        "DEV_Q240",
+        "TRAIN_Q124",
+        "TRAIN_Q058",
+        "TRAIN_Q543",
+        "TRAIN_Q328",
+        "TRAIN_Q033",
+        "DEV_Q055",
+        "DEV_Q262",
+        "DEV_Q000",
+        "TRAIN_Q016",
+        "TRAIN_Q100",
+        "DEV_Q201",
+        "TRAIN_Q295",
+        "TRAIN_Q494",
+        "TRAIN_Q319",
+        "TRAIN_Q259",
+        "DEV_Q110",
+        "DEV_Q202",
+        "TRAIN_Q514",
+        "TRAIN_Q387",
+        "TRAIN_Q082"
+      ],
+      "cv_ndcg@10": 0.5910895534163483
+    }
+  },
+  "selected_weighted_rrf": {
+    "constant": 10,
+    "semantic_weight": 2.0,
+    "dev_ndcg@10": 0.6672837291045687
+  },
+  "limitations": [
+    "Performance is measured against provided sparse/noisy archive qrels, not exhaustive relevance or generated-answer correctness",
+    "89 highest-risk cross-split pairs reviewed by Codex assistants; neither these judgments nor lower-similarity candidates are independently human/domain-expert adjudicated",
+    "SPSS Mac launch symptom group is an uncertainty sensitivity note, not a confirmed same-cause duplicate merge",
+    "Source CVE-2017-1741 versus gold CVE-2017-1731 conflicts remain source-quality warnings; no qrels corrected based on scores",
+    "Development intervals are exploratory; final primary contrast must be fixed before any held-out metric is opened"
+  ],
+  "new_training_or_indexing": false,
+  "heldout_scored": true,
+  "test_predictions_sha256": "cea05c0dfe1bcb23d02e27e8dda868dbebf4723d06b654a262f05db704c606f3",
+  "completed_at_utc": "2026-11-14T14:58:28.000190+00:00",
+  "output_sha256": {
+    "results.json": "f49f902348d18286731b45466cfa05deeffb21671ba00e993222a75777c0cbd4",
+    "configuration.json": "0e9890ac0ae2ac70df0dbf345710cab4bf852d1f7e997fdf9d4a7b1cdb6f747f",
+    "data_audit.json": "02c0ad9c4b33aad202152203cd080bfd3b267af59c15b21a71a23e1690ca7a74",
+    "split_manifest.json": "089b4a77346af498752a049291c5bc45ab67f98bef000397c78089daf97f5f92",
+    "candidate_runs.json": "21095e4012733df5a008b1a2fb18ca18c457cbd02e8edd826f3554ce54d53a4e",
+    "per_query_metrics.json": "bfcb5c5ee091ad98e365cf5756bc0a6785796e8715cc8e82f915901988b7b72b",
+    "experiments.sqlite": "a37af26d926770b8e25be3c07e0dd12124fa365c8061657c42e8135d6612c9e2",
+    "search_bundle.joblib": "e77fd735102229554f3ed82b531b1ad7e89bfefdf22b8556ee877214a286323b",
+    "protocol.json": "67e7a15c91cf6d40b4e1a33d8d2b2fc087cad2bcfd08def55e50b34b2312957f",
+    "test_predictions.json": "cea05c0dfe1bcb23d02e27e8dda868dbebf4723d06b654a262f05db704c606f3"
+  }
+}

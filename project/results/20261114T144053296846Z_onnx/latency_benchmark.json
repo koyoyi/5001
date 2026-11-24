@@ -1,0 +1,5524 @@
+{
+  "protocol": "Warm serial CPU search; one excluded warm pass per method; deterministic development subset only",
+  "query_count": 20,
+  "repeats": 5,
+  "samples": 600,
+  "concurrency": 1,
+  "threads": "BLAS/OpenMP limited to two",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "encoder_threads": 8,
+  "timing_boundary": "Query encoding/BM25, exact search, candidate union, feature building, prediction and top-k; excludes bundle loading, model download and text generation",
+  "wall_seconds": 52.06149140000343,
+  "summary": {
+    "bm25": {
+      "retrieval": {
+        "median_ms": 0.5676000146195292,
+        "p95_ms": 1.390660015749745
+      },
+      "candidate_features": {
+        "median_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "rerank_and_output": {
+        "median_ms": 4.882699984591454,
+        "p95_ms": 5.605049998848699
+      },
+      "total": {
+        "median_ms": 5.744750000303611,
+        "p95_ms": 6.796390000090468
+      }
+    },
+    "semantic": {
+      "retrieval": {
+        "median_ms": 61.48675001168158,
+        "p95_ms": 93.05093998846131
+      },
+      "candidate_features": {
+        "median_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "rerank_and_output": {
+        "median_ms": 5.242250001174398,
+        "p95_ms": 6.765540009655524
+      },
+      "total": {
+        "median_ms": 66.47640001028776,
+        "p95_ms": 97.88017499231499
+      }
+    },
+    "rrf": {
+      "retrieval": {
+        "median_ms": 60.14965000213124,
+        "p95_ms": 92.49395000369985
+      },
+      "candidate_features": {
+        "median_ms": 10.099200007971376,
+        "p95_ms": 14.14539498509839
+      },
+      "rerank_and_output": {
+        "median_ms": 0.26164998416788876,
+        "p95_ms": 0.40744998696027324
+      },
+      "total": {
+        "median_ms": 71.40734999848064,
+        "p95_ms": 104.02850499813212
+      }
+    },
+    "weighted_rrf": {
+      "retrieval": {
+        "median_ms": 60.66129999817349,
+        "p95_ms": 80.5180050185299
+      },
+      "candidate_features": {
+        "median_ms": 9.810300005483441,
+        "p95_ms": 12.024530001508538
+      },
+      "rerank_and_output": {
+        "median_ms": 0.24970000959001482,
+        "p95_ms": 0.3818950222921558
+      },
+      "total": {
+        "median_ms": 71.13455000217073,
+        "p95_ms": 92.09042000147743
+      }
+    },
+    "logistic": {
+      "retrieval": {
+        "median_ms": 56.07404999318533,
+        "p95_ms": 78.07580499065801
+      },
+      "candidate_features": {
+        "median_ms": 11.943600009544753,
+        "p95_ms": 14.991460027522407
+      },
+      "rerank_and_output": {
+        "median_ms": 0.35955000203102827,
+        "p95_ms": 0.5231250164797528
+      },
+      "total": {
+        "median_ms": 69.77649999316782,
+        "p95_ms": 90.85859500337386
+      }
+    },
+    "random_forest": {
+      "retrieval": {
+        "median_ms": 63.276450004195794,
+        "p95_ms": 85.08156999305353
+      },
+      "candidate_features": {
+        "median_ms": 12.1981499978574,
+        "p95_ms": 15.696904998912942
+      },
+      "rerank_and_output": {
+        "median_ms": 14.816699986113235,
+        "p95_ms": 19.393964993651025
+      },
+      "total": {
+        "median_ms": 91.21220000088215,
+        "p95_ms": 126.21470497979315
+      }
+    }
+  },
+  "samples_ms": [
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 1.492699986556545,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.07010001456365,
+      "total": 6.562800001120195
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 1.3897000171709806,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.0866999954450876,
+      "total": 6.476400012616068
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 0.5605999904219061,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.49229999887757,
+      "total": 6.052899989299476
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 1.0901000059675425,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.33379998523742,
+      "total": 6.423899991204962
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 0.38189999759197235,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.3545000264421105,
+      "total": 5.736400024034083
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 0.4010999982710928,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.411999998614192,
+      "total": 5.813099996885285
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 1.412999990861863,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.880299995420501,
+      "total": 6.2932999862823635
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 0.48299998161382973,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.717900010291487,
+      "total": 5.200899991905317
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 0.4318999999668449,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.915800003800541,
+      "total": 5.347700003767386
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 1.0520000068936497,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.0168999878223985,
+      "total": 6.068899994716048
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 1.212400005897507,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.562700011068955,
+      "total": 6.775100016966462
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 0.6644999957643449,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.175400001462549,
+      "total": 5.839899997226894
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 1.2212999863550067,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.285899998852983,
+      "total": 6.50719998520799
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 0.4526000120677054,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.28640000266023,
+      "total": 5.739000014727935
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 0.6428000051528215,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.436200008261949,
+      "total": 6.07900001341477
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 0.5527999892365187,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.566900013945997,
+      "total": 6.1197000031825155
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 1.4358999906107783,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.352200008928776,
+      "total": 6.788099999539554
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 0.524200004292652,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.237200006376952,
+      "total": 5.761400010669604
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 0.5213000113144517,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.377299996325746,
+      "total": 5.898600007640198
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 1.2812000059057027,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.443900008685887,
+      "total": 6.72510001459159
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 1.3506000104825944,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.603300000075251,
+      "total": 6.953900010557845
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 1.6456000157631934,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.454400001326576,
+      "total": 7.100000017089769
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 0.588800001423806,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.638299975544214,
+      "total": 6.22709997696802
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 0.7138999935705215,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.550400004722178,
+      "total": 6.2642999982926995
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 0.40329998591914773,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.3490000136662275,
+      "total": 5.752299999585375
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 0.35429999115876853,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.294100003084168,
+      "total": 5.648399994242936
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 1.2691000010818243,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.215799988945946,
+      "total": 6.48489999002777
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 0.4606999864336103,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8439000092912465,
+      "total": 5.304599995724857
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 0.42019999818876386,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.716199997346848,
+      "total": 5.136399995535612
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 0.9756999788805842,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.70860002678819,
+      "total": 5.684300005668774
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 1.0874999861698598,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.766800004290417,
+      "total": 5.854299990460277
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 0.5637000140268356,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.882199980784208,
+      "total": 5.445899994811043
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 0.972100009676069,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.669200017815456,
+      "total": 5.641300027491525
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 0.44720000005327165,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.989300010493025,
+      "total": 5.436500010546297
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 0.6229999999050051,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.994899994926527,
+      "total": 5.617899994831532
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 0.5051000043749809,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.824199975701049,
+      "total": 5.32929998007603
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 1.14819998270832,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8288000107277185,
+      "total": 5.9769999934360385
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 0.4180000105407089,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.706400010036305,
+      "total": 5.1244000205770135
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 0.48990000505000353,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.791200015461072,
+      "total": 5.281100020511076
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 1.1314000003039837,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.803199990419671,
+      "total": 5.934599990723655
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 1.1670999811030924,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.757800023071468,
+      "total": 5.92490000417456
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 1.327400008449331,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.9738999989349395,
+      "total": 7.30130000738427
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 0.5568999913521111,
+      "candidate_features": 0.0,
+      "rerank_and_output": 7.675600005313754,
+      "total": 8.232499996665865
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 0.7955000037327409,
+      "candidate_features": 0.0,
+      "rerank_and_output": 9.106300014536828,
+      "total": 9.901800018269569
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 0.5116999964229763,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.996799980290234,
+      "total": 5.50849997671321
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 0.39090000791475177,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.667600005632266,
+      "total": 5.058500013547018
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 1.1363000085111707,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.856999992625788,
+      "total": 5.993300001136959
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 0.44600002001971006,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.89219999872148,
+      "total": 5.33820001874119
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 0.4301000153645873,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.9079000018537045,
+      "total": 5.338000017218292
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 0.9697999921627343,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.6824000019114465,
+      "total": 5.652199994074181
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 1.0123999963980168,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.896600003121421,
+      "total": 5.9089999995194376
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 0.5715000152122229,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.997299984097481,
+      "total": 5.568799999309704
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 1.0299999848939478,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.720500000985339,
+      "total": 5.750499985879287
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 0.40889999945648015,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.648300004191697,
+      "total": 5.057200003648177
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 0.528200005646795,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.084999982500449,
+      "total": 5.613199988147244
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 0.5603000172413886,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.866599978413433,
+      "total": 5.426899995654821
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 1.2085000053048134,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.783200012752786,
+      "total": 5.9917000180576
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 0.43330001062713563,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.783299984410405,
+      "total": 5.216599995037541
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 0.49470001249574125,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.851700010476634,
+      "total": 5.346400022972375
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 1.2244000099599361,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.697299998952076,
+      "total": 5.921700008912012
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 1.4088999887462705,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.783700016560033,
+      "total": 6.1926000053063035
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 1.248300017323345,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.843999980948865,
+      "total": 6.09229999827221
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 0.4758999857585877,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.840100009460002,
+      "total": 5.31599999521859
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 0.5614999972749501,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.792799998540431,
+      "total": 5.354299995815381
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 0.3194000164512545,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.787799989571795,
+      "total": 5.107200006023049
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 0.29329999233596027,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.6455999836325645,
+      "total": 4.938899975968525
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 1.0729999921750277,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.6971999981906265,
+      "total": 5.770199990365654
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 0.36020000698044896,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8531999927945435,
+      "total": 5.2133999997749925
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 0.32130000181496143,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.201799998758361,
+      "total": 5.523100000573322
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 1.0085999965667725,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.636700003175065,
+      "total": 5.645299999741837
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 1.0402999760117382,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.799400019692257,
+      "total": 5.839699995703995
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 0.5015999777242541,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.947700013872236,
+      "total": 5.44929999159649
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 0.9885999897960573,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.857599997194484,
+      "total": 5.846199986990541
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 0.3589999978430569,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.667700006393716,
+      "total": 5.026700004236773
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 0.4695999959949404,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.883199988398701,
+      "total": 5.352799984393641
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 0.49730000318959355,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.81069998932071,
+      "total": 5.307999992510304
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 1.115100021706894,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8577999987173826,
+      "total": 5.972900020424277
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 0.4799999878741801,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.974200011929497,
+      "total": 5.454199999803677
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 0.521400012075901,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8497999960090965,
+      "total": 5.3712000080849975
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 1.2254000175744295,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.637999983970076,
+      "total": 5.863400001544505
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 1.281000004382804,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.947999987052754,
+      "total": 6.228999991435558
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 1.3319000136107206,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.9334999930579215,
+      "total": 6.265400006668642
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 0.4434000002220273,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.086499983211979,
+      "total": 6.529899983434007
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 0.7026999955996871,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.016400013118982,
+      "total": 5.719100008718669
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 0.40210000588558614,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.783800017321482,
+      "total": 5.185900023207068
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 0.3387999895494431,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.623200016794726,
+      "total": 4.962000006344169
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 1.0350999946240336,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.828900011489168,
+      "total": 5.864000006113201
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 0.378099997760728,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.106199998408556,
+      "total": 5.484299996169284
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 0.46869998914189637,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.943100007949397,
+      "total": 5.411799997091293
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 1.0417000157758594,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.743299999972805,
+      "total": 5.785000015748665
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 1.069999998435378,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.853099992033094,
+      "total": 5.923099990468472
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 0.6921000021975487,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.031699984101579,
+      "total": 5.723799986299127
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 1.0162999969907105,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.7469000273849815,
+      "total": 5.763200024375692
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 0.38759998278692365,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.817600012756884,
+      "total": 5.205199995543808
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 0.5499999970197678,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.864899994572625,
+      "total": 5.414899991592392
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 0.4758999857585877,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.809700010810047,
+      "total": 5.285599996568635
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 1.1712000123225152,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.9374999944120646,
+      "total": 6.10870000673458
+    },
+    {
+      "method": "bm25",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 0.45759999193251133,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.659099999116734,
+      "total": 5.116699991049245
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 0.41069998405873775,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.956600023433566,
+      "total": 5.367300007492304
+    },
+    {
+      "method": "bm25",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 1.1073999921791255,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.023300007451326,
+      "total": 6.130699999630451
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 25.06730001186952,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.250699992757291,
+      "total": 30.31800000462681
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 54.47130001266487,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.444199981866404,
+      "total": 59.915499994531274
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 71.62149998475797,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.6448000066448,
+      "total": 76.26629999140278
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 57.05990002024919,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.447999981697649,
+      "total": 62.50790000194684
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 61.50900002103299,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.67589998152107,
+      "total": 66.18490000255406
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 62.18459998490289,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.715900024166331,
+      "total": 66.90050000906922
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 53.43840000568889,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.9082000041380525,
+      "total": 58.34660000982694
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 51.96260000229813,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.451500008348376,
+      "total": 57.41410001064651
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 50.76549999648705,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.877700004726648,
+      "total": 55.6432000012137
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 52.90969999623485,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.850199999054894,
+      "total": 57.75989999528974
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 57.571299985283986,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.762800010619685,
+      "total": 64.33409999590367
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 61.90619998960756,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.186100024729967,
+      "total": 67.09230001433752
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 62.4316000030376,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.214299995917827,
+      "total": 68.64589999895543
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 70.65139999031089,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.0187000199221075,
+      "total": 76.670100010233
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 63.56860001687892,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.606699996860698,
+      "total": 69.17530001373962
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 63.60039999708533,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.782499996712431,
+      "total": 69.38289999379776
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 105.73539999313653,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.807699995581061,
+      "total": 110.54309998871759
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 69.19750000815839,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.100499984109774,
+      "total": 74.29799999226816
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 57.451300002867356,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.670499998610467,
+      "total": 62.12180000147782
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 60.28370000422001,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.812800005311146,
+      "total": 65.09650000953116
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 138.4296999895014,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.681299993535504,
+      "total": 143.1109999830369
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 61.764400015817955,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.940799990436062,
+      "total": 66.70520000625402
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 62.161400011973456,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.859499982558191,
+      "total": 67.02089999453165
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 53.58320000232197,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.282700003590435,
+      "total": 58.86590000591241
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 58.89230000320822,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.785900004208088,
+      "total": 63.67820000741631
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 83.97360000526533,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.923699984326959,
+      "total": 90.89729998959228
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 65.70669999928214,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.287999985739589,
+      "total": 70.99469998502173
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 50.92020001029596,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.236400000285357,
+      "total": 56.156600010581315
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 55.28460000641644,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.372900010319427,
+      "total": 61.65750001673587
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 64.79050000780262,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.438699998194352,
+      "total": 70.22920000599697
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 55.848300020443276,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.704399984097108,
+      "total": 61.552700004540384
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 71.03009999264032,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.926599988015369,
+      "total": 76.95669998065569
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 54.85240000416525,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.441199988126755,
+      "total": 60.293599992292
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 71.48990000132471,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.948299989337102,
+      "total": 76.43819999066181
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 62.4033999920357,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.25369998649694,
+      "total": 67.65709997853264
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 53.07739999261685,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.523200012044981,
+      "total": 57.60060000466183
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 92.82739998889156,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.82410000404343,
+      "total": 97.65149999293499
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 55.45799998799339,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.709700006060302,
+      "total": 60.16769999405369
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 57.47260001953691,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.920899973716587,
+      "total": 63.3934999932535
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 57.18149998574518,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.105999996885657,
+      "total": 62.287499982630834
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 69.8112000245601,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.725999992340803,
+      "total": 76.5372000169009
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 60.409999976400286,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.807100020116195,
+      "total": 65.21709999651648
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 61.99030001880601,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.64490000740625,
+      "total": 66.63520002621226
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 55.42869999771938,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.933599993819371,
+      "total": 60.36229999153875
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 73.76179998391308,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.151200010208413,
+      "total": 79.91299999412149
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 66.79989999975078,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.67020000400953,
+      "total": 73.47010000376031
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 60.10689999675378,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.45390001591295,
+      "total": 66.56080001266673
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 66.67930001276545,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.723699996247888,
+      "total": 71.40300000901334
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 49.81909997877665,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.888700001174584,
+      "total": 54.70779997995123
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 52.137000020593405,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.683499981183559,
+      "total": 56.82050000177696
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 52.14479999267496,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.074299988336861,
+      "total": 57.21909998101182
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 59.97510001179762,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.73369998508133,
+      "total": 64.70879999687895
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 85.70660001714714,
+      "candidate_features": 0.0,
+      "rerank_and_output": 9.731800004374236,
+      "total": 95.43840002152137
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 80.9319999825675,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.747400002088398,
+      "total": 85.6793999846559
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 65.12109999312088,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.291700003203005,
+      "total": 71.41279999632388
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 67.29170001926832,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.018699990818277,
+      "total": 73.3104000100866
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 105.10740001336671,
+      "candidate_features": 0.0,
+      "rerank_and_output": 12.127099995268509,
+      "total": 117.23450000863522
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 70.86559999152087,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.598699994152412,
+      "total": 76.46429998567328
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 53.75570000614971,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.786000004969537,
+      "total": 58.54170001111925
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 57.212999992771074,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.8534999950788915,
+      "total": 62.066499987849966
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 72.66360000357963,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.605199985438958,
+      "total": 78.26879998901859
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 61.70839999685995,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.6836000110488385,
+      "total": 66.39200000790879
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 67.8986000129953,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.691099999239668,
+      "total": 73.58970001223497
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 71.31909998133779,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.98699999297969,
+      "total": 76.30609997431748
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 82.65409999876283,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.84929998149164,
+      "total": 88.50339998025447
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 73.67139999405481,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.9324000030756,
+      "total": 79.60379999713041
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 58.0228999897372,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.668000016361475,
+      "total": 64.69090000609867
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 63.8582999818027,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.993800015654415,
+      "total": 68.85209999745712
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 56.59280001418665,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.342399981804192,
+      "total": 62.93519999599084
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 63.826900004642084,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.991399986669421,
+      "total": 69.8182999913115
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 70.12400001985952,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.817599991336465,
+      "total": 76.94160001119599
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 67.92879998101853,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.248100002063438,
+      "total": 73.17689998308197
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 54.972800018731505,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.785699973581359,
+      "total": 59.75849999231286
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 68.08189998264425,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.072600022889674,
+      "total": 74.15450000553392
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 67.75300001027063,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.108199973823503,
+      "total": 73.86119998409413
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 68.4758999850601,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.025600014254451,
+      "total": 74.50149999931455
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 97.29819998028688,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.926800000248477,
+      "total": 102.22499998053536
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 57.805699994787574,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.817400000523776,
+      "total": 63.62309999531135
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 61.46450000233017,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.348999984562397,
+      "total": 66.81349998689257
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 59.93090002448298,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.73369997437112,
+      "total": 65.6645999988541
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 70.3854999737814,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.901300009805709,
+      "total": 75.28679998358712
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 55.69739997736178,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.726100014522672,
+      "total": 60.423499991884455
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 61.82149998494424,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.21540000429377,
+      "total": 68.03689998923801
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 59.208699996815994,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.818899993551895,
+      "total": 64.02759999036789
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 66.70609998400323,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.228100024396554,
+      "total": 71.93420000839978
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 60.89049999718554,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.832000005990267,
+      "total": 65.72250000317581
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 53.06909998762421,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.279300006804988,
+      "total": 58.3483999944292
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 51.896999997552484,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.7848999965935946,
+      "total": 56.68189999414608
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 50.17410000436939,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.777699999976903,
+      "total": 54.951800004346296
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 52.728000009665266,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.7657999966759235,
+      "total": 57.49380000634119
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 52.57890000939369,
+      "candidate_features": 0.0,
+      "rerank_and_output": 6.551099999342114,
+      "total": 59.130000008735806
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 61.63310000556521,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.230800015851855,
+      "total": 66.86390002141707
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 56.96760001592338,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.633399978047237,
+      "total": 61.60099999397062
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 61.03500002063811,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.592399985995144,
+      "total": 65.62740000663325
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 51.60879998584278,
+      "candidate_features": 0.0,
+      "rerank_and_output": 7.045300008030608,
+      "total": 58.65409999387339
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 53.825999988475814,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.407399992691353,
+      "total": 59.23339998116717
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 102.79380000429228,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.371999985072762,
+      "total": 108.16579998936504
+    },
+    {
+      "method": "semantic",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 55.70960001205094,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.882099998416379,
+      "total": 61.59170001046732
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 54.01219998020679,
+      "candidate_features": 0.0,
+      "rerank_and_output": 4.707700019935146,
+      "total": 58.719900000141934
+    },
+    {
+      "method": "semantic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 56.72469999990426,
+      "candidate_features": 0.0,
+      "rerank_and_output": 5.044399993494153,
+      "total": 61.76909999339841
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 70.18820001394488,
+      "candidate_features": 9.587699983967468,
+      "rerank_and_output": 0.22869999520480633,
+      "total": 80.00459999311715
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 55.06980000063777,
+      "candidate_features": 9.312600013799965,
+      "rerank_and_output": 0.21469997591339052,
+      "total": 64.59709999035113
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 62.27770002442412,
+      "candidate_features": 12.69129998399876,
+      "rerank_and_output": 0.31900001340545714,
+      "total": 75.28800002182834
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 58.287000021664426,
+      "candidate_features": 9.189999982481822,
+      "rerank_and_output": 0.21019999985583127,
+      "total": 67.68720000400208
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 58.45400001271628,
+      "candidate_features": 9.686399978818372,
+      "rerank_and_output": 0.21550001110881567,
+      "total": 68.35590000264347
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 60.24809999507852,
+      "candidate_features": 10.358200001064688,
+      "rerank_and_output": 0.25359998107887805,
+      "total": 70.85989997722208
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 61.04219998815097,
+      "candidate_features": 11.474300001282245,
+      "rerank_and_output": 0.2792000013869256,
+      "total": 72.79569999082014
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 57.452900015050545,
+      "candidate_features": 10.561500006588176,
+      "rerank_and_output": 0.20939999376423657,
+      "total": 68.22380001540296
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 55.1463000010699,
+      "candidate_features": 11.049299995647743,
+      "rerank_and_output": 0.24540000595152378,
+      "total": 66.44100000266917
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 53.677599993534386,
+      "candidate_features": 10.268399986671284,
+      "rerank_and_output": 0.22760001593269408,
+      "total": 64.17359999613836
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 53.326799999922514,
+      "candidate_features": 9.703800023999065,
+      "rerank_and_output": 0.232299993513152,
+      "total": 63.26290001743473
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 59.33220000588335,
+      "candidate_features": 9.846900007687509,
+      "rerank_and_output": 0.2460000105202198,
+      "total": 69.42510002409108
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 54.52130001503974,
+      "candidate_features": 9.594100003596395,
+      "rerank_and_output": 0.3569999826140702,
+      "total": 64.47240000125021
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 63.47890000324696,
+      "candidate_features": 12.191299989353865,
+      "rerank_and_output": 0.2699000178836286,
+      "total": 75.94010001048446
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 57.29910000809468,
+      "candidate_features": 15.024499996798113,
+      "rerank_and_output": 0.30429998878389597,
+      "total": 72.62789999367669
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 56.66489998111501,
+      "candidate_features": 10.117300000274554,
+      "rerank_and_output": 0.22640000679530203,
+      "total": 67.00859998818487
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 95.85220000008121,
+      "candidate_features": 9.372200001962483,
+      "rerank_and_output": 0.34699999378062785,
+      "total": 105.57139999582432
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 51.619699981529266,
+      "candidate_features": 9.490500000538304,
+      "rerank_and_output": 0.24640001356601715,
+      "total": 61.35659999563359
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 55.74670000351034,
+      "candidate_features": 11.321400001179427,
+      "rerank_and_output": 0.2666999935172498,
+      "total": 67.33479999820702
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 67.05949999741279,
+      "candidate_features": 10.670199990272522,
+      "rerank_and_output": 0.2803000097628683,
+      "total": 78.00999999744818
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 71.42339998972602,
+      "candidate_features": 12.13000001735054,
+      "rerank_and_output": 0.2826999989338219,
+      "total": 83.83610000601038
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 63.235700014047325,
+      "candidate_features": 11.708899983204901,
+      "rerank_and_output": 0.5994999955873936,
+      "total": 75.54409999283962
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 80.94469999196008,
+      "candidate_features": 10.940900014247745,
+      "rerank_and_output": 0.24470000062137842,
+      "total": 92.1303000068292
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 58.93130000913516,
+      "candidate_features": 9.501199994701892,
+      "rerank_and_output": 0.219000008655712,
+      "total": 68.65150001249276
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 59.67270000837743,
+      "candidate_features": 9.785000002011657,
+      "rerank_and_output": 0.37659998633898795,
+      "total": 69.83429999672808
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 67.34369997866452,
+      "candidate_features": 9.33120000991039,
+      "rerank_and_output": 0.22819999139755964,
+      "total": 76.90309997997247
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 57.6658999780193,
+      "candidate_features": 9.747200005222112,
+      "rerank_and_output": 0.30040001729503274,
+      "total": 67.71350000053644
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 50.985800015041605,
+      "candidate_features": 11.22909999685362,
+      "rerank_and_output": 0.20549999317154288,
+      "total": 62.42040000506677
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 52.046600001631305,
+      "candidate_features": 9.678500005975366,
+      "rerank_and_output": 0.2038000093307346,
+      "total": 61.928900016937405
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 54.414299986092374,
+      "candidate_features": 9.816700010560453,
+      "rerank_and_output": 0.3252000024076551,
+      "total": 64.55619999906048
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 54.54209999879822,
+      "candidate_features": 9.942700009560212,
+      "rerank_and_output": 0.3372000064700842,
+      "total": 64.82200001482852
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 62.364299985347316,
+      "candidate_features": 9.27350000711158,
+      "rerank_and_output": 0.21160001051612198,
+      "total": 71.84940000297502
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 56.46730001899414,
+      "candidate_features": 10.187300009420142,
+      "rerank_and_output": 0.2722999779507518,
+      "total": 66.92690000636503
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 64.10619997768663,
+      "candidate_features": 10.660700005246326,
+      "rerank_and_output": 0.19409999367780983,
+      "total": 74.96099997661076
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 59.564099996350706,
+      "candidate_features": 10.464999999385327,
+      "rerank_and_output": 0.2677000011317432,
+      "total": 70.29679999686778
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 61.50730000808835,
+      "candidate_features": 9.539899998344481,
+      "rerank_and_output": 0.2717000024858862,
+      "total": 71.31890000891872
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 161.58730001188815,
+      "candidate_features": 10.917200008407235,
+      "rerank_and_output": 0.24119997397065163,
+      "total": 172.74569999426603
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 61.118899990106,
+      "candidate_features": 10.064400004921481,
+      "rerank_and_output": 0.23579999106004834,
+      "total": 71.41909998608753
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 59.86619999748655,
+      "candidate_features": 12.513299996498972,
+      "rerank_and_output": 0.28450001263991,
+      "total": 72.66400000662543
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 62.03880000975914,
+      "candidate_features": 9.899700002279133,
+      "rerank_and_output": 0.22350001381710172,
+      "total": 72.16200002585538
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 76.13850000780076,
+      "candidate_features": 9.82159998966381,
+      "rerank_and_output": 0.26440000510774553,
+      "total": 86.22450000257231
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 55.66859999089502,
+      "candidate_features": 9.946300007868558,
+      "rerank_and_output": 0.2175999979954213,
+      "total": 65.832499996759
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 63.00949997967109,
+      "candidate_features": 9.56230002338998,
+      "rerank_and_output": 0.29189998167566955,
+      "total": 72.86369998473674
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 55.86120000225492,
+      "candidate_features": 9.854800009634346,
+      "rerank_and_output": 0.2720999764278531,
+      "total": 65.98809998831712
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 59.833899984369054,
+      "candidate_features": 11.940399999730289,
+      "rerank_and_output": 0.2570000069681555,
+      "total": 72.0312999910675
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 68.5129999765195,
+      "candidate_features": 10.028700024122372,
+      "rerank_and_output": 0.28399997972883284,
+      "total": 78.8256999803707
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 54.61969997850247,
+      "candidate_features": 10.022700007539243,
+      "rerank_and_output": 0.2662000188138336,
+      "total": 64.90860000485554
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 63.219400006346405,
+      "candidate_features": 18.138699990231544,
+      "rerank_and_output": 0.21510000806301832,
+      "total": 81.57320000464097
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 51.31239999900572,
+      "candidate_features": 9.82599999406375,
+      "rerank_and_output": 0.2764000091701746,
+      "total": 61.414800002239645
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 56.05760001344606,
+      "candidate_features": 10.25259998277761,
+      "rerank_and_output": 0.29260001610964537,
+      "total": 66.60280001233332
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 56.64670001715422,
+      "candidate_features": 12.427199981175363,
+      "rerank_and_output": 0.30189999961294234,
+      "total": 69.37579999794252
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 70.6761000037659,
+      "candidate_features": 11.065200000302866,
+      "rerank_and_output": 0.2589999930933118,
+      "total": 82.00029999716207
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 62.62330000754446,
+      "candidate_features": 12.148799985880032,
+      "rerank_and_output": 0.24270001449622214,
+      "total": 75.01480000792071
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 71.88719999976456,
+      "candidate_features": 9.706899989396334,
+      "rerank_and_output": 0.22270000772550702,
+      "total": 81.8167999968864
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 54.75159999332391,
+      "candidate_features": 10.566000011749566,
+      "rerank_and_output": 0.21219998598098755,
+      "total": 65.52979999105446
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 54.002500022761524,
+      "candidate_features": 10.024299990618601,
+      "rerank_and_output": 0.27049999334849417,
+      "total": 64.29730000672862
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 98.55100000277162,
+      "candidate_features": 9.783500019693747,
+      "rerank_and_output": 0.3698999935295433,
+      "total": 108.7044000159949
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 52.756299992324784,
+      "candidate_features": 9.433900006115437,
+      "rerank_and_output": 0.228599994443357,
+      "total": 62.41879999288358
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 52.18249998870306,
+      "candidate_features": 10.173000016948208,
+      "rerank_and_output": 0.26429997524246573,
+      "total": 62.61979998089373
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 58.918299997458234,
+      "candidate_features": 10.408600006485358,
+      "rerank_and_output": 0.2334000018890947,
+      "total": 69.56030000583269
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 74.28970001637936,
+      "candidate_features": 10.062199988169596,
+      "rerank_and_output": 0.26840000646188855,
+      "total": 84.62030001101084
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 59.948000009171665,
+      "candidate_features": 9.647900005802512,
+      "rerank_and_output": 0.2145000034943223,
+      "total": 69.8104000184685
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 63.8590999878943,
+      "candidate_features": 11.04979999945499,
+      "rerank_and_output": 0.23900001542642713,
+      "total": 75.14790000277571
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 57.79110000003129,
+      "candidate_features": 10.351699980674312,
+      "rerank_and_output": 0.292200013063848,
+      "total": 68.43499999376945
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 63.84519999846816,
+      "candidate_features": 10.45709999743849,
+      "rerank_and_output": 0.2418000076431781,
+      "total": 74.54410000354983
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 62.01229998259805,
+      "candidate_features": 9.214699995936826,
+      "rerank_and_output": 0.25209999876096845,
+      "total": 71.47909997729585
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 62.297700002091005,
+      "candidate_features": 10.275600012391806,
+      "rerank_and_output": 0.25519999326206744,
+      "total": 72.82850000774488
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 62.362799973925576,
+      "candidate_features": 9.93560001370497,
+      "rerank_and_output": 0.22089999401941895,
+      "total": 72.51929998164997
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 69.14649999816902,
+      "candidate_features": 12.732599978335202,
+      "rerank_and_output": 0.2525000018067658,
+      "total": 82.13159997831099
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 70.35449999966659,
+      "candidate_features": 16.483900020830333,
+      "rerank_and_output": 0.5876999930478632,
+      "total": 87.42610001354478
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 92.31720000389032,
+      "candidate_features": 11.24980000895448,
+      "rerank_and_output": 0.38029998540878296,
+      "total": 103.94729999825358
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 75.00859998981468,
+      "candidate_features": 10.207799990894273,
+      "rerank_and_output": 0.26890001026913524,
+      "total": 85.48529999097809
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 62.899500015191734,
+      "candidate_features": 9.84529999550432,
+      "rerank_and_output": 0.22759998682886362,
+      "total": 72.97239999752492
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 76.63619998493232,
+      "candidate_features": 9.563100000377744,
+      "rerank_and_output": 0.21470000501722097,
+      "total": 86.41399999032728
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 59.83929999638349,
+      "candidate_features": 10.081100015668198,
+      "rerank_and_output": 0.21399999968707561,
+      "total": 70.13440001173876
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 61.78109999746084,
+      "candidate_features": 9.688400023151189,
+      "rerank_and_output": 0.33749997965060174,
+      "total": 71.80700000026263
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 155.46310000354424,
+      "candidate_features": 10.031800018623471,
+      "rerank_and_output": 0.24429999757558107,
+      "total": 165.7392000197433
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 52.803800004767254,
+      "candidate_features": 9.306599997216836,
+      "rerank_and_output": 0.24190000840462744,
+      "total": 62.35230001038872
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 52.721999993082136,
+      "candidate_features": 9.662700002081692,
+      "rerank_and_output": 0.24210000992752612,
+      "total": 62.626800005091354
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 58.952499995939434,
+      "candidate_features": 11.333900009049103,
+      "rerank_and_output": 0.2705999941099435,
+      "total": 70.55699999909848
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 75.01420000335202,
+      "candidate_features": 14.120799984084442,
+      "rerank_and_output": 0.2693000133149326,
+      "total": 89.40430000075139
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 64.4138999923598,
+      "candidate_features": 9.614000009605661,
+      "rerank_and_output": 0.2274000144097954,
+      "total": 74.25530001637526
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 66.1891000054311,
+      "candidate_features": 9.733599988976493,
+      "rerank_and_output": 0.20849998691119254,
+      "total": 76.13119998131879
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 57.51240000245161,
+      "candidate_features": 11.377100017853081,
+      "rerank_and_output": 0.4070999857503921,
+      "total": 69.29660000605509
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 63.280099973781034,
+      "candidate_features": 9.743600006913766,
+      "rerank_and_output": 0.22700001136399806,
+      "total": 73.2506999920588
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 60.05120000918396,
+      "candidate_features": 10.83650000509806,
+      "rerank_and_output": 0.5078999965917319,
+      "total": 71.39560001087375
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 55.78510000486858,
+      "candidate_features": 10.434099996928126,
+      "rerank_and_output": 0.3042000171262771,
+      "total": 66.52340001892298
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 57.63289998867549,
+      "candidate_features": 9.834299999056384,
+      "rerank_and_output": 0.23020000662654638,
+      "total": 67.69739999435842
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 51.58990001655184,
+      "candidate_features": 11.034199997084215,
+      "rerank_and_output": 0.27779999072663486,
+      "total": 62.90190000436269
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 55.24210000294261,
+      "candidate_features": 14.612700004363433,
+      "rerank_and_output": 0.4563999827951193,
+      "total": 70.31119999010116
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 60.398500005248934,
+      "candidate_features": 9.88369999686256,
+      "rerank_and_output": 0.26790000265464187,
+      "total": 70.55010000476614
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 64.22319999546744,
+      "candidate_features": 14.79529999778606,
+      "rerank_and_output": 0.27970000519417226,
+      "total": 79.29819999844767
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 56.93669998436235,
+      "candidate_features": 9.777300001587719,
+      "rerank_and_output": 0.22819999139755964,
+      "total": 66.94219997734763
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 65.86769997375086,
+      "candidate_features": 9.933400026056916,
+      "rerank_and_output": 0.2893999917432666,
+      "total": 76.09049999155104
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 53.34210000000894,
+      "candidate_features": 10.213000001385808,
+      "rerank_and_output": 0.25880002067424357,
+      "total": 63.81390002206899
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 66.77450001006946,
+      "candidate_features": 10.601899994071573,
+      "rerank_and_output": 0.3161999920848757,
+      "total": 77.69259999622591
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 99.89939999650232,
+      "candidate_features": 10.276099987095222,
+      "rerank_and_output": 0.277700019069016,
+      "total": 110.45320000266656
+    },
+    {
+      "method": "rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 55.95029998221435,
+      "candidate_features": 10.195300012128428,
+      "rerank_and_output": 0.2702999918255955,
+      "total": 66.41589998616837
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 62.63669999316335,
+      "candidate_features": 13.338399992790073,
+      "rerank_and_output": 0.4141000099480152,
+      "total": 76.38919999590144
+    },
+    {
+      "method": "rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 61.683100007940084,
+      "candidate_features": 9.546899993438274,
+      "rerank_and_output": 0.2868000010494143,
+      "total": 71.51680000242777
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 70.70250000106171,
+      "candidate_features": 9.720200003357604,
+      "rerank_and_output": 0.25530002312734723,
+      "total": 80.67800002754666
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 55.30829998315312,
+      "candidate_features": 9.558599995216355,
+      "rerank_and_output": 0.24870000197552145,
+      "total": 65.115599980345
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 62.83929999335669,
+      "candidate_features": 11.065800004871562,
+      "rerank_and_output": 0.22390001686289907,
+      "total": 74.12900001509115
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 55.22949999431148,
+      "candidate_features": 9.977300011087209,
+      "rerank_and_output": 0.2586999908089638,
+      "total": 65.46549999620765
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 60.78020000131801,
+      "candidate_features": 9.864699997706339,
+      "rerank_and_output": 0.22050002007745206,
+      "total": 70.8654000191018
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 61.361200001556426,
+      "candidate_features": 9.441300004255027,
+      "rerank_and_output": 0.2204999909736216,
+      "total": 71.02299999678507
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 54.85799998859875,
+      "candidate_features": 10.99489998887293,
+      "rerank_and_output": 0.2674999996088445,
+      "total": 66.12039997708052
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 59.58420000388287,
+      "candidate_features": 11.327899992465973,
+      "rerank_and_output": 0.2465000143274665,
+      "total": 71.15860001067631
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 59.79259999003261,
+      "candidate_features": 18.24030000716448,
+      "rerank_and_output": 0.4606999864336103,
+      "total": 78.4935999836307
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 68.12390001141466,
+      "candidate_features": 11.433799983933568,
+      "rerank_and_output": 0.3004999889526516,
+      "total": 79.85819998430088
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 55.58879999443889,
+      "candidate_features": 10.112999996636063,
+      "rerank_and_output": 0.37819999852217734,
+      "total": 66.07999998959713
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 61.010400007944554,
+      "candidate_features": 11.695299996063113,
+      "rerank_and_output": 0.32309998641721904,
+      "total": 73.02879999042489
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 66.01960002444685,
+      "candidate_features": 9.582099999533966,
+      "rerank_and_output": 0.22149999858811498,
+      "total": 75.82320002256893
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 63.028000004123896,
+      "candidate_features": 9.925999998813495,
+      "rerank_and_output": 0.21180001203902066,
+      "total": 73.16580001497641
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 55.165500001749024,
+      "candidate_features": 10.334599995985627,
+      "rerank_and_output": 0.22280000848695636,
+      "total": 65.72290000622161
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 54.24650001805276,
+      "candidate_features": 9.59179998608306,
+      "rerank_and_output": 0.2482999989297241,
+      "total": 64.08660000306554
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 95.4349999956321,
+      "candidate_features": 9.760500019183382,
+      "rerank_and_output": 0.3111999831162393,
+      "total": 105.50669999793172
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 51.43239998142235,
+      "candidate_features": 9.913900023093447,
+      "rerank_and_output": 0.21410000044852495,
+      "total": 61.56040000496432
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 52.93440000968985,
+      "candidate_features": 10.265299992170185,
+      "rerank_and_output": 0.2339000056963414,
+      "total": 63.43360000755638
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 54.3988999852445,
+      "candidate_features": 10.145000007469207,
+      "rerank_and_output": 0.2373000024817884,
+      "total": 64.7811999951955
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 72.20500000403263,
+      "candidate_features": 10.023499984527007,
+      "rerank_and_output": 0.368200009688735,
+      "total": 82.59669999824837
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 62.94989999150857,
+      "candidate_features": 10.926199989626184,
+      "rerank_and_output": 0.24970000959001482,
+      "total": 74.12579999072477
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 66.83729999349453,
+      "candidate_features": 10.311599995475262,
+      "rerank_and_output": 0.22600000374950469,
+      "total": 77.37489999271929
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 56.88720001489855,
+      "candidate_features": 13.691100000869483,
+      "rerank_and_output": 0.3254000039305538,
+      "total": 70.90370001969859
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 65.80320000648499,
+      "candidate_features": 9.723099996335804,
+      "rerank_and_output": 0.33400001120753586,
+      "total": 75.86030001402833
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 66.57979998271912,
+      "candidate_features": 9.419100009836257,
+      "rerank_and_output": 0.2339000056963414,
+      "total": 76.23279999825172
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 62.256300006993115,
+      "candidate_features": 12.021000002278015,
+      "rerank_and_output": 0.31900001340545714,
+      "total": 74.59630002267659
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 64.43040000158362,
+      "candidate_features": 9.598999982699752,
+      "rerank_and_output": 0.21700002253055573,
+      "total": 74.24640000681393
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 59.141900012036785,
+      "candidate_features": 9.098299982724711,
+      "rerank_and_output": 0.1886000100057572,
+      "total": 68.42880000476725
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 60.44390000170097,
+      "candidate_features": 9.7550000064075,
+      "rerank_and_output": 0.22690001060254872,
+      "total": 70.42580001871102
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 62.34279999625869,
+      "candidate_features": 9.504000016022474,
+      "rerank_and_output": 0.26760000037029386,
+      "total": 72.11440001265146
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 72.60150002548471,
+      "candidate_features": 9.307000000262633,
+      "rerank_and_output": 0.3139999753329903,
+      "total": 82.22250000108033
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 61.98099997709505,
+      "candidate_features": 9.222699998645112,
+      "rerank_and_output": 0.21389999892562628,
+      "total": 71.41759997466579
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 69.80900000780821,
+      "candidate_features": 9.01549999252893,
+      "rerank_and_output": 0.18969998927786946,
+      "total": 79.01419998961501
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 58.76380001427606,
+      "candidate_features": 9.744300012243912,
+      "rerank_and_output": 0.28319997363723814,
+      "total": 68.79130000015721
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 61.762799974530935,
+      "candidate_features": 10.571699996944517,
+      "rerank_and_output": 0.2628000220283866,
+      "total": 72.59729999350384
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 155.07130001788028,
+      "candidate_features": 9.604699996998534,
+      "rerank_and_output": 0.2901999978348613,
+      "total": 164.96620001271367
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 60.35179999889806,
+      "candidate_features": 10.78760001109913,
+      "rerank_and_output": 0.3893999964930117,
+      "total": 71.5288000064902
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 60.54239999502897,
+      "candidate_features": 11.958799994317815,
+      "rerank_and_output": 0.4621000261977315,
+      "total": 72.96330001554452
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 72.72970001213253,
+      "candidate_features": 14.89310001488775,
+      "rerank_and_output": 0.2623999898787588,
+      "total": 87.88520001689903
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 72.13809998938814,
+      "candidate_features": 11.72249999945052,
+      "rerank_and_output": 0.3121000190731138,
+      "total": 84.17270000791177
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 56.34419998386875,
+      "candidate_features": 9.338100004242733,
+      "rerank_and_output": 0.26580001576803625,
+      "total": 65.94810000387952
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 62.210200005210936,
+      "candidate_features": 11.180700006661937,
+      "rerank_and_output": 0.2133999951183796,
+      "total": 73.60430000699125
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 56.78070001886226,
+      "candidate_features": 10.012099985033274,
+      "rerank_and_output": 0.23140001576393843,
+      "total": 67.02420001965947
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 60.52070000441745,
+      "candidate_features": 9.603399987099692,
+      "rerank_and_output": 0.215600011870265,
+      "total": 70.3397000033874
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 60.051599983125925,
+      "candidate_features": 9.145099989837036,
+      "rerank_and_output": 0.24960000882856548,
+      "total": 69.44629998179153
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 55.67840000730939,
+      "candidate_features": 9.764799993718043,
+      "rerank_and_output": 0.23949999012984335,
+      "total": 65.68269999115728
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 50.941099994815886,
+      "candidate_features": 9.866899985354394,
+      "rerank_and_output": 0.29510000604204834,
+      "total": 61.10309998621233
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 51.94759997539222,
+      "candidate_features": 9.497999999439344,
+      "rerank_and_output": 0.3011000226251781,
+      "total": 61.746699997456744
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 52.4069000093732,
+      "candidate_features": 9.243500011507422,
+      "rerank_and_output": 0.21440000273287296,
+      "total": 61.8648000236135
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 53.612800023984164,
+      "candidate_features": 9.490500000538304,
+      "rerank_and_output": 0.22950000129640102,
+      "total": 63.33280002581887
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 60.396999993827194,
+      "candidate_features": 9.661999996751547,
+      "rerank_and_output": 0.3074999840464443,
+      "total": 70.36649997462519
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 56.37320000096224,
+      "candidate_features": 12.480000004870817,
+      "rerank_and_output": 0.2753000007942319,
+      "total": 69.12850000662729
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 73.51180000114255,
+      "candidate_features": 12.091599986888468,
+      "rerank_and_output": 0.4838000168092549,
+      "total": 86.08720000484027
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 61.09700002707541,
+      "candidate_features": 10.027099982835352,
+      "rerank_and_output": 0.3625999961514026,
+      "total": 71.48670000606216
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 55.458699993323535,
+      "candidate_features": 9.427800017874688,
+      "rerank_and_output": 0.22089999401941895,
+      "total": 65.10740000521764
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 95.76280001783744,
+      "candidate_features": 9.607899992261082,
+      "rerank_and_output": 0.22869999520480633,
+      "total": 105.59940000530332
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 51.54350001248531,
+      "candidate_features": 9.817799989832565,
+      "rerank_and_output": 0.2245000214315951,
+      "total": 61.58580002374947
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 52.8010000125505,
+      "candidate_features": 11.012299975845963,
+      "rerank_and_output": 0.29520000680349767,
+      "total": 64.10849999519996
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 58.53060001390986,
+      "candidate_features": 9.496299986494705,
+      "rerank_and_output": 0.31110001145862043,
+      "total": 68.33800001186319
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 69.70009999349713,
+      "candidate_features": 9.482900000875816,
+      "rerank_and_output": 0.22590000298805535,
+      "total": 79.408899997361
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 56.06979998992756,
+      "candidate_features": 9.999700007028878,
+      "rerank_and_output": 0.24759999359957874,
+      "total": 66.31709999055602
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 63.1524000200443,
+      "candidate_features": 9.367099992232397,
+      "rerank_and_output": 0.2041999832727015,
+      "total": 72.7236999955494
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 57.03250001533888,
+      "candidate_features": 9.604799997759983,
+      "rerank_and_output": 0.22519999765791,
+      "total": 66.86250001075678
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 60.91729999752715,
+      "candidate_features": 10.010400001192465,
+      "rerank_and_output": 0.2246999938506633,
+      "total": 71.15239999257028
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 72.58489998639561,
+      "candidate_features": 9.531299991067499,
+      "rerank_and_output": 0.24830002803355455,
+      "total": 82.36450000549667
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 55.532900005346164,
+      "candidate_features": 9.435399988433346,
+      "rerank_and_output": 0.23880001390352845,
+      "total": 65.20710000768304
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 56.05990000185557,
+      "candidate_features": 10.20240000798367,
+      "rerank_and_output": 0.2632999967318028,
+      "total": 66.52560000657104
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 51.86179999145679,
+      "candidate_features": 11.679099989123642,
+      "rerank_and_output": 0.2784999960567802,
+      "total": 63.819399976637214
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 71.52789999963716,
+      "candidate_features": 9.921400021994486,
+      "rerank_and_output": 0.23889998556114733,
+      "total": 81.68820000719279
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 68.5957999958191,
+      "candidate_features": 10.769899992737919,
+      "rerank_and_output": 0.26309999520890415,
+      "total": 79.62879998376593
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 79.7329000197351,
+      "candidate_features": 11.275999975623563,
+      "rerank_and_output": 0.37540000630542636,
+      "total": 91.38430000166409
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 64.412200008519,
+      "candidate_features": 9.774700010893866,
+      "rerank_and_output": 0.24159997701644897,
+      "total": 74.42849999642931
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 71.05050000245683,
+      "candidate_features": 10.150599991902709,
+      "rerank_and_output": 0.20790001144632697,
+      "total": 81.40900000580586
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 60.17229999997653,
+      "candidate_features": 9.632400004193187,
+      "rerank_and_output": 0.21500000730156898,
+      "total": 70.01970001147129
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 61.13689998164773,
+      "candidate_features": 9.55630000680685,
+      "rerank_and_output": 0.3552999987732619,
+      "total": 71.04849998722784
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 154.37970001948997,
+      "candidate_features": 9.46449997718446,
+      "rerank_and_output": 0.2330999996047467,
+      "total": 164.07729999627918
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 60.229299997445196,
+      "candidate_features": 9.52659998438321,
+      "rerank_and_output": 0.24970000959001482,
+      "total": 70.00559999141842
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 51.2929999968037,
+      "candidate_features": 9.78910000412725,
+      "rerank_and_output": 0.27489999774843454,
+      "total": 61.356999998679385
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 61.383699998259544,
+      "candidate_features": 9.802800021134317,
+      "rerank_and_output": 0.26849997811950743,
+      "total": 71.45499999751337
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 72.01210001949221,
+      "candidate_features": 9.569299989379942,
+      "rerank_and_output": 0.2376000047661364,
+      "total": 81.81900001363829
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 54.879200004506856,
+      "candidate_features": 9.37849999172613,
+      "rerank_and_output": 0.38150002365000546,
+      "total": 64.63920001988299
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 65.47229998977855,
+      "candidate_features": 11.222000000998378,
+      "rerank_and_output": 0.21329999435693026,
+      "total": 76.90759998513386
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 63.66260000504553,
+      "candidate_features": 9.696299995994195,
+      "rerank_and_output": 0.3342999843880534,
+      "total": 73.69319998542778
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 64.41790002281778,
+      "candidate_features": 11.604199971770868,
+      "rerank_and_output": 0.4348000220488757,
+      "total": 76.45690001663752
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 64.16960002388805,
+      "candidate_features": 9.795799996936694,
+      "rerank_and_output": 0.2571999793872237,
+      "total": 74.22260000021197
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 53.81889999262057,
+      "candidate_features": 11.99199998518452,
+      "rerank_and_output": 0.2500000118743628,
+      "total": 66.06089998967946
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 54.148800001712516,
+      "candidate_features": 10.532499989494681,
+      "rerank_and_output": 0.2418000076431781,
+      "total": 64.92309999885038
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 52.193300012731925,
+      "candidate_features": 9.718499990412965,
+      "rerank_and_output": 0.2547000185586512,
+      "total": 62.16650002170354
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 52.825799997663125,
+      "candidate_features": 9.270499984268099,
+      "rerank_and_output": 0.24750002194195986,
+      "total": 62.343800003873184
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 54.280799988191575,
+      "candidate_features": 9.452099999180064,
+      "rerank_and_output": 0.22750001517124474,
+      "total": 63.96040000254288
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 61.395600001560524,
+      "candidate_features": 9.502200002316386,
+      "rerank_and_output": 0.21890000789426267,
+      "total": 71.11670001177117
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 53.233500017086044,
+      "candidate_features": 9.931999986292794,
+      "rerank_and_output": 0.28750000637955964,
+      "total": 63.4530000097584
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 67.85319998743944,
+      "candidate_features": 9.893500013276935,
+      "rerank_and_output": 0.2919999824371189,
+      "total": 78.03869998315349
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 61.709299974609166,
+      "candidate_features": 9.21710001421161,
+      "rerank_and_output": 0.2649000089149922,
+      "total": 71.19129999773577
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 52.56179999560118,
+      "candidate_features": 9.311500005424023,
+      "rerank_and_output": 0.2142000012099743,
+      "total": 62.087500002235174
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 104.88400000031106,
+      "candidate_features": 10.702800005674362,
+      "rerank_and_output": 0.29520000680349767,
+      "total": 115.88200001278892
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 54.16770000010729,
+      "candidate_features": 9.88369999686256,
+      "rerank_and_output": 0.22960000205785036,
+      "total": 64.2809999990277
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 52.944299997761846,
+      "candidate_features": 11.491599987493828,
+      "rerank_and_output": 0.27310001314617693,
+      "total": 64.70899999840185
+    },
+    {
+      "method": "weighted_rrf",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 64.35770000098273,
+      "candidate_features": 10.315499996067956,
+      "rerank_and_output": 0.2699999895412475,
+      "total": 74.94319998659194
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 71.5026999823749,
+      "candidate_features": 12.050300021655858,
+      "rerank_and_output": 0.5167999770492315,
+      "total": 84.06979998108
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 56.37340000248514,
+      "candidate_features": 12.620599998626858,
+      "rerank_and_output": 0.35310001112520695,
+      "total": 69.3471000122372
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 62.22250001155771,
+      "candidate_features": 11.162200011312962,
+      "rerank_and_output": 0.32900000223889947,
+      "total": 73.71370002510957
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 55.784500000299886,
+      "candidate_features": 11.361799988662824,
+      "rerank_and_output": 0.35600000410340726,
+      "total": 67.50229999306612
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 59.31609999970533,
+      "candidate_features": 10.1208999985829,
+      "rerank_and_output": 0.3260999801568687,
+      "total": 69.7630999784451
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 59.73559999256395,
+      "candidate_features": 11.40980000491254,
+      "rerank_and_output": 0.40350001654587686,
+      "total": 71.54890001402237
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 53.3321000111755,
+      "candidate_features": 12.002300005406141,
+      "rerank_and_output": 0.371600006474182,
+      "total": 65.70600002305582
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 49.395900015952066,
+      "candidate_features": 11.323099985020235,
+      "rerank_and_output": 0.3504000196699053,
+      "total": 61.069400020642206
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 51.45269999047741,
+      "candidate_features": 11.52969998656772,
+      "rerank_and_output": 0.36260002525523305,
+      "total": 63.34500000230037
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 54.87849999917671,
+      "candidate_features": 14.453300012974069,
+      "rerank_and_output": 0.458099995739758,
+      "total": 69.78990000789054
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 65.02539999200962,
+      "candidate_features": 13.135399989550933,
+      "rerank_and_output": 0.3755000070668757,
+      "total": 78.53629998862743
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 60.14419998973608,
+      "candidate_features": 11.224500020034611,
+      "rerank_and_output": 0.3364999720361084,
+      "total": 71.7051999818068
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 56.23269997886382,
+      "candidate_features": 11.597200005780905,
+      "rerank_and_output": 0.37310001789592206,
+      "total": 68.20300000254065
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 62.353999994229525,
+      "candidate_features": 10.403199994470924,
+      "rerank_and_output": 0.33420001273043454,
+      "total": 73.09140000143088
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 52.98770000808872,
+      "candidate_features": 22.58700001402758,
+      "rerank_and_output": 0.4170999745838344,
+      "total": 75.99179999670014
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 58.88530000811443,
+      "candidate_features": 12.655499973334372,
+      "rerank_and_output": 0.4751000087708235,
+      "total": 72.01589999021962
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 100.22700001718476,
+      "candidate_features": 11.824199988041073,
+      "rerank_and_output": 0.34410000080242753,
+      "total": 112.39530000602826
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 52.80569999013096,
+      "candidate_features": 11.193400016054511,
+      "rerank_and_output": 0.34489997779019177,
+      "total": 64.34399998397566
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 50.546999991638586,
+      "candidate_features": 12.597000022651628,
+      "rerank_and_output": 0.7166999857872725,
+      "total": 63.860700000077486
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 54.48349998914637,
+      "candidate_features": 12.41300001856871,
+      "rerank_and_output": 0.3479000006336719,
+      "total": 67.24440000834875
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 71.51810001232661,
+      "candidate_features": 12.725200009299442,
+      "rerank_and_output": 0.4553999751806259,
+      "total": 84.69869999680668
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 55.57389999739826,
+      "candidate_features": 12.290999991819263,
+      "rerank_and_output": 0.3564000071492046,
+      "total": 68.22129999636672
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 62.00229999376461,
+      "candidate_features": 12.523300014436245,
+      "rerank_and_output": 0.45419999514706433,
+      "total": 74.97980000334792
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 60.249999980442226,
+      "candidate_features": 14.00870000361465,
+      "rerank_and_output": 0.5030000174883753,
+      "total": 74.76170000154525
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 62.883100006729364,
+      "candidate_features": 11.391000007279217,
+      "rerank_and_output": 0.35719998413696885,
+      "total": 74.63129999814555
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 69.28789999801666,
+      "candidate_features": 11.298099998384714,
+      "rerank_and_output": 0.35719998413696885,
+      "total": 80.94319998053834
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 53.754699998535216,
+      "candidate_features": 13.628599990624934,
+      "rerank_and_output": 0.40550000267103314,
+      "total": 67.78879999183118
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 50.0336000113748,
+      "candidate_features": 11.007099994458258,
+      "rerank_and_output": 0.3301000106148422,
+      "total": 61.3708000164479
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 50.9584000101313,
+      "candidate_features": 13.050899986410514,
+      "rerank_and_output": 0.4430000262800604,
+      "total": 64.45230002282187
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 53.45869998564012,
+      "candidate_features": 11.884900013683364,
+      "rerank_and_output": 0.3693999897222966,
+      "total": 65.71299998904578
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 54.40290001570247,
+      "candidate_features": 18.681999994441867,
+      "rerank_and_output": 0.35069999285042286,
+      "total": 73.43560000299476
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 59.759600000688806,
+      "candidate_features": 11.749400000553578,
+      "rerank_and_output": 0.34779999987222254,
+      "total": 71.8568000011146
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 54.07899999408983,
+      "candidate_features": 12.640800006920472,
+      "rerank_and_output": 0.3403000009711832,
+      "total": 67.06010000198148
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 63.18099997588433,
+      "candidate_features": 10.597800021059811,
+      "rerank_and_output": 0.322499981848523,
+      "total": 74.10129997879267
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 52.55870000110008,
+      "candidate_features": 11.065400001825765,
+      "rerank_and_output": 0.33930002246052027,
+      "total": 63.96340002538636
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 53.86810001800768,
+      "candidate_features": 11.508600000524893,
+      "rerank_and_output": 0.3806999884545803,
+      "total": 65.75740000698715
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 98.2402999943588,
+      "candidate_features": 11.708100006217137,
+      "rerank_and_output": 0.3699999942909926,
+      "total": 110.31839999486692
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 51.42189998878166,
+      "candidate_features": 10.815299989189953,
+      "rerank_and_output": 0.3335000074002892,
+      "total": 62.5706999853719
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 52.1864999900572,
+      "candidate_features": 11.131800012663007,
+      "rerank_and_output": 0.3459000145085156,
+      "total": 63.66420001722872
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 54.245099978288636,
+      "candidate_features": 13.341000012587756,
+      "rerank_and_output": 0.4847999953199178,
+      "total": 68.07089998619631
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 71.66339998366311,
+      "candidate_features": 13.253600016469136,
+      "rerank_and_output": 0.4039999912492931,
+      "total": 85.32099999138154
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 67.50980002107099,
+      "candidate_features": 13.992499996675178,
+      "rerank_and_output": 0.47969998558983207,
+      "total": 81.982000003336
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 77.14139999006875,
+      "candidate_features": 12.40250002592802,
+      "rerank_and_output": 0.41119998786598444,
+      "total": 89.95510000386275
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 55.6800999911502,
+      "candidate_features": 12.713100004475564,
+      "rerank_and_output": 0.3986000083386898,
+      "total": 68.79180000396445
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 60.62289999681525,
+      "candidate_features": 10.875399981159717,
+      "rerank_and_output": 0.32660001306794584,
+      "total": 71.82489999104291
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 62.00839998200536,
+      "candidate_features": 10.992900002747774,
+      "rerank_and_output": 0.35280000884085894,
+      "total": 73.35409999359399
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 54.466200002934784,
+      "candidate_features": 11.789800017140806,
+      "rerank_and_output": 0.3395999956410378,
+      "total": 66.59560001571663
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 50.80540000926703,
+      "candidate_features": 12.067100004060194,
+      "rerank_and_output": 0.3741999971680343,
+      "total": 63.24670001049526
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 52.8751999954693,
+      "candidate_features": 11.344900005497038,
+      "rerank_and_output": 0.3451000084169209,
+      "total": 64.56520000938326
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 54.47539998567663,
+      "candidate_features": 12.828200007788837,
+      "rerank_and_output": 0.36150001687929034,
+      "total": 67.66510001034476
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 55.572700017364696,
+      "candidate_features": 12.379799998598173,
+      "rerank_and_output": 0.3539999888744205,
+      "total": 68.30650000483729
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 62.59210000280291,
+      "candidate_features": 10.726100008469075,
+      "rerank_and_output": 0.33179999445565045,
+      "total": 73.65000000572763
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 55.51579999155365,
+      "candidate_features": 12.915400002384558,
+      "rerank_and_output": 0.4284000024199486,
+      "total": 68.85959999635816
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 70.27980001294054,
+      "candidate_features": 11.146700009703636,
+      "rerank_and_output": 0.3437999985180795,
+      "total": 81.77030002116226
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 59.478200011653826,
+      "candidate_features": 11.831699986942112,
+      "rerank_and_output": 0.3692000173032284,
+      "total": 71.67910001589917
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 72.0601000066381,
+      "candidate_features": 13.537799997720867,
+      "rerank_and_output": 0.4230999911669642,
+      "total": 86.02099999552593
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 158.29189997748472,
+      "candidate_features": 12.243100005434826,
+      "rerank_and_output": 0.34810000215657055,
+      "total": 170.88309998507611
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 50.966499984497204,
+      "candidate_features": 11.073300003772601,
+      "rerank_and_output": 0.34410000080242753,
+      "total": 62.38389998907223
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 51.63979998906143,
+      "candidate_features": 11.036200012313202,
+      "rerank_and_output": 0.3384999872650951,
+      "total": 63.01449998863973
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 54.21959998784587,
+      "candidate_features": 12.054899998474866,
+      "rerank_and_output": 0.3552999987732619,
+      "total": 66.629799985094
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 70.55039997794665,
+      "candidate_features": 12.03220000024885,
+      "rerank_and_output": 0.3960000176448375,
+      "total": 82.97859999584034
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 54.408099997090176,
+      "candidate_features": 12.755000003380701,
+      "rerank_and_output": 0.36279999767430127,
+      "total": 67.52589999814518
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 61.78790002013557,
+      "candidate_features": 11.546299996552989,
+      "rerank_and_output": 0.3352999920025468,
+      "total": 73.6695000086911
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 54.98950000037439,
+      "candidate_features": 11.568499990971759,
+      "rerank_and_output": 0.3436999977566302,
+      "total": 66.90169998910278
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 58.34540000068955,
+      "candidate_features": 10.557200002949685,
+      "rerank_and_output": 0.3271999885328114,
+      "total": 69.22979999217205
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 60.103600000729784,
+      "candidate_features": 11.348100000759587,
+      "rerank_and_output": 0.3434999962337315,
+      "total": 71.7951999977231
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 53.18079999415204,
+      "candidate_features": 12.488999986089766,
+      "rerank_and_output": 0.37029999657534063,
+      "total": 66.04009997681715
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 50.13650000910275,
+      "candidate_features": 11.235300014959648,
+      "rerank_and_output": 0.3468999930191785,
+      "total": 61.718700017081574
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 50.558900024043396,
+      "candidate_features": 13.090599997667596,
+      "rerank_and_output": 0.34929998219013214,
+      "total": 63.998800003901124
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 53.28769999323413,
+      "candidate_features": 12.077599996700883,
+      "rerank_and_output": 0.522000016644597,
+      "total": 65.88730000657961
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 71.43080001696944,
+      "candidate_features": 16.87989998026751,
+      "rerank_and_output": 0.4282000008970499,
+      "total": 88.738899998134
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 61.84919999213889,
+      "candidate_features": 14.978900027927011,
+      "rerank_and_output": 0.4739999712910503,
+      "total": 77.30209999135695
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 62.00959999114275,
+      "candidate_features": 13.325000007171184,
+      "rerank_and_output": 0.384899991331622,
+      "total": 75.71949998964556
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 64.87030000425875,
+      "candidate_features": 11.022499995306134,
+      "rerank_and_output": 0.31540001509711146,
+      "total": 76.208200014662
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 53.35150001337752,
+      "candidate_features": 11.456699983682483,
+      "rerank_and_output": 0.3403000009711832,
+      "total": 65.14849999803118
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 54.412600002251565,
+      "candidate_features": 10.984900000039488,
+      "rerank_and_output": 0.3406000032555312,
+      "total": 65.73810000554658
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 95.8295000018552,
+      "candidate_features": 11.84989998000674,
+      "rerank_and_output": 0.3456000122241676,
+      "total": 108.0249999940861
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 53.64279999048449,
+      "candidate_features": 12.382500019157305,
+      "rerank_and_output": 0.5878999945707619,
+      "total": 66.61320000421256
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 55.308799986960366,
+      "candidate_features": 11.22899999609217,
+      "rerank_and_output": 0.3810000198427588,
+      "total": 66.9188000028953
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 54.399499989813194,
+      "candidate_features": 11.81719999294728,
+      "rerank_and_output": 0.33480001729913056,
+      "total": 66.5515000000596
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 71.61770001403056,
+      "candidate_features": 13.570899987826124,
+      "rerank_and_output": 0.3454000107012689,
+      "total": 85.53400001255795
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 54.44010000792332,
+      "candidate_features": 12.476999982027337,
+      "rerank_and_output": 0.35280000884085894,
+      "total": 67.26989999879152
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 63.33309999899939,
+      "candidate_features": 13.796299987006932,
+      "rerank_and_output": 0.4332000098656863,
+      "total": 77.562599995872
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 63.763000012841076,
+      "candidate_features": 11.597099975915626,
+      "rerank_and_output": 0.4762000171467662,
+      "total": 75.83630000590347
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 61.471199995139614,
+      "candidate_features": 13.092700013658032,
+      "rerank_and_output": 0.8137999975588173,
+      "total": 75.37770000635646
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 68.34069997421466,
+      "candidate_features": 11.2692000111565,
+      "rerank_and_output": 0.5445000133477151,
+      "total": 80.15439999871887
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 58.966999989934266,
+      "candidate_features": 15.230100019834936,
+      "rerank_and_output": 0.39679999463260174,
+      "total": 74.5939000044018
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 55.91540000750683,
+      "candidate_features": 10.965900000883266,
+      "rerank_and_output": 0.3237999917473644,
+      "total": 67.20510000013746
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 49.45109999971464,
+      "candidate_features": 10.895399987930432,
+      "rerank_and_output": 0.43559999903663993,
+      "total": 60.782099986681715
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 54.86730000120588,
+      "candidate_features": 15.67979998071678,
+      "rerank_and_output": 0.6369000184349716,
+      "total": 71.18400000035763
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 72.229299985338,
+      "candidate_features": 13.103500008583069,
+      "rerank_and_output": 0.3806999884545803,
+      "total": 85.71349998237565
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 59.95510000502691,
+      "candidate_features": 12.78779999120161,
+      "rerank_and_output": 0.3657999914139509,
+      "total": 73.10869998764247
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 54.523700004210696,
+      "candidate_features": 12.153999996371567,
+      "rerank_and_output": 0.36869998439215124,
+      "total": 67.04639998497441
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 64.50829998357221,
+      "candidate_features": 11.841300001833588,
+      "rerank_and_output": 0.33840001560747623,
+      "total": 76.68800000101328
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 52.82079998869449,
+      "candidate_features": 12.3891000112053,
+      "rerank_and_output": 0.4200999974273145,
+      "total": 65.6299999973271
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 58.44819999765605,
+      "candidate_features": 11.402300006011501,
+      "rerank_and_output": 0.3392999933566898,
+      "total": 70.18979999702424
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 96.07970001525246,
+      "candidate_features": 12.13569997344166,
+      "rerank_and_output": 0.3949000092688948,
+      "total": 108.61029999796301
+    },
+    {
+      "method": "logistic",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 51.44720000680536,
+      "candidate_features": 11.400100018363446,
+      "rerank_and_output": 0.3575999871827662,
+      "total": 63.20490001235157
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 59.38260001130402,
+      "candidate_features": 12.363099987851456,
+      "rerank_and_output": 0.39670002297498286,
+      "total": 72.14240002213046
+    },
+    {
+      "method": "logistic",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 55.701499979477376,
+      "candidate_features": 11.801700020441785,
+      "rerank_and_output": 0.34779999987222254,
+      "total": 67.85099999979138
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q010",
+      "repeat": 0,
+      "retrieval": 71.0010000038892,
+      "candidate_features": 12.80110000516288,
+      "rerank_and_output": 14.566599973477423,
+      "total": 98.3686999825295
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q014",
+      "repeat": 0,
+      "retrieval": 56.48769999970682,
+      "candidate_features": 12.002000003121793,
+      "rerank_and_output": 16.51099999435246,
+      "total": 85.00069999718107
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q035",
+      "repeat": 0,
+      "retrieval": 72.38950001192279,
+      "candidate_features": 11.093699984485283,
+      "rerank_and_output": 13.305600004969165,
+      "total": 96.78880000137724
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q046",
+      "repeat": 0,
+      "retrieval": 54.585900012170896,
+      "candidate_features": 13.057799980742857,
+      "rerank_and_output": 14.324400020996109,
+      "total": 81.96810001390986
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q064",
+      "repeat": 0,
+      "retrieval": 62.125700002070516,
+      "candidate_features": 11.05279999319464,
+      "rerank_and_output": 14.88560001598671,
+      "total": 88.06410001125187
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q119",
+      "repeat": 0,
+      "retrieval": 61.919800005853176,
+      "candidate_features": 11.743499984731898,
+      "rerank_and_output": 16.43680001143366,
+      "total": 90.10010000201873
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q121",
+      "repeat": 0,
+      "retrieval": 65.07939999573864,
+      "candidate_features": 16.752199997426942,
+      "rerank_and_output": 16.009299986762926,
+      "total": 97.84089997992851
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q175",
+      "repeat": 0,
+      "retrieval": 51.93439999129623,
+      "candidate_features": 10.953000019071624,
+      "rerank_and_output": 15.287699992768466,
+      "total": 78.17510000313632
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q176",
+      "repeat": 0,
+      "retrieval": 51.07429999043234,
+      "candidate_features": 11.32530000177212,
+      "rerank_and_output": 13.874900003429502,
+      "total": 76.27449999563396
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q192",
+      "repeat": 0,
+      "retrieval": 53.02930000470951,
+      "candidate_features": 11.585800006287172,
+      "rerank_and_output": 13.831799995386973,
+      "total": 78.44690000638366
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q204",
+      "repeat": 0,
+      "retrieval": 54.5226999965962,
+      "candidate_features": 11.788800009526312,
+      "rerank_and_output": 14.337100001284853,
+      "total": 80.64860000740737
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q208",
+      "repeat": 0,
+      "retrieval": 58.53779998142272,
+      "candidate_features": 12.800099997548386,
+      "rerank_and_output": 14.30500001879409,
+      "total": 85.6428999977652
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q218",
+      "repeat": 0,
+      "retrieval": 54.960800014669076,
+      "candidate_features": 13.030200003413484,
+      "rerank_and_output": 18.028899998171255,
+      "total": 86.01990001625381
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q220",
+      "repeat": 0,
+      "retrieval": 65.96720000379719,
+      "candidate_features": 11.15489998483099,
+      "rerank_and_output": 15.699900017352775,
+      "total": 92.82200000598095
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q245",
+      "repeat": 0,
+      "retrieval": 53.904300002614036,
+      "candidate_features": 11.711500003002584,
+      "rerank_and_output": 15.104499994777143,
+      "total": 80.72030000039376
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q254",
+      "repeat": 0,
+      "retrieval": 55.78870000317693,
+      "candidate_features": 11.270299990428612,
+      "rerank_and_output": 14.364500006195158,
+      "total": 81.4234999998007
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q260",
+      "repeat": 0,
+      "retrieval": 96.28719999454916,
+      "candidate_features": 14.46919998852536,
+      "rerank_and_output": 19.490200007567182,
+      "total": 130.2465999906417
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q306",
+      "repeat": 0,
+      "retrieval": 63.923000008799136,
+      "candidate_features": 13.441299990518019,
+      "rerank_and_output": 18.747399997664616,
+      "total": 96.11169999698177
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q001",
+      "repeat": 0,
+      "retrieval": 65.55220001609996,
+      "candidate_features": 12.459599995054305,
+      "rerank_and_output": 14.281800016760826,
+      "total": 92.29360002791509
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q011",
+      "repeat": 0,
+      "retrieval": 56.916800007456914,
+      "candidate_features": 12.215499999001622,
+      "rerank_and_output": 14.446699991822243,
+      "total": 83.57899999828078
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q010",
+      "repeat": 1,
+      "retrieval": 77.24230000167154,
+      "candidate_features": 12.508400017395616,
+      "rerank_and_output": 17.068699991796166,
+      "total": 106.81940001086332
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q014",
+      "repeat": 1,
+      "retrieval": 57.27320001460612,
+      "candidate_features": 12.202199985040352,
+      "rerank_and_output": 14.542300021275878,
+      "total": 84.01770002092235
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q035",
+      "repeat": 1,
+      "retrieval": 63.246200006688014,
+      "candidate_features": 12.719199992716312,
+      "rerank_and_output": 18.20900000166148,
+      "total": 94.1744000010658
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q046",
+      "repeat": 1,
+      "retrieval": 67.4140999908559,
+      "candidate_features": 12.240800017025322,
+      "rerank_and_output": 14.5388999953866,
+      "total": 94.19380000326782
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q064",
+      "repeat": 1,
+      "retrieval": 65.67920002271421,
+      "candidate_features": 10.986299981595948,
+      "rerank_and_output": 14.385500020580366,
+      "total": 91.05100002489053
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q119",
+      "repeat": 1,
+      "retrieval": 69.61440001032315,
+      "candidate_features": 13.375300011830404,
+      "rerank_and_output": 17.680499993730336,
+      "total": 100.67020001588389
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q121",
+      "repeat": 1,
+      "retrieval": 58.809999987715855,
+      "candidate_features": 11.60700002219528,
+      "rerank_and_output": 14.438899990636855,
+      "total": 84.85590000054799
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q175",
+      "repeat": 1,
+      "retrieval": 54.32930000824854,
+      "candidate_features": 12.717300007352605,
+      "rerank_and_output": 14.207800006261095,
+      "total": 81.25440002186224
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q176",
+      "repeat": 1,
+      "retrieval": 53.21579999872483,
+      "candidate_features": 11.512900004163384,
+      "rerank_and_output": 14.661599998362362,
+      "total": 79.39030000125058
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q192",
+      "repeat": 1,
+      "retrieval": 57.85019998438656,
+      "candidate_features": 14.981300017097965,
+      "rerank_and_output": 16.381399997044355,
+      "total": 89.21289999852888
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q204",
+      "repeat": 1,
+      "retrieval": 61.145199986640364,
+      "candidate_features": 14.990399999078363,
+      "rerank_and_output": 18.288600025698543,
+      "total": 94.42420001141727
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q208",
+      "repeat": 1,
+      "retrieval": 65.29120000777766,
+      "candidate_features": 13.290500006405637,
+      "rerank_and_output": 15.671799978008494,
+      "total": 94.25349999219179
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q218",
+      "repeat": 1,
+      "retrieval": 56.45949998870492,
+      "candidate_features": 14.32410001871176,
+      "rerank_and_output": 15.836299979127944,
+      "total": 86.61989998654462
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q220",
+      "repeat": 1,
+      "retrieval": 63.306700001703575,
+      "candidate_features": 11.063399986596778,
+      "rerank_and_output": 14.855000015813857,
+      "total": 89.22510000411421
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q245",
+      "repeat": 1,
+      "retrieval": 54.86840000958182,
+      "candidate_features": 11.276200006250292,
+      "rerank_and_output": 14.125199988484383,
+      "total": 80.2698000043165
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q254",
+      "repeat": 1,
+      "retrieval": 56.680999987293035,
+      "candidate_features": 11.881499987794086,
+      "rerank_and_output": 71.2968000152614,
+      "total": 139.85929999034852
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q260",
+      "repeat": 1,
+      "retrieval": 97.99739997833967,
+      "candidate_features": 12.626600015209988,
+      "rerank_and_output": 15.378499985672534,
+      "total": 126.0024999792222
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q306",
+      "repeat": 1,
+      "retrieval": 52.49750000075437,
+      "candidate_features": 11.339899996528402,
+      "rerank_and_output": 14.88860000972636,
+      "total": 78.72600000700913
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q001",
+      "repeat": 1,
+      "retrieval": 52.68490000162274,
+      "candidate_features": 11.512199998833239,
+      "rerank_and_output": 15.643199993064627,
+      "total": 79.8402999935206
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q011",
+      "repeat": 1,
+      "retrieval": 55.64579999190755,
+      "candidate_features": 12.862800009315833,
+      "rerank_and_output": 14.641499990830198,
+      "total": 83.15009999205358
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q010",
+      "repeat": 2,
+      "retrieval": 75.43009999790229,
+      "candidate_features": 15.221100009512156,
+      "rerank_and_output": 19.388899992918596,
+      "total": 110.04010000033304
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q014",
+      "repeat": 2,
+      "retrieval": 59.55170001834631,
+      "candidate_features": 14.125299989245832,
+      "rerank_and_output": 17.483300005551428,
+      "total": 91.16030001314357
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q035",
+      "repeat": 2,
+      "retrieval": 73.93129999400117,
+      "candidate_features": 12.60990000446327,
+      "rerank_and_output": 16.29889998002909,
+      "total": 102.84009997849353
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q046",
+      "repeat": 2,
+      "retrieval": 67.53469997784123,
+      "candidate_features": 11.89430002705194,
+      "rerank_and_output": 14.901099988492206,
+      "total": 94.33009999338537
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q064",
+      "repeat": 2,
+      "retrieval": 69.80120000662282,
+      "candidate_features": 12.792399997124448,
+      "rerank_and_output": 14.463900006376207,
+      "total": 97.05750001012348
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q119",
+      "repeat": 2,
+      "retrieval": 74.8590000148397,
+      "candidate_features": 12.26930000120774,
+      "rerank_and_output": 14.043599978322163,
+      "total": 101.1718999943696
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q121",
+      "repeat": 2,
+      "retrieval": 64.59880000329576,
+      "candidate_features": 13.066899991827086,
+      "rerank_and_output": 16.41640000161715,
+      "total": 94.08209999674
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q175",
+      "repeat": 2,
+      "retrieval": 60.64630000037141,
+      "candidate_features": 11.879699974087998,
+      "rerank_and_output": 14.392700017197058,
+      "total": 86.91869999165647
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q176",
+      "repeat": 2,
+      "retrieval": 57.88179999217391,
+      "candidate_features": 11.09139999607578,
+      "rerank_and_output": 14.10189998568967,
+      "total": 83.07509997393936
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q192",
+      "repeat": 2,
+      "retrieval": 61.15150000550784,
+      "candidate_features": 11.403400014387444,
+      "rerank_and_output": 14.0825999842491,
+      "total": 86.63750000414439
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q204",
+      "repeat": 2,
+      "retrieval": 64.14569998742081,
+      "candidate_features": 15.843000001041219,
+      "rerank_and_output": 15.243100002408028,
+      "total": 95.23179999087006
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q208",
+      "repeat": 2,
+      "retrieval": 75.72890000301413,
+      "candidate_features": 11.373499990440905,
+      "rerank_and_output": 14.348900003824383,
+      "total": 101.45129999727942
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q218",
+      "repeat": 2,
+      "retrieval": 63.39540000772104,
+      "candidate_features": 11.646500002825633,
+      "rerank_and_output": 14.716399979079142,
+      "total": 89.75829998962581
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q220",
+      "repeat": 2,
+      "retrieval": 72.18769998871721,
+      "candidate_features": 11.900900019099936,
+      "rerank_and_output": 14.271299995016307,
+      "total": 98.35990000283346
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q245",
+      "repeat": 2,
+      "retrieval": 64.75439999485388,
+      "candidate_features": 12.171200010925531,
+      "rerank_and_output": 17.866999987745658,
+      "total": 94.79259999352507
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q254",
+      "repeat": 2,
+      "retrieval": 64.55559999449179,
+      "candidate_features": 12.21429998986423,
+      "rerank_and_output": 14.581199997337535,
+      "total": 91.35109998169355
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q260",
+      "repeat": 2,
+      "retrieval": 157.96470001805574,
+      "candidate_features": 12.04829997732304,
+      "rerank_and_output": 14.605200005462393,
+      "total": 184.61820000084117
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q306",
+      "repeat": 2,
+      "retrieval": 54.01660001371056,
+      "candidate_features": 10.938299994450063,
+      "rerank_and_output": 14.355599996633828,
+      "total": 79.31050000479445
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q001",
+      "repeat": 2,
+      "retrieval": 56.29209999460727,
+      "candidate_features": 11.487999989185482,
+      "rerank_and_output": 14.401400025235489,
+      "total": 82.18150000902824
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q011",
+      "repeat": 2,
+      "retrieval": 57.90889999479987,
+      "candidate_features": 11.980900017078966,
+      "rerank_and_output": 14.269599982071668,
+      "total": 84.1593999939505
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q010",
+      "repeat": 3,
+      "retrieval": 75.69749999674968,
+      "candidate_features": 11.576100019738078,
+      "rerank_and_output": 14.493700000457466,
+      "total": 101.76730001694523
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q014",
+      "repeat": 3,
+      "retrieval": 56.52799998642877,
+      "candidate_features": 13.022400002228096,
+      "rerank_and_output": 17.229999997653067,
+      "total": 86.78039998630993
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q035",
+      "repeat": 3,
+      "retrieval": 72.83829999505542,
+      "candidate_features": 12.24989999900572,
+      "rerank_and_output": 14.348800003062934,
+      "total": 99.43699999712408
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q046",
+      "repeat": 3,
+      "retrieval": 56.9645999930799,
+      "candidate_features": 10.804999998072162,
+      "rerank_and_output": 14.785400009714067,
+      "total": 82.55500000086613
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q064",
+      "repeat": 3,
+      "retrieval": 71.98290000087582,
+      "candidate_features": 15.078800002811477,
+      "rerank_and_output": 16.88160002231598,
+      "total": 103.94330002600327
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q119",
+      "repeat": 3,
+      "retrieval": 71.70040000346489,
+      "candidate_features": 15.81899999291636,
+      "rerank_and_output": 19.675200019264594,
+      "total": 107.19460001564585
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q121",
+      "repeat": 3,
+      "retrieval": 60.035400005290285,
+      "candidate_features": 15.759700007038191,
+      "rerank_and_output": 18.7185000104364,
+      "total": 94.51360002276488
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q175",
+      "repeat": 3,
+      "retrieval": 54.822900012368336,
+      "candidate_features": 10.817600006703287,
+      "rerank_and_output": 14.889899990521371,
+      "total": 80.530400009593
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q176",
+      "repeat": 3,
+      "retrieval": 59.79359999764711,
+      "candidate_features": 13.975099980598316,
+      "rerank_and_output": 17.950300010852516,
+      "total": 91.71899998909794
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q192",
+      "repeat": 3,
+      "retrieval": 55.746000027284026,
+      "candidate_features": 11.866399989230558,
+      "rerank_and_output": 14.839899988146499,
+      "total": 82.45230000466108
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q204",
+      "repeat": 3,
+      "retrieval": 56.847100000595674,
+      "candidate_features": 11.862499988637865,
+      "rerank_and_output": 14.622999995481223,
+      "total": 83.33259998471476
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q208",
+      "repeat": 3,
+      "retrieval": 66.30320000112988,
+      "candidate_features": 11.947399994824082,
+      "rerank_and_output": 15.937099989969283,
+      "total": 94.18769998592325
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q218",
+      "repeat": 3,
+      "retrieval": 62.30339998728596,
+      "candidate_features": 12.892600003397092,
+      "rerank_and_output": 16.06809999793768,
+      "total": 91.26409998862073
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q220",
+      "repeat": 3,
+      "retrieval": 84.40100000007078,
+      "candidate_features": 12.061899993568659,
+      "rerank_and_output": 13.957299990579486,
+      "total": 110.42019998421893
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q245",
+      "repeat": 3,
+      "retrieval": 54.37489997711964,
+      "candidate_features": 11.300700018182397,
+      "rerank_and_output": 14.234799979021773,
+      "total": 79.91039997432381
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q254",
+      "repeat": 3,
+      "retrieval": 53.946100000757724,
+      "candidate_features": 12.440399994375184,
+      "rerank_and_output": 14.536600006977096,
+      "total": 80.92310000211
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q260",
+      "repeat": 3,
+      "retrieval": 102.80880000209436,
+      "candidate_features": 13.046600011875853,
+      "rerank_and_output": 15.513399994233623,
+      "total": 131.36880000820383
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q306",
+      "repeat": 3,
+      "retrieval": 57.524099975125864,
+      "candidate_features": 13.133500004187226,
+      "rerank_and_output": 17.62810000218451,
+      "total": 88.2856999814976
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q001",
+      "repeat": 3,
+      "retrieval": 63.17539999145083,
+      "candidate_features": 11.95350001216866,
+      "rerank_and_output": 15.41309998719953,
+      "total": 90.54199999081902
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q011",
+      "repeat": 3,
+      "retrieval": 66.53969999752007,
+      "candidate_features": 13.438900001347065,
+      "rerank_and_output": 20.082700008060783,
+      "total": 100.06130000692792
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q010",
+      "repeat": 4,
+      "retrieval": 83.63579999422655,
+      "candidate_features": 12.22629999392666,
+      "rerank_and_output": 14.484799990896136,
+      "total": 110.34689997904934
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q014",
+      "repeat": 4,
+      "retrieval": 63.74559999676421,
+      "candidate_features": 12.279899994609877,
+      "rerank_and_output": 14.35840001795441,
+      "total": 90.3839000093285
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q035",
+      "repeat": 4,
+      "retrieval": 70.66190001205541,
+      "candidate_features": 12.80259998748079,
+      "rerank_and_output": 14.197699987562373,
+      "total": 97.66219998709857
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q046",
+      "repeat": 4,
+      "retrieval": 64.76989999646321,
+      "candidate_features": 12.956799997482449,
+      "rerank_and_output": 14.653699996415526,
+      "total": 92.38039999036118
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q064",
+      "repeat": 4,
+      "retrieval": 70.11529998271726,
+      "candidate_features": 13.571799994679168,
+      "rerank_and_output": 18.469300004653633,
+      "total": 102.15639998205006
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q119",
+      "repeat": 4,
+      "retrieval": 73.94469997962005,
+      "candidate_features": 11.083400022471324,
+      "rerank_and_output": 14.793499984079972,
+      "total": 99.82159998617135
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q121",
+      "repeat": 4,
+      "retrieval": 64.23479999648407,
+      "candidate_features": 12.214599992148578,
+      "rerank_and_output": 15.05320001160726,
+      "total": 91.50260000023991
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q175",
+      "repeat": 4,
+      "retrieval": 57.9827000037767,
+      "candidate_features": 11.212200013687834,
+      "rerank_and_output": 14.567999984137714,
+      "total": 83.76290000160225
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q176",
+      "repeat": 4,
+      "retrieval": 57.003800000529736,
+      "candidate_features": 11.356200004229322,
+      "rerank_and_output": 13.741600007051602,
+      "total": 82.10160001181066
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q192",
+      "repeat": 4,
+      "retrieval": 66.73650001175702,
+      "candidate_features": 14.491799985989928,
+      "rerank_and_output": 15.743199997814372,
+      "total": 96.97149999556132
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q204",
+      "repeat": 4,
+      "retrieval": 69.12619998911396,
+      "candidate_features": 16.1466000135988,
+      "rerank_and_output": 19.637699995655566,
+      "total": 104.91049999836832
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q208",
+      "repeat": 4,
+      "retrieval": 84.49179999297485,
+      "candidate_features": 11.685600009514019,
+      "rerank_and_output": 15.348699991591275,
+      "total": 111.52609999408014
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q218",
+      "repeat": 4,
+      "retrieval": 65.02639999962412,
+      "candidate_features": 12.194100010674447,
+      "rerank_and_output": 14.471499976934865,
+      "total": 91.69199998723343
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q220",
+      "repeat": 4,
+      "retrieval": 70.70710000698455,
+      "candidate_features": 15.693599998485297,
+      "rerank_and_output": 17.21180000458844,
+      "total": 103.61250001005828
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q245",
+      "repeat": 4,
+      "retrieval": 64.72509997547604,
+      "candidate_features": 11.245800007600337,
+      "rerank_and_output": 14.139600010821596,
+      "total": 90.11049999389797
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q254",
+      "repeat": 4,
+      "retrieval": 63.3279999892693,
+      "candidate_features": 12.023999996017665,
+      "rerank_and_output": 14.496399991912767,
+      "total": 89.84839997719973
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q260",
+      "repeat": 4,
+      "retrieval": 161.06099999160506,
+      "candidate_features": 12.035400024615228,
+      "rerank_and_output": 14.46499998564832,
+      "total": 187.5614000018686
+    },
+    {
+      "method": "random_forest",
+      "query_id": "DEV_Q306",
+      "repeat": 4,
+      "retrieval": 58.780499995918944,
+      "candidate_features": 11.580899998079985,
+      "rerank_and_output": 17.09190002293326,
+      "total": 87.45330001693219
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q001",
+      "repeat": 4,
+      "retrieval": 61.98160001076758,
+      "candidate_features": 11.192600009962916,
+      "rerank_and_output": 14.22650000313297,
+      "total": 87.40070002386346
+    },
+    {
+      "method": "random_forest",
+      "query_id": "TRAIN_Q011",
+      "repeat": 4,
+      "retrieval": 62.945200013928115,
+      "candidate_features": 12.5908000045456,
+      "rerank_and_output": 15.508999989833683,
+      "total": 91.0450000083074
+    }
+  ]
+}
